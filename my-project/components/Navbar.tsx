@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   // Smooth scroll with offset
-  const handleScroll = (id) => {
+  const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       const yOffset = -100; // adjust for navbar height
