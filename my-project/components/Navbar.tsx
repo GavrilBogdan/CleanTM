@@ -1,49 +1,73 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  // Smooth scroll with offset
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -100; // adjust for navbar height
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+    setOpen(false); // close mobile menu
+  };
 
   return (
     <div className="relative z-50 w-screen flex justify-center cursor-pointer">
       <nav className="fixed mt-5 flex w-full items-center justify-between mx-auto max-w-7xl px-6 py-3 lg:px-8 lg:py-4 bg-lime-50 rounded-[3rem] shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 backdrop-blur-lg">
         {/* LOGO */}
-        <Link href="#">
-          <div className="flex items-center space-x-2 cursor-pointer">
-            <img
-              className="h-8 w-auto"
-              src="https://cdn-icons-png.flaticon.com/128/892/892930.png"
-              alt="CleanTM Logo"
-            />
-            <span className="text-xl font-bold text-green-800  md:block">
-              CleanTM
-            </span>
-          </div>
-        </Link>
+        <div
+          onClick={() => handleScroll("home")}
+          className="flex items-center space-x-2 cursor-pointer"
+        >
+          <img
+            className="h-8 w-auto"
+            src="https://cdn-icons-png.flaticon.com/128/892/892930.png"
+            alt="CleanTM Logo"
+          />
+          <span className="text-xl font-bold text-green-800 md:block">
+            CleanTM
+          </span>
+        </div>
 
         {/* DESKTOP NAV */}
         <div className="hidden lg:block">
           <ul className="flex space-x-10 text-lg font-semibold text-green-700">
             <li className="hover:text-green-900 transition">
-              <Link href="#">
-                <p className="hover:underline-animation-b">Home</p>
-              </Link>
+              <p
+                className="hover:underline-animation-b cursor-pointer"
+                onClick={() => handleScroll("home")}
+              >
+                Home
+              </p>
             </li>
             <li className="hover:text-green-900 transition">
-              <Link href="#">
-                <p className="hover:underline-animation-b">Map</p>
-              </Link>
+              <p
+                className="hover:underline-animation-b cursor-pointer"
+                onClick={() => handleScroll("map")}
+              >
+                Map
+              </p>
             </li>
             <li className="hover:text-green-900 transition">
-              <Link href="#">
-                <p className="hover:underline-animation-b">Progress</p>
-              </Link>
+              <p
+                className="hover:underline-animation-b cursor-pointer"
+                onClick={() => handleScroll("progress")}
+              >
+                Progress
+              </p>
             </li>
             <li className="hover:text-green-900 transition">
-              <Link href="#">
-                <p className="hover:underline-animation-b">Rewards</p>
-              </Link>
+              <p
+                className="hover:underline-animation-b cursor-pointer"
+                onClick={() => handleScroll("rewards")}
+              >
+                Rewards
+              </p>
             </li>
           </ul>
         </div>
@@ -92,24 +116,30 @@ const Navbar = () => {
       >
         <ul className="flex flex-col space-y-4 text-lg font-semibold text-green-800">
           <li className="hover:text-green-900 transition">
-            <Link href="#" onClick={() => setOpen(false)}>
+            <p className="cursor-pointer" onClick={() => handleScroll("home")}>
               Home
-            </Link>
+            </p>
           </li>
           <li className="hover:text-green-900 transition">
-            <Link href="#" onClick={() => setOpen(false)}>
+            <p className="cursor-pointer" onClick={() => handleScroll("map")}>
               Map
-            </Link>
+            </p>
           </li>
           <li className="hover:text-green-900 transition">
-            <Link href="#" onClick={() => setOpen(false)}>
+            <p
+              className="cursor-pointer"
+              onClick={() => handleScroll("progress")}
+            >
               Progress
-            </Link>
+            </p>
           </li>
           <li className="hover:text-green-900 transition">
-            <Link href="#" onClick={() => setOpen(false)}>
+            <p
+              className="cursor-pointer"
+              onClick={() => handleScroll("rewards")}
+            >
               Rewards
-            </Link>
+            </p>
           </li>
         </ul>
 

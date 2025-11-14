@@ -49,7 +49,10 @@ const FloatingParticle = ({ img, size, delay }: any) => (
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden text-white"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 -z-20">
         <Image
