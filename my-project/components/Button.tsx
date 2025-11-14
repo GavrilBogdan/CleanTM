@@ -19,7 +19,7 @@ export default function AnimatedButton({
     >
       {text}
       {/* Background animat */}
-      <span className="absolute top-0 left-0 w-0 h-full bg-[#12af49] transition-all duration-500 group-hover:w-full z-[-1]"></span>
+      <span className="absolute top-0 left-0 w-0 h-full bg-[#12af49] transition-all duration-900 group-hover:w-full z-[-1]"></span>
     </button>
   );
 }

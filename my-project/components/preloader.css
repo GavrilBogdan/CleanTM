@@ -1,0 +1,128 @@
+/* ===================== PRELOADER CONTAINER ===================== */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 999999;
+  animation: fadeOut 0.8s ease forwards;
+  animation-delay: 2.6s;
+}
+
+/* ===================== BACKGROUND GLOW ===================== */
+.bg-glow {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  max-width: 1000px;
+  max-height: 1000px;
+  background: radial-gradient(circle, rgba(0, 255, 120, 0.15), transparent 70%);
+  filter: blur(80px);
+  animation: pulseBG 6s ease-in-out infinite;
+}
+
+/* ===================== LOGO TEXT ===================== */
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(40px, 8vw, 80px); /* responsive font size */
+  fill: none;
+  stroke: #00ff91;
+  stroke-width: 2;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: draw 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+    neonPulse 2.8s ease-in-out infinite 1.5s;
+}
+
+/* ===================== SHINE EFFECT ===================== */
+.shine {
+  fill: url(#shineGrad);
+  animation: sweep 2.2s ease-in-out infinite;
+  width: 40%; /* responsive */
+  height: 100%;
+}
+
+/* ===================== PARTICLES ===================== */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: clamp(3px, 0.6vw, 6px);
+  height: clamp(3px, 0.6vw, 6px);
+  background: rgba(0, 255, 150, 0.7);
+  border-radius: 50%;
+  filter: blur(2px);
+  top: 100%;
+  animation: floatUp 3s ease-out infinite;
+}
+
+/* ===================== KEYFRAMES ===================== */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-150%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px #00ff91);
+  }
+  50% {
+    filter: drop-shadow(0 0 26px #00ffaa);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-25vw);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(65vw);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseBG {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}

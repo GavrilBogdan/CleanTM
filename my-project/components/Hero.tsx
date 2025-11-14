@@ -1,86 +1,133 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Montserrat } from "next/font/google";
 import Button from "@/components/Button";
+import { motion } from "framer-motion";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-const PulsingDot = ({ position }: { position: string }) => {
-  return (
-    <div className={`absolute ${position}`}>
-      <span className="relative flex h-4 w-4">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500"></span>
-        <span className="relative inline-flex rounded-full h-4 w-4 bg-red-600"></span>
-      </span>
-    </div>
-  );
-};
+// ECO PARTICLES
+const particles = [
+  { img: "/images/leaf-2.png", size: 40 },
+  { img: "/images/leaf-3.png", size: 40 },
+  { img: "/images/recycle-icon.png", size: 28 },
+  { img: "/images/leaf.png", size: 22 },
+  { img: "/images/leaf.png", size: 35 },
+];
+
+const FloatingParticle = ({ img, size, delay }: any) => (
+  <motion.div
+    initial={{ y: 50, opacity: 0 }}
+    animate={{ y: [-20, 20, -20], opacity: [0.4, 1, 0.4] }}
+    transition={{
+      repeat: Infinity,
+      duration: 6 + Math.random() * 4,
+      delay,
+      ease: "easeInOut",
+    }}
+    className="absolute"
+    style={{
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+    }}
+  >
+    <Image
+      src={img}
+      alt="particle"
+      width={size}
+      height={size}
+      className="opacity-70 drop-shadow-[0_0_12px_rgba(0,255,120,0.7)]"
+    />
+  </motion.div>
+);
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex justify-center relative flex-col overflow-hidden">
-      <Image
-        src="/images/litter.png"
-        alt="litter"
-        width={100}
-        height={100}
-        className="absolute bottom-15 left-25 opacity-75 animate-fluid-bounce "
-      />
-      <div className="absolute inset-0 -z-20 opacity-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 -z-20">
         <Image
           src="/images/map-bg.png"
           alt="Map background"
-          layout="fill"
-          objectFit="cover"
-          className="grayscale"
+          fill
+          className="object-cover grayscale opacity-40"
         />
-        <div className="absolute inset-0 bg-green-700/50 mix-blend-multiply" />
-        <div className="absolute inset-0 ">
-          <PulsingDot position="top-1/4 left-1/3" />
-          <PulsingDot position="top-2/3 left-1/4" />
-          <PulsingDot position="top-1/3 left-3/4" />
-          <PulsingDot position="top-3/4 left-2/3" />
+
+        {/* GREEN OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/60 via-green-700/50 to-emerald-900/70 mix-blend-multiply" />
+
+        {/* SPOTLIGHT */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25),transparent_75%)]" />
+
+        {/* PULSING DOTS */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute"
+              style={{
+                top: `${20 + Math.random() * 60}%`,
+                left: `${20 + Math.random() * 60}%`,
+              }}
+            >
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/70"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+            </div>
+          ))}
         </div>
+
+        {/* ECO PARTICLES */}
+        {particles.map((p, i) => (
+          <FloatingParticle key={i} img={p.img} size={p.size} delay={i * 0.8} />
+        ))}
       </div>
 
-      <div className="flex w-full min-h-screen flex-col justify-center relative z-10">
-        <div className="flex flex-wrap  text-center bg-white/30 p-5 ">
-          <h1
-            className={`w-full font-bold text-green-50 text-6xl ${montserrat.className}`}
-          >
-            CleanTM ♻️
-          </h1>
-          <p className="w-full text-xl font-semibold text-green-900">
-            Together on a mission!
-          </p>
-        </div>
-        <div className="flex flex-row gap-10 bg-white/30 pb-2 w-full justify-center">
+      {/* HERO CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative z-20 w-full max-w-3xl px-6 text-center 
+        bg-white/10 backdrop-blur-2xl border border-white/20 
+        rounded-3xl py-14 shadow-[0_0_25px_rgba(0,255,150,0.7)] 
+        hover:shadow-[0_0_40px_rgba(0,255,150,1)] 
+        transition-all duration-500"
+      >
+        <h1
+          className={` text-5xl sm:text-7xl font-bold drop-shadow-[0_0_20px_rgba(0,255,150,0.9)]
+          text-green-50 ${montserrat.className}`}
+        >
+          CleanTM ♻️
+        </h1>
+
+        <p className="mt-4 text-2xl font-semibold text-green-100">
+          Let’s clean Timișoara — together.
+        </p>
+
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
           <Link href="#">
             <Button
               text="About us"
-              className="text-lg font-bold cursor-pointer"
+              className="text-lg font-semibold px-8 py-4 shadow-xl hover:scale-105 transition"
             />
           </Link>
           <Link href="#">
-            <Button text="Participate" className="text-lg font-bold" />
+            <Button
+              text="Participate"
+              className="text-lg font-semibold px-8 py-4 shadow-xl hover:scale-105 transition"
+            />
           </Link>
         </div>
-
-        {/* <div className=" p-5  flex justify-center ">
-          <Image
-            src="/images/recycle_1.png"
-            alt=""
-            width={400}
-            height={600}
-            className="absolute -z-10 "
-          />
-        </div> */}
-      </div>
+      </motion.div>
     </section>
   );
 };
