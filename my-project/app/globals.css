@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-<<<<<<< Updated upstream
+
 .animate-fluid-bounce {
   animation: spin-animation 2s infinite;
 }
@@ -22,7 +22,7 @@
     animation-timing-function: cubic-bezier(0.8, 0.2, 1, 1);
   }
 }
-=======
+
 .smooth-link {
   position: relative;
 }
@@ -40,4 +40,4 @@
 .smooth-link.active::after {
   width: 100%;
 }
->>>>>>> Stashed changes
+
