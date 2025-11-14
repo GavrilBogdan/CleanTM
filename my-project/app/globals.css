@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d662ec0b4c7e26fe3a60a3e3497bf5d1564a26a9
 .animate-fluid-bounce {
   animation: spin-animation 2s infinite;
 }
@@ -22,7 +25,10 @@
     animation-timing-function: cubic-bezier(0.8, 0.2, 1, 1);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d662ec0b4c7e26fe3a60a3e3497bf5d1564a26a9
 .smooth-link {
   position: relative;
 }
@@ -40,4 +46,7 @@
 .smooth-link.active::after {
   width: 100%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d662ec0b4c7e26fe3a60a3e3497bf5d1564a26a9
