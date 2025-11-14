@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.animate-fluid-bounce {
+  animation: spin-animation 2s infinite;
+}
+@keyframes spin-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+    animation-timing-function: cubic-bezier(0.8, 0.2, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  75% {
+    transform: translateY(-4px);
+    animation-timing-function: cubic-bezier(0.8, 0.2, 1, 1);
+  }
+}
