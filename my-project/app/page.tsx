@@ -1,17 +1,13 @@
-<<<<<<< Updated upstream
+
 import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <>
+    {/* <Navbar/> */}
+    <main>
       <Hero />
+      </main>
     </>
-=======
-import Navbar from "@/components/Navbar";
-
-export default function Home() {
-  return (
-   <Navbar/>
->>>>>>> Stashed changes
   );
 }
