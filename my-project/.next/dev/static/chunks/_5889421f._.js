@@ -7,539 +7,341 @@ __turbopack_context__.s([
     ()=>__TURBOPACK__default__export__
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/context/UserContext.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
 ;
-const Navbar = ()=>{
+const Navbar = ({ className })=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(62);
-    if ($[0] !== "e4bb0c396b1ef76212abc7543ec05b26cdb12fc4c8615fa8c49baebce41b5598") {
-        for(let $i = 0; $i < 62; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "e4bb0c396b1ef76212abc7543ec05b26cdb12fc4c8615fa8c49baebce41b5598";
-    }
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const { user, setUser } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useUser"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    let t0;
-    if ($[1] !== router) {
-        t0 = (id)=>{
-            if (id.startsWith("/")) {
-                router.push(id);
-            } else {
-                const element = document.getElementById(id);
-                if (element) {
-                    const y = element.getBoundingClientRect().top + window.pageYOffset + -100;
-                    window.scrollTo({
-                        top: y,
-                        behavior: "smooth"
-                    });
+    // ✅ Check if user is logged in on mount
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Navbar.useEffect": ()=>{
+            const fetchUser = {
+                "Navbar.useEffect.fetchUser": async ()=>{
+                    try {
+                        const res = await fetch("/api/auth/me");
+                        if (res.ok) {
+                            const data = await res.json();
+                            setUser(data.user || null);
+                        } else {
+                            setUser(null);
+                        }
+                    } catch  {
+                        setUser(null);
+                    }
                 }
+            }["Navbar.useEffect.fetchUser"];
+            fetchUser();
+        }
+    }["Navbar.useEffect"], [
+        setUser
+    ]);
+    const handleScroll = (id)=>{
+        if (id.startsWith("/")) {
+            router.push(id);
+        } else {
+            const element = document.getElementById(id);
+            if (element) {
+                const yOffset = -100;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({
+                    top: y,
+                    behavior: "smooth"
+                });
             }
-            setOpen(false);
-        };
-        $[1] = router;
-        $[2] = t0;
-    } else {
-        t0 = $[2];
-    }
-    const handleScroll = t0;
-    let t1;
-    if ($[3] !== handleScroll) {
-        t1 = ()=>handleScroll("/");
-        $[3] = handleScroll;
-        $[4] = t1;
-    } else {
-        t1 = $[4];
-    }
-    let t2;
-    let t3;
-    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-            className: "h-8 w-auto",
-            src: "https://cdn-icons-png.flaticon.com/128/892/892930.png",
-            alt: "CleanTM Logo"
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 50,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: "text-xl font-bold text-green-800 md:block",
-            children: "CleanTM"
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 51,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[5] = t2;
-        $[6] = t3;
-    } else {
-        t2 = $[5];
-        t3 = $[6];
-    }
-    let t4;
-    if ($[7] !== t1) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            onClick: t1,
-            className: "flex items-center space-x-2 cursor-pointer",
-            children: [
-                t2,
-                t3
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 60,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[7] = t1;
-        $[8] = t4;
-    } else {
-        t4 = $[8];
-    }
-    let t5;
-    if ($[9] !== handleScroll) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "hover:underline-animation-b cursor-pointer",
-                onClick: ()=>handleScroll("home"),
-                children: "Home"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 68,
-                columnNumber: 58
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 68,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[9] = handleScroll;
-        $[10] = t5;
-    } else {
-        t5 = $[10];
-    }
-    let t6;
-    if ($[11] !== handleScroll) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "hover:underline-animation-b cursor-pointer",
-                onClick: ()=>handleScroll("map"),
-                children: "Map"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 76,
-                columnNumber: 58
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 76,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[11] = handleScroll;
-        $[12] = t6;
-    } else {
-        t6 = $[12];
-    }
-    let t7;
-    if ($[13] !== handleScroll) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "hover:underline-animation-b cursor-pointer",
-                onClick: ()=>handleScroll("/task"),
-                children: "Tasks"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 84,
-                columnNumber: 58
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 84,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[13] = handleScroll;
-        $[14] = t7;
-    } else {
-        t7 = $[14];
-    }
-    let t8;
-    if ($[15] !== handleScroll) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "hover:underline-animation-b cursor-pointer",
-                onClick: ()=>handleScroll("rewards"),
-                children: "Rewards"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 92,
-                columnNumber: 58
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 92,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[15] = handleScroll;
-        $[16] = t8;
-    } else {
-        t8 = $[16];
-    }
-    let t9;
-    if ($[17] !== t5 || $[18] !== t6 || $[19] !== t7 || $[20] !== t8) {
-        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hidden lg:block",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                className: "flex space-x-10 text-lg font-semibold text-green-700",
+        }
+        setOpen(false);
+    };
+    const handleLogout = async ()=>{
+        await fetch("/api/auth/logout", {
+            method: "POST"
+        });
+        setUser(null);
+        router.push("/");
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `relative z-50 w-screen flex justify-center cursor-pointer ${className ?? ""}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                className: "fixed mt-5 flex w-full items-center justify-between mx-auto max-w-7xl px-6 py-3 lg:px-8 lg:py-4 bg-lime-50 rounded-[3rem] shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 backdrop-blur-lg",
                 children: [
-                    t5,
-                    t6,
-                    t7,
-                    t8
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        onClick: ()=>handleScroll("/"),
+                        className: "flex items-center space-x-2 cursor-pointer",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                className: "h-8 w-auto",
+                                src: "https://cdn-icons-png.flaticon.com/128/892/892930.png",
+                                alt: "CleanTM Logo"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 62,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-xl font-bold text-green-800 md:block",
+                                children: "CleanTM"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 63,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "hidden lg:block",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "flex space-x-10 text-lg font-semibold text-green-700",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    onClick: ()=>handleScroll("home"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Home"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 71,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    onClick: ()=>handleScroll("map"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Map"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 74,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    onClick: ()=>handleScroll("/task"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Tasks"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 77,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    onClick: ()=>handleScroll("/shop"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Rewards"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 80,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 70,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 69,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "hidden lg:flex lg:items-center gap-x-2",
+                        children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center space-x-4",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-semibold text-green-700",
+                                    children: user.email
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 89,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handleLogout,
+                                    className: "cursor-pointer rounded-full bg-red-500 text-white px-4 py-2 font-bold hover:bg-red-600 shadow-md transition",
+                                    children: "Logout"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 90,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 88,
+                            columnNumber: 19
+                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "cursor-pointer rounded-full bg-green-500 text-white px-6 py-2.5 font-bold hover:bg-green-600 shadow-md transition",
+                            onClick: ()=>handleScroll("/api/login"),
+                            children: "Login"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 93,
+                            columnNumber: 22
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>setOpen(!open),
+                        className: "lg:hidden text-green-700 focus:outline-none",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative w-8 h-8",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: `absolute top-2 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 101,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: `absolute top-3.5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "opacity-0" : ""}`
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 102,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: `absolute top-5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 103,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 100,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 99,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 100,
-                columnNumber: 43
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 100,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[17] = t5;
-        $[18] = t6;
-        $[19] = t7;
-        $[20] = t8;
-        $[21] = t9;
-    } else {
-        t9 = $[21];
-    }
-    let t10;
-    if ($[22] === Symbol.for("react.memo_cache_sentinel")) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hidden lg:flex lg:items-center gap-x-2",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                className: "cursor-pointer rounded-full bg-green-500 text-white px-6 py-2.5 font-bold hover:bg-green-600 shadow-md transition",
-                children: "Login"
-            }, void 0, false, {
+                lineNumber: 59,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `fixed top-[5.5rem] w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl px-8 py-6 transition-all duration-500 ease-in-out mx-auto ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "flex flex-col space-y-4 text-lg font-semibold text-green-800",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("home"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 111,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("map"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Map"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 114,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("progress"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Tasks"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 117,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("/rewards"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Rewards"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 120,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 110,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col mt-6 gap-y-3",
+                        children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex flex-col space-y-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-green-800 font-semibold",
+                                    children: user.email
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 127,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: "rounded-full bg-red-500 text-white py-2.5 font-bold hover:bg-red-600 transition shadow-md w-full",
+                                    onClick: handleLogout,
+                                    children: "Logout"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 128,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 126,
+                            columnNumber: 19
+                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "rounded-full bg-green-500 text-white py-2.5 font-bold hover:bg-green-600 transition shadow-md w-full",
+                            onClick: ()=>handleScroll("/api/login"),
+                            children: "Login"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 131,
+                            columnNumber: 22
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 125,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 111,
-                columnNumber: 67
+                lineNumber: 109,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 111,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[22] = t10;
-    } else {
-        t10 = $[22];
-    }
-    let t11;
-    if ($[23] !== open) {
-        t11 = ()=>setOpen(!open);
-        $[23] = open;
-        $[24] = t11;
-    } else {
-        t11 = $[24];
-    }
-    const t12 = `absolute top-2 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`;
-    let t13;
-    if ($[25] !== t12) {
-        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t12
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 127,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[25] = t12;
-        $[26] = t13;
-    } else {
-        t13 = $[26];
-    }
-    const t14 = `absolute top-3.5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "opacity-0" : ""}`;
-    let t15;
-    if ($[27] !== t14) {
-        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t14
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 136,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[27] = t14;
-        $[28] = t15;
-    } else {
-        t15 = $[28];
-    }
-    const t16 = `absolute top-5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`;
-    let t17;
-    if ($[29] !== t16) {
-        t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t16
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 145,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[29] = t16;
-        $[30] = t17;
-    } else {
-        t17 = $[30];
-    }
-    let t18;
-    if ($[31] !== t13 || $[32] !== t15 || $[33] !== t17) {
-        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative w-8 h-8",
-            children: [
-                t13,
-                t15,
-                t17
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 153,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[31] = t13;
-        $[32] = t15;
-        $[33] = t17;
-        $[34] = t18;
-    } else {
-        t18 = $[34];
-    }
-    let t19;
-    if ($[35] !== t11 || $[36] !== t18) {
-        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            onClick: t11,
-            className: "lg:hidden text-green-700 focus:outline-none",
-            children: t18
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 163,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[35] = t11;
-        $[36] = t18;
-        $[37] = t19;
-    } else {
-        t19 = $[37];
-    }
-    let t20;
-    if ($[38] !== t19 || $[39] !== t4 || $[40] !== t9) {
-        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-            className: "fixed mt-5 flex w-full items-center justify-between mx-auto max-w-7xl px-6 py-3 lg:px-8 lg:py-4 bg-lime-50 rounded-[3rem] shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 backdrop-blur-lg",
-            children: [
-                t4,
-                t9,
-                t10,
-                t19
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 172,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[38] = t19;
-        $[39] = t4;
-        $[40] = t9;
-        $[41] = t20;
-    } else {
-        t20 = $[41];
-    }
-    const t21 = `fixed top-[5.5rem] w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl px-8 py-6 transition-all duration-500 ease-in-out mx-auto
-        ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
-        `;
-    let t22;
-    if ($[42] !== handleScroll) {
-        t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "cursor-pointer",
-                onClick: ()=>handleScroll("home"),
-                children: "Home"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 185,
-                columnNumber: 59
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 185,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[42] = handleScroll;
-        $[43] = t22;
-    } else {
-        t22 = $[43];
-    }
-    let t23;
-    if ($[44] !== handleScroll) {
-        t23 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "cursor-pointer",
-                onClick: ()=>handleScroll("map"),
-                children: "Map"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 193,
-                columnNumber: 59
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 193,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[44] = handleScroll;
-        $[45] = t23;
-    } else {
-        t23 = $[45];
-    }
-    let t24;
-    if ($[46] !== handleScroll) {
-        t24 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "cursor-pointer",
-                onClick: ()=>handleScroll("progress"),
-                children: "Tasks"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 201,
-                columnNumber: 59
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 201,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[46] = handleScroll;
-        $[47] = t24;
-    } else {
-        t24 = $[47];
-    }
-    let t25;
-    if ($[48] !== handleScroll) {
-        t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "cursor-pointer",
-                onClick: ()=>handleScroll("rewards"),
-                children: "Rewards"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 209,
-                columnNumber: 59
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 209,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[48] = handleScroll;
-        $[49] = t25;
-    } else {
-        t25 = $[49];
-    }
-    let t26;
-    if ($[50] !== t22 || $[51] !== t23 || $[52] !== t24 || $[53] !== t25) {
-        t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-            className: "flex flex-col space-y-4 text-lg font-semibold text-green-800",
-            children: [
-                t22,
-                t23,
-                t24,
-                t25
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 217,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[50] = t22;
-        $[51] = t23;
-        $[52] = t24;
-        $[53] = t25;
-        $[54] = t26;
-    } else {
-        t26 = $[54];
-    }
-    let t27;
-    if ($[55] === Symbol.for("react.memo_cache_sentinel")) {
-        t27 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col mt-6 gap-y-3",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                className: "rounded-full bg-green-500 text-white py-2.5 font-bold hover:bg-green-600 transition shadow-md w-full",
-                children: "Login"
-            }, void 0, false, {
-                fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 228,
-                columnNumber: 55
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 228,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[55] = t27;
-    } else {
-        t27 = $[55];
-    }
-    let t28;
-    if ($[56] !== t21 || $[57] !== t26) {
-        t28 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: t21,
-            children: [
-                t26,
-                t27
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 235,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[56] = t21;
-        $[57] = t26;
-        $[58] = t28;
-    } else {
-        t28 = $[58];
-    }
-    let t29;
-    if ($[59] !== t20 || $[60] !== t28) {
-        t29 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative z-50 w-screen flex justify-center cursor-pointer",
-            children: [
-                t20,
-                t28
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Navbar.tsx",
-            lineNumber: 244,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[59] = t20;
-        $[60] = t28;
-        $[61] = t29;
-    } else {
-        t29 = $[61];
-    }
-    return t29;
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/Navbar.tsx",
+        lineNumber: 58,
+        columnNumber: 10
+    }, ("TURBOPACK compile-time value", void 0));
 };
-_s(Navbar, "ytWOlNORoNjKCJyRctHL6U+Vztg=", false, function() {
+_s(Navbar, "Fz5SxGQeSPX0/N6St7LABQu60PA=", false, function() {
     return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useUser"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
 });
@@ -912,7 +714,6 @@ __turbopack_context__.s([
     ()=>TasksPage
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/star.js [app-client] (ecmascript) <export default as Star>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Navbar.tsx [app-client] (ecmascript)");
@@ -924,7 +725,6 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
 const initialTasks = [
     {
         id: 1,
@@ -932,7 +732,6 @@ const initialTasks = [
         difficulty: 1,
         basePoints: 10,
         points: 10,
-        // scaled dynamically
         startedAt: null,
         lastCompleted: null,
         uploadedImage: null
@@ -960,420 +759,292 @@ const initialTasks = [
 ];
 function TasksPage() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(34);
-    if ($[0] !== "e340cae2495c80d2b403f99e12d32ab3196279b3d1f6d36fcc16ccb4f974a434") {
-        for(let $i = 0; $i < 34; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "e340cae2495c80d2b403f99e12d32ab3196279b3d1f6d36fcc16ccb4f974a434";
-    }
     const [tasks, setTasks] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(initialTasks);
     const [activeTaskId, setActiveTaskId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [userPoints, setUserPoints] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [timeLeft, setTimeLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    let t0;
-    if ($[1] !== activeTaskId || $[2] !== tasks) {
-        t0 = ({
-            "TasksPage[startTask]": (taskId)=>{
-                if (!activeTaskId) {
-                    tasks.find({
-                        "TasksPage[startTask > tasks.find()]": (t)=>t.id === taskId
-                    }["TasksPage[startTask > tasks.find()]"]);
-                    setTasks({
-                        "TasksPage[startTask > setTasks()]": (prev)=>prev.map({
-                                "TasksPage[startTask > setTasks() > prev.map()]": (t_0)=>t_0.id === taskId ? {
-                                        ...t_0,
-                                        points: t_0.basePoints * t_0.difficulty,
-                                        startedAt: Date.now()
-                                    } : t_0
-                            }["TasksPage[startTask > setTasks() > prev.map()]"])
-                    }["TasksPage[startTask > setTasks()]"]);
-                    setActiveTaskId(taskId);
-                    setTimeLeft(10800);
-                }
-            }
-        })["TasksPage[startTask]"];
-        $[1] = activeTaskId;
-        $[2] = tasks;
-        $[3] = t0;
-    } else {
-        t0 = $[3];
-    }
-    const startTask = t0;
-    let t1;
-    let t2;
-    if ($[4] !== activeTaskId) {
-        t1 = ({
-            "TasksPage[useEffect()]": ()=>{
-                if (!activeTaskId) {
-                    return;
-                }
-                const interval = setInterval({
-                    "TasksPage[useEffect() > setInterval()]": ()=>{
-                        setTimeLeft({
-                            "TasksPage[useEffect() > setInterval() > setTimeLeft()]": (prev_0)=>{
-                                if (prev_0 <= 1) {
-                                    clearInterval(interval);
-                                    return 0;
-                                }
-                                return prev_0 - 1;
-                            }
-                        }["TasksPage[useEffect() > setInterval() > setTimeLeft()]"]);
+    // Fetch user points when page loads
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "TasksPage.useEffect": ()=>{
+            fetch("/api/auth/me").then({
+                "TasksPage.useEffect": (res)=>res.json()
+            }["TasksPage.useEffect"]).then({
+                "TasksPage.useEffect": (data)=>{
+                    if (data.user && typeof data.user.points === "number") {
+                        setUserPoints(data.user.points);
                     }
-                }["TasksPage[useEffect() > setInterval()]"], 1000);
-                return ()=>clearInterval(interval);
+                }
+            }["TasksPage.useEffect"]).catch({
+                "TasksPage.useEffect": (err)=>console.error("Error fetching user points:", err)
+            }["TasksPage.useEffect"]);
+        }
+    }["TasksPage.useEffect"], []);
+    const startTask = (taskId)=>{
+        if (!activeTaskId) {
+            const task = tasks.find((t)=>t.id === taskId);
+            setTasks((prev)=>prev.map((t_0)=>t_0.id === taskId ? {
+                        ...t_0,
+                        points: t_0.basePoints * t_0.difficulty,
+                        startedAt: Date.now()
+                    } : t_0));
+            setActiveTaskId(taskId);
+            setTimeLeft(3 * 60 * 60); // 3 hours in seconds
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "TasksPage.useEffect": ()=>{
+            if (!activeTaskId) return;
+            const interval = setInterval({
+                "TasksPage.useEffect.interval": ()=>{
+                    setTimeLeft({
+                        "TasksPage.useEffect.interval": (prev_0)=>{
+                            if (prev_0 <= 1) {
+                                clearInterval(interval);
+                                return 0;
+                            }
+                            return prev_0 - 1;
+                        }
+                    }["TasksPage.useEffect.interval"]);
+                }
+            }["TasksPage.useEffect.interval"], 1000);
+            return ({
+                "TasksPage.useEffect": ()=>clearInterval(interval)
+            })["TasksPage.useEffect"];
+        }
+    }["TasksPage.useEffect"], [
+        activeTaskId
+    ]);
+    const finishTask = async (taskId_0)=>{
+        const task_0 = tasks.find((t_1)=>t_1.id === taskId_0);
+        if (!task_0) return;
+        try {
+            // Update points in database
+            const res_0 = await fetch("/api/tasks/addPoints", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    points: task_0.points
+                })
+            });
+            const data_0 = await res_0.json();
+            if (data_0.user && typeof data_0.user.points === "number") {
+                setUserPoints(data_0.user.points); // update state from backend
             }
-        })["TasksPage[useEffect()]"];
-        t2 = [
-            activeTaskId
-        ];
-        $[4] = activeTaskId;
-        $[5] = t1;
-        $[6] = t2;
-    } else {
-        t1 = $[5];
-        t2 = $[6];
-    }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
-    let t3;
-    if ($[7] !== tasks) {
-        t3 = ({
-            "TasksPage[finishTask]": (taskId_0)=>{
-                const task_0 = tasks.find({
-                    "TasksPage[finishTask > tasks.find()]": (t_1)=>t_1.id === taskId_0
-                }["TasksPage[finishTask > tasks.find()]"]);
-                setUserPoints({
-                    "TasksPage[finishTask > setUserPoints()]": (p)=>p + task_0.points
-                }["TasksPage[finishTask > setUserPoints()]"]);
-                setTasks({
-                    "TasksPage[finishTask > setTasks()]": (prev_1)=>prev_1.map({
-                            "TasksPage[finishTask > setTasks() > prev_1.map()]": (t_2)=>t_2.id === taskId_0 ? {
-                                    ...t_2,
-                                    startedAt: null,
-                                    lastCompleted: Date.now(),
-                                    uploadedImage: null
-                                } : t_2
-                        }["TasksPage[finishTask > setTasks() > prev_1.map()]"])
-                }["TasksPage[finishTask > setTasks()]"]);
-                setActiveTaskId(null);
-                setTimeLeft(0);
-            }
-        })["TasksPage[finishTask]"];
-        $[7] = tasks;
-        $[8] = t3;
-    } else {
-        t3 = $[8];
-    }
-    const finishTask = t3;
-    let t4;
-    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
-        t4 = ({
-            "TasksPage[handleImageUpload]": (taskId_1, file)=>{
-                setTasks({
-                    "TasksPage[handleImageUpload > setTasks()]": (prev_2)=>prev_2.map({
-                            "TasksPage[handleImageUpload > setTasks() > prev_2.map()]": (t_3)=>t_3.id === taskId_1 ? {
-                                    ...t_3,
-                                    uploadedImage: file
-                                } : t_3
-                        }["TasksPage[handleImageUpload > setTasks() > prev_2.map()]"])
-                }["TasksPage[handleImageUpload > setTasks()]"]);
-            }
-        })["TasksPage[handleImageUpload]"];
-        $[9] = t4;
-    } else {
-        t4 = $[9];
-    }
-    const handleImageUpload = t4;
-    const formatTime = _TasksPageFormatTime;
-    let t5;
-    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-            className: "cursor-pointer"
-        }, void 0, false, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 163,
-            columnNumber: 10
-        }, this);
-        $[10] = t5;
-    } else {
-        t5 = $[10];
-    }
-    let t6;
-    if ($[11] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-            className: "text-4xl text-center shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer md:text-4xl font-bold text-white p-5 bg-white/50  backdrop-blur-md px-6 py-3 rounded-full drop-shadow-md mb-12",
-            children: "Daily Tasks"
-        }, void 0, false, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 170,
-            columnNumber: 10
-        }, this);
-        $[11] = t6;
-    } else {
-        t6 = $[11];
-    }
-    let t7;
-    if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 177,
-            columnNumber: 10
-        }, this);
-        $[12] = t7;
-    } else {
-        t7 = $[12];
-    }
-    let t8;
-    if ($[13] !== userPoints) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative my-5 bg-white  backdrop-blur-md px-4 py-2 rounded-full shadow-md text-green-700 font-bold text-center",
-            children: [
-                "Your Points ",
-                t7,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "text-2xl font-extrabold drop-shadow-[0_0_5px_#00ff91]",
-                    children: userPoints
-                }, void 0, false, {
-                    fileName: "[project]/app/task/page.tsx",
-                    lineNumber: 184,
-                    columnNumber: 154
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 184,
-            columnNumber: 10
-        }, this);
-        $[13] = userPoints;
-        $[14] = t8;
-    } else {
-        t8 = $[14];
-    }
-    let t9;
-    if ($[15] !== activeTaskId || $[16] !== finishTask || $[17] !== startTask || $[18] !== tasks || $[19] !== timeLeft) {
-        let t10;
-        if ($[21] !== activeTaskId || $[22] !== finishTask || $[23] !== startTask || $[24] !== timeLeft) {
-            t10 = ({
-                "TasksPage[tasks.map()]": (task_1, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col items-center p-6 bg-white/50 shadow-[0_0_16px_5px_rgba(0,255,0,0.2)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer backdrop-blur-md rounded-2xl  relative",
+            // Reset task
+            setTasks((prev_1)=>prev_1.map((t_2)=>t_2.id === taskId_0 ? {
+                        ...t_2,
+                        startedAt: null,
+                        lastCompleted: Date.now(),
+                        uploadedImage: null
+                    } : t_2));
+            setActiveTaskId(null);
+            setTimeLeft(0);
+        } catch (err_0) {
+            console.error("Error updating points:", err_0);
+        }
+    };
+    const handleImageUpload = (taskId_1, file)=>{
+        setTasks((prev_2)=>prev_2.map((t_3)=>t_3.id === taskId_1 ? {
+                    ...t_3,
+                    uploadedImage: file
+                } : t_3));
+    };
+    const formatTime = (seconds)=>{
+        const h = Math.floor(seconds / 3600);
+        const m = Math.floor(seconds % 3600 / 60);
+        const s = seconds % 60;
+        return `${h}h ${m}m ${s}s`;
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                className: "cursor-pointer"
+            }, void 0, false, {
+                fileName: "[project]/app/task/page.tsx",
+                lineNumber: 119,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "min-h-screen pt-24 px-12 md:px-10 md:p-10 flex flex-col items-center justify-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        className: "text-4xl text-center shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer md:text-4xl font-bold text-white p-5 bg-white/50 backdrop-blur-md px-6 py-3 rounded-full drop-shadow-md mb-12",
+                        children: "Daily Tasks"
+                    }, void 0, false, {
+                        fileName: "[project]/app/task/page.tsx",
+                        lineNumber: 121,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative my-5 bg-white backdrop-blur-md px-4 py-2 rounded-full shadow-md text-green-700 font-bold text-center",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-xl font-bold text-green-700 mb-2 px-4 py-2 bg-white/30 rounded-full drop-shadow-md",
-                                children: [
-                                    "Task ",
-                                    idx + 1
-                                ]
-                            }, void 0, true, {
+                            "Your Points ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 195,
-                                columnNumber: 299
+                                lineNumber: 126,
+                                columnNumber: 23
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col items-center mb-4",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-2xl font-extrabold drop-shadow-[0_0_5px_#00ff91]",
+                                children: userPoints
+                            }, void 0, false, {
+                                fileName: "[project]/app/task/page.tsx",
+                                lineNumber: 127,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/task/page.tsx",
+                        lineNumber: 125,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl",
+                        children: tasks.map((task_1, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-col items-center p-6 bg-white/50 shadow-[0_0_16px_5px_rgba(0,255,0,0.2)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer backdrop-blur-md rounded-2xl relative",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-green-500 font-semibold text-xl mb-1",
-                                        children: "Difficulty"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 195,
-                                        columnNumber: 471
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-1",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-xl font-bold text-green-700 mb-2 px-4 py-2 bg-white/30 rounded-full drop-shadow-md",
                                         children: [
-                                            ...Array(task_1.difficulty)
-                                        ].map(_TasksPageTasksMapAnonymous)
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 195,
-                                        columnNumber: 548
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-green-700 font-semibold mt-1",
-                                        children: [
-                                            task_1.points,
-                                            " points"
+                                            "Task ",
+                                            idx + 1
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 195,
-                                        columnNumber: 659
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 195,
-                                columnNumber: 422
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-center font-semibold mb-6",
-                                children: task_1.title
-                            }, void 0, false, {
-                                fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 195,
-                                columnNumber: 740
-                            }, this),
-                            activeTaskId === task_1.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-green-700 font-medium mb-4",
-                                children: [
-                                    "Time Left: ",
-                                    formatTime(timeLeft)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 195,
-                                columnNumber: 835
-                            }, this),
-                            activeTaskId === task_1.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "mb-4 w-fit cursor-pointer relative overflow-hidden bg-green-500 text-white font-bold px-5 py-2 rounded-full shadow-lg hover:bg-green-600 hover:shadow-xl transition-all duration-300 flex items-center gap-2",
-                                children: [
-                                    task_1.uploadedImage ? "\u2705 File Uploaded" : "Upload Image",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "file",
-                                        accept: "image/*",
-                                        onChange: {
-                                            "TasksPage[tasks.map() > <input>.onChange]": (e)=>e.target.files && handleImageUpload(task_1.id, e.target.files[0])
-                                        }["TasksPage[tasks.map() > <input>.onChange]"],
-                                        className: "absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                        lineNumber: 134,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex flex-col items-center mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-green-500 font-semibold text-xl mb-1",
+                                                children: "Difficulty"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 139,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-1",
+                                                children: [
+                                                    ...Array(task_1.difficulty)
+                                                ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                        className: "w-4 h-4 text-yellow-400 font-bold"
+                                                    }, i, false, {
+                                                        fileName: "[project]/app/task/page.tsx",
+                                                        lineNumber: 143,
+                                                        columnNumber: 64
+                                                    }, this))
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 142,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-green-700 font-semibold mt-1",
+                                                children: [
+                                                    task_1.points,
+                                                    " points"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 145,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 138,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-center font-semibold mb-6",
+                                        children: task_1.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 195,
-                                        columnNumber: 1239
+                                        lineNumber: 150,
+                                        columnNumber: 15
+                                    }, this),
+                                    activeTaskId === task_1.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-green-700 font-medium mb-4",
+                                        children: [
+                                            "Time Left: ",
+                                            formatTime(timeLeft)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 152,
+                                        columnNumber: 46
+                                    }, this),
+                                    activeTaskId === task_1.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        className: "mb-4 w-fit cursor-pointer relative overflow-hidden bg-green-500 text-white font-bold px-5 py-2 rounded-full shadow-lg hover:bg-green-600 hover:shadow-xl transition-all duration-300 flex items-center gap-2",
+                                        children: [
+                                            task_1.uploadedImage ? "✅ File Uploaded" : "Upload Image",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "file",
+                                                accept: "image/*",
+                                                onChange: (e)=>e.target.files && handleImageUpload(task_1.id, e.target.files[0]),
+                                                className: "absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 158,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 156,
+                                        columnNumber: 46
+                                    }, this),
+                                    !activeTaskId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>startTask(task_1.id),
+                                        className: "border-green-400 shadow-[0_0_16px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] border-2 text-white px-6 py-2 rounded-full font-bold hover:bg-green-600 transition duration-300 cursor-pointer",
+                                        children: "Start Task"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 161,
+                                        columnNumber: 33
+                                    }, this),
+                                    activeTaskId === task_1.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>finishTask(task_1.id),
+                                        disabled: !task_1.uploadedImage,
+                                        className: `${task_1.uploadedImage ? "border-green-400 border-2 hover:bg-green-600 cursor-pointer" : "bg-gray-400 cursor-not-allowed"} text-white px-6 py-2 rounded-full font-bold shadow-md transition`,
+                                        children: "Finish Task"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 165,
+                                        columnNumber: 46
                                     }, this)
                                 ]
-                            }, void 0, true, {
+                            }, task_1.id, true, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 195,
-                                columnNumber: 951
-                            }, this),
-                            !activeTaskId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: {
-                                    "TasksPage[tasks.map() > <button>.onClick]": ()=>startTask(task_1.id)
-                                }["TasksPage[tasks.map() > <button>.onClick]"],
-                                className: "border-green-400 shadow-[0_0_16px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)]  border-2 text-white px-6 py-2 rounded-full font-bold  hover:bg-green-600 transition duration-300 cursor-pointer",
-                                children: "Start Task"
-                            }, void 0, false, {
-                                fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 197,
-                                columnNumber: 158
-                            }, this),
-                            activeTaskId === task_1.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: {
-                                    "TasksPage[tasks.map() > <button>.onClick]": ()=>finishTask(task_1.id)
-                                }["TasksPage[tasks.map() > <button>.onClick]"],
-                                disabled: !task_1.uploadedImage,
-                                className: `${task_1.uploadedImage ? "border-green-400 border-2 hover:bg-green-600 cursor-pointer" : "bg-gray-400 cursor-not-allowed"} text-white px-6 py-2 rounded-full font-bold shadow-md transition`,
-                                children: "Finish Task"
-                            }, void 0, false, {
-                                fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 199,
-                                columnNumber: 342
-                            }, this)
-                        ]
-                    }, task_1.id, true, {
+                                lineNumber: 133,
+                                columnNumber: 39
+                            }, this))
+                    }, void 0, false, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 195,
-                        columnNumber: 52
+                        lineNumber: 132,
+                        columnNumber: 9
                     }, this)
-            })["TasksPage[tasks.map()]"];
-            $[21] = activeTaskId;
-            $[22] = finishTask;
-            $[23] = startTask;
-            $[24] = timeLeft;
-            $[25] = t10;
-        } else {
-            t10 = $[25];
-        }
-        t9 = tasks.map(t10);
-        $[15] = activeTaskId;
-        $[16] = finishTask;
-        $[17] = startTask;
-        $[18] = tasks;
-        $[19] = timeLeft;
-        $[20] = t9;
-    } else {
-        t9 = $[20];
-    }
-    let t10;
-    if ($[26] !== t9) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl",
-            children: t9
-        }, void 0, false, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 223,
-            columnNumber: 11
-        }, this);
-        $[26] = t9;
-        $[27] = t10;
-    } else {
-        t10 = $[27];
-    }
-    let t11;
-    if ($[28] !== t10 || $[29] !== t8) {
-        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen pt-24 px-12 md:px-10 md:p-10 flex flex-col items-center justify-center",
-            children: [
-                t6,
-                t8,
-                t10
-            ]
-        }, void 0, true, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 231,
-            columnNumber: 11
-        }, this);
-        $[28] = t10;
-        $[29] = t8;
-        $[30] = t11;
-    } else {
-        t11 = $[30];
-    }
-    let t12;
-    if ($[31] === Symbol.for("react.memo_cache_sentinel")) {
-        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-            fileName: "[project]/app/task/page.tsx",
-            lineNumber: 240,
-            columnNumber: 11
-        }, this);
-        $[31] = t12;
-    } else {
-        t12 = $[31];
-    }
-    let t13;
-    if ($[32] !== t11) {
-        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: [
-                t5,
-                t11,
-                t12
-            ]
-        }, void 0, true);
-        $[32] = t11;
-        $[33] = t13;
-    } else {
-        t13 = $[33];
-    }
-    return t13;
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/task/page.tsx",
+                lineNumber: 120,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/app/task/page.tsx",
+                lineNumber: 171,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
 }
-_s(TasksPage, "fhiZnIWtl37WsOG5w35/dAlWGRg=");
+_s(TasksPage, "NpjRb36FRVWMpYS2sCBAeYGE1Q0=");
 _c = TasksPage;
-function _TasksPageTasksMapAnonymous(_, i) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-        className: "w-4 h-4 text-yellow-400 font-bold"
-    }, i, false, {
-        fileName: "[project]/app/task/page.tsx",
-        lineNumber: 256,
-        columnNumber: 10
-    }, this);
-}
-function _TasksPageFormatTime(seconds) {
-    const h = Math.floor(seconds / 3600);
-    const m = Math.floor(seconds % 3600 / 60);
-    const s = seconds % 60;
-    return `${h}h ${m}m ${s}s`;
-}
 var _c;
 __turbopack_context__.k.register(_c, "TasksPage");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

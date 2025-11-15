@@ -9,21 +9,42 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/context/UserContext.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
-const Navbar = ()=>{
+;
+const Navbar = ({ className })=>{
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])(); // <-- add this
-    // Smooth scroll for sections on the same page
+    const { user, setUser } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useUser"])();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    // ✅ Check if user is logged in on mount
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const fetchUser = async ()=>{
+            try {
+                const res = await fetch("/api/auth/me");
+                if (res.ok) {
+                    const data = await res.json();
+                    setUser(data.user || null);
+                } else {
+                    setUser(null);
+                }
+            } catch  {
+                setUser(null);
+            }
+        };
+        fetchUser();
+    }, [
+        setUser
+    ]);
     const handleScroll = (id)=>{
         if (id.startsWith("/")) {
-            router.push(id); // navigate to a different page
+            router.push(id);
         } else {
             const element = document.getElementById(id);
             if (element) {
-                const yOffset = -100; // adjust for navbar height
+                const yOffset = -100;
                 const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({
                     top: y,
@@ -31,10 +52,17 @@ const Navbar = ()=>{
                 });
             }
         }
-        setOpen(false); // close mobile menu
+        setOpen(false);
+    };
+    const handleLogout = async ()=>{
+        await fetch("/api/auth/logout", {
+            method: "POST"
+        });
+        setUser(null);
+        router.push("/");
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative z-50 w-screen flex justify-center cursor-pointer",
+        className: `relative z-50 w-screen flex justify-center cursor-pointer ${className ?? ""}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                 className: "fixed mt-5 flex w-full items-center justify-between mx-auto max-w-7xl px-6 py-3 lg:px-8 lg:py-4 bg-lime-50 rounded-[3rem] shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 backdrop-blur-lg",
@@ -49,7 +77,7 @@ const Navbar = ()=>{
                                 alt: "CleanTM Logo"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 33,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -57,13 +85,13 @@ const Navbar = ()=>{
                                 children: "CleanTM"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 38,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 29,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -72,93 +100,91 @@ const Navbar = ()=>{
                             className: "flex space-x-10 text-lg font-semibold text-green-700",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    className: "hover:text-green-900 transition",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "hover:underline-animation-b cursor-pointer",
-                                        onClick: ()=>handleScroll("home"),
-                                        children: "Home"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 47,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                    onClick: ()=>handleScroll("home"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Home"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    className: "hover:text-green-900 transition",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "hover:underline-animation-b cursor-pointer",
-                                        onClick: ()=>handleScroll("map"),
-                                        children: "Map"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 55,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                    onClick: ()=>handleScroll("map"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Map"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    className: "hover:text-green-900 transition",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "hover:underline-animation-b cursor-pointer",
-                                        onClick: ()=>handleScroll("/task"),
-                                        children: "Tasks"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 63,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                    onClick: ()=>handleScroll("/task"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Tasks"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    className: "hover:text-green-900 transition",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "hover:underline-animation-b cursor-pointer",
-                                        onClick: ()=>handleScroll("rewards"),
-                                        children: "Rewards"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 71,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                    onClick: ()=>handleScroll("/shop"),
+                                    className: "hover:text-green-900 transition hover:underline-animation-b",
+                                    children: "Rewards"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 93,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 45,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 44,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "hidden lg:flex lg:items-center gap-x-2",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center space-x-4",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-semibold text-green-700",
+                                    children: user.email
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 106,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handleLogout,
+                                    className: "cursor-pointer rounded-full bg-red-500 text-white px-4 py-2 font-bold hover:bg-red-600 shadow-md transition",
+                                    children: "Logout"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 107,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 105,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             className: "cursor-pointer rounded-full bg-green-500 text-white px-6 py-2.5 font-bold hover:bg-green-600 shadow-md transition",
+                            onClick: ()=>handleScroll("/api/login"),
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 83,
-                            columnNumber: 11
+                            lineNumber: 115,
+                            columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 82,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -171,143 +197,139 @@ const Navbar = ()=>{
                                     className: `absolute top-2 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: `absolute top-3.5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "opacity-0" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 135,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: `absolute top-5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 140,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 93,
+                            lineNumber: 129,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 89,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 27,
+                lineNumber: 56,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `fixed top-[5.5rem] w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl px-8 py-6 transition-all duration-500 ease-in-out mx-auto
-        ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
-        `,
+                className: `fixed top-[5.5rem] w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl px-8 py-6 transition-all duration-500 ease-in-out mx-auto ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                         className: "flex flex-col space-y-4 text-lg font-semibold text-green-800",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                className: "hover:text-green-900 transition",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "cursor-pointer",
-                                    onClick: ()=>handleScroll("home"),
-                                    children: "Home"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 125,
-                                    columnNumber: 13
-                                }, ("TURBOPACK compile-time value", void 0))
+                                onClick: ()=>handleScroll("home"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 124,
+                                lineNumber: 158,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                className: "hover:text-green-900 transition",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "cursor-pointer",
-                                    onClick: ()=>handleScroll("map"),
-                                    children: "Map"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 130,
-                                    columnNumber: 13
-                                }, ("TURBOPACK compile-time value", void 0))
+                                onClick: ()=>handleScroll("map"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Map"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 129,
+                                lineNumber: 164,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                className: "hover:text-green-900 transition",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "cursor-pointer",
-                                    onClick: ()=>handleScroll("progress"),
-                                    children: "Tasks"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 135,
-                                    columnNumber: 13
-                                }, ("TURBOPACK compile-time value", void 0))
+                                onClick: ()=>handleScroll("progress"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Tasks"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 134,
+                                lineNumber: 170,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                className: "hover:text-green-900 transition",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "cursor-pointer",
-                                    onClick: ()=>handleScroll("rewards"),
-                                    children: "Rewards"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 143,
-                                    columnNumber: 13
-                                }, ("TURBOPACK compile-time value", void 0))
+                                onClick: ()=>handleScroll("/rewards"),
+                                className: "hover:text-green-900 transition hover:underline-animation-b",
+                                children: "Rewards"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 142,
+                                lineNumber: 176,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 123,
+                        lineNumber: 157,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col mt-6 gap-y-3",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex flex-col space-y-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-green-800 font-semibold",
+                                    children: user.email
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 187,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: "rounded-full bg-red-500 text-white py-2.5 font-bold hover:bg-red-600 transition shadow-md w-full",
+                                    onClick: handleLogout,
+                                    children: "Logout"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Navbar.tsx",
+                                    lineNumber: 188,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Navbar.tsx",
+                            lineNumber: 186,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             className: "rounded-full bg-green-500 text-white py-2.5 font-bold hover:bg-green-600 transition shadow-md w-full",
+                            onClick: ()=>handleScroll("/api/login"),
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 153,
-                            columnNumber: 11
+                            lineNumber: 196,
+                            columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 152,
+                        lineNumber: 184,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 114,
+                lineNumber: 150,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Navbar.tsx",
-        lineNumber: 26,
+        lineNumber: 51,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -636,11 +658,17 @@ function TasksPage() {
     const [activeTaskId, setActiveTaskId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [userPoints, setUserPoints] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [timeLeft, setTimeLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    // Start a task
+    // Fetch user points when page loads
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        fetch("/api/auth/me").then((res)=>res.json()).then((data)=>{
+            if (data.user && typeof data.user.points === "number") {
+                setUserPoints(data.user.points);
+            }
+        }).catch((err)=>console.error("Error fetching user points:", err));
+    }, []);
     const startTask = (taskId)=>{
         if (!activeTaskId) {
             const task = tasks.find((t)=>t.id === taskId);
-            // Calculate points as basePoints * difficulty
             setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
                         ...t,
                         points: t.basePoints * t.difficulty,
@@ -650,7 +678,6 @@ function TasksPage() {
             setTimeLeft(3 * 60 * 60); // 3 hours in seconds
         }
     };
-    // Track timer
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!activeTaskId) return;
         const interval = setInterval(()=>{
@@ -666,27 +693,43 @@ function TasksPage() {
     }, [
         activeTaskId
     ]);
-    // Finish a task
-    const finishTask = (taskId)=>{
+    const finishTask = async (taskId)=>{
         const task = tasks.find((t)=>t.id === taskId);
-        setUserPoints((p)=>p + task.points);
-        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
-                    ...t,
-                    startedAt: null,
-                    lastCompleted: Date.now(),
-                    uploadedImage: null
-                } : t));
-        setActiveTaskId(null);
-        setTimeLeft(0);
+        if (!task) return;
+        try {
+            // Update points in database
+            const res = await fetch("/api/tasks/addPoints", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    points: task.points
+                })
+            });
+            const data = await res.json();
+            if (data.user && typeof data.user.points === "number") {
+                setUserPoints(data.user.points); // update state from backend
+            }
+            // Reset task
+            setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
+                        ...t,
+                        startedAt: null,
+                        lastCompleted: Date.now(),
+                        uploadedImage: null
+                    } : t));
+            setActiveTaskId(null);
+            setTimeLeft(0);
+        } catch (err) {
+            console.error("Error updating points:", err);
+        }
     };
-    // Handle image upload
     const handleImageUpload = (taskId, file)=>{
         setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
                     ...t,
                     uploadedImage: file
                 } : t));
     };
-    // Format time
     const formatTime = (seconds)=>{
         const h = Math.floor(seconds / 3600);
         const m = Math.floor(seconds % 3600 / 60);
@@ -699,27 +742,27 @@ function TasksPage() {
                 className: "cursor-pointer"
             }, void 0, false, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 121,
+                lineNumber: 149,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "min-h-screen pt-24 px-12 md:px-10 md:p-10 flex flex-col items-center justify-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-4xl text-center shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer md:text-4xl font-bold text-white p-5 bg-white/50  backdrop-blur-md px-6 py-3 rounded-full drop-shadow-md mb-12",
+                        className: "text-4xl text-center shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer md:text-4xl font-bold text-white p-5 bg-white/50 backdrop-blur-md px-6 py-3 rounded-full drop-shadow-md mb-12",
                         children: "Daily Tasks"
                     }, void 0, false, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 124,
+                        lineNumber: 151,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative my-5 bg-white  backdrop-blur-md px-4 py-2 rounded-full shadow-md text-green-700 font-bold text-center",
+                        className: "relative my-5 bg-white backdrop-blur-md px-4 py-2 rounded-full shadow-md text-green-700 font-bold text-center",
                         children: [
                             "Your Points ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 130,
+                                lineNumber: 156,
                                 columnNumber: 23
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -727,19 +770,19 @@ function TasksPage() {
                                 children: userPoints
                             }, void 0, false, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 131,
+                                lineNumber: 157,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 129,
+                        lineNumber: 155,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl",
                         children: tasks.map((task, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col items-center p-6 bg-white/50 shadow-[0_0_16px_5px_rgba(0,255,0,0.2)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer backdrop-blur-md rounded-2xl  relative",
+                                className: "flex flex-col items-center p-6 bg-white/50 shadow-[0_0_16px_5px_rgba(0,255,0,0.2)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer backdrop-blur-md rounded-2xl relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         className: "text-xl font-bold text-green-700 mb-2 px-4 py-2 bg-white/30 rounded-full drop-shadow-md",
@@ -749,7 +792,7 @@ function TasksPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 168,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -760,7 +803,7 @@ function TasksPage() {
                                                 children: "Difficulty"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 173,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -771,12 +814,12 @@ function TasksPage() {
                                                         className: "w-4 h-4 text-yellow-400 font-bold"
                                                     }, i, false, {
                                                         fileName: "[project]/app/task/page.tsx",
-                                                        lineNumber: 155,
+                                                        lineNumber: 178,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 176,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -787,13 +830,13 @@ function TasksPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 184,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 172,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -801,7 +844,7 @@ function TasksPage() {
                                         children: task.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 189,
                                         columnNumber: 15
                                     }, this),
                                     activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -812,7 +855,7 @@ function TasksPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 192,
                                         columnNumber: 17
                                     }, this),
                                     activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -826,22 +869,22 @@ function TasksPage() {
                                                 className: "absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 180,
+                                                lineNumber: 200,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 178,
+                                        lineNumber: 198,
                                         columnNumber: 17
                                     }, this),
                                     !activeTaskId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>startTask(task.id),
-                                        className: "border-green-400 shadow-[0_0_16px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)]  border-2 text-white px-6 py-2 rounded-full font-bold  hover:bg-green-600 transition duration-300 cursor-pointer",
+                                        className: "border-green-400 shadow-[0_0_16px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] border-2 text-white px-6 py-2 rounded-full font-bold hover:bg-green-600 transition duration-300 cursor-pointer",
                                         children: "Start Task"
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 213,
                                         columnNumber: 17
                                     }, this),
                                     activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -851,29 +894,29 @@ function TasksPage() {
                                         children: "Finish Task"
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 222,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, task.id, true, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 139,
+                                lineNumber: 164,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 137,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 122,
+                lineNumber: 150,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 218,
+                lineNumber: 238,
                 columnNumber: 7
             }, this)
         ]

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 70, "column": 0}, "map": {"version":3,"sources":["file:///Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/api/auth/me/route.js"],"sourcesContent":["import { NextResponse } from \"next/server\";\nimport jwt from \"jsonwebtoken\";\n\nconst JWT_SECRET = process.env.JWT_SECRET || \"your-secret-key\";\n\nexport async function GET(req) {\n  const token = req.cookies.get?.(\"token\")?.value; // optional chaining for safety\n  if (!token) return NextResponse.json({ user: null });\n\n  try {\n    const decoded = jwt.verify(token, JWT_SECRET);\n    return NextResponse.json({ user: { email: decoded.email } });\n  } catch (err) {\n    return NextResponse.json({ user: null });\n  }\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEA,MAAM,aAAa,QAAQ,GAAG,CAAC,UAAU,IAAI;AAEtC,eAAe,IAAI,GAAG;IAC3B,MAAM,QAAQ,IAAI,OAAO,CAAC,GAAG,GAAG,UAAU,OAAO,+BAA+B;IAChF,IAAI,CAAC,OAAO,OAAO,gJAAY,CAAC,IAAI,CAAC;QAAE,MAAM;IAAK;IAElD,IAAI;QACF,MAAM,UAAU,kJAAG,CAAC,MAAM,CAAC,OAAO;QAClC,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,MAAM;gBAAE,OAAO,QAAQ,KAAK;YAAC;QAAE;IAC5D,EAAE,OAAO,KAAK;QACZ,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,MAAM;QAAK;IACxC;AACF"}}]
+}

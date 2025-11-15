@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import RouteLoader from "@/components/RouteLoader";
+import { UserProvider } from "./context/UserContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -63,7 +64,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} ${poppins.className} antialiased min-h-screen bg-gradient-to-br from-[#DBD3D3] to-[#27CFB1]`}
       >
         <RouteLoader />
-        {children}
+        <UserProvider>{children}</UserProvider>
       </body>
     </html>
   );

@@ -1,0 +1,3 @@
+{
+  "/api/tasks/addPoints/route": "app/api/tasks/addPoints/route.js"
+}
