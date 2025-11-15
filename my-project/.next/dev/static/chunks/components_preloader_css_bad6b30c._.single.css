@@ -1,0 +1,127 @@
+/* [project]/components/preloader.css [app-client] (css) */
+.preloader {
+  z-index: 999999;
+  background: #050505;
+  justify-content: center;
+  align-items: center;
+  animation: .8s 2.6s forwards fadeOut;
+  display: flex;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.bg-glow {
+  filter: blur(80px);
+  background: radial-gradient(circle, #00ff7826, #0000 70%);
+  width: 100vw;
+  max-width: 1000px;
+  height: 100vw;
+  max-height: 1000px;
+  animation: 6s ease-in-out infinite pulseBG;
+  position: absolute;
+}
+
+.logo-text {
+  fill: none;
+  stroke: #00ff91;
+  stroke-width: 2px;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800px;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(40px, 8vw, 80px);
+  animation: 1.5s cubic-bezier(.65, 0, .35, 1) forwards draw, 2.8s ease-in-out 1.5s infinite neonPulse;
+}
+
+.shine {
+  fill: url("#shineGrad");
+  width: 40%;
+  height: 100%;
+  animation: 2.2s ease-in-out infinite sweep;
+}
+
+.particles {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.particle {
+  filter: blur(2px);
+  background: #00ff96b3;
+  border-radius: 50%;
+  width: clamp(3px, .6vw, 6px);
+  height: clamp(3px, .6vw, 6px);
+  animation: 3s ease-out infinite floatUp;
+  position: absolute;
+  top: 100%;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: .6;
+    transform: translateY(0)scale(.6);
+  }
+
+  50% {
+    opacity: .9;
+    transform: translateY(-50vh)scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-150%)scale(1);
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #00ff91);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 26px #0fa);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-25vw);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(65vw);
+  }
+}
+
+@keyframes pulseBG {
+  0%, 100% {
+    opacity: .6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=components_preloader_css_bad6b30c._.single.css.map*/

@@ -1,6 +1,6 @@
 {
   "app": {
-    "[project]/my-project/app/_not-found/page": [
+    "[project]/app/_not-found/page": [
       "static/media/043b82ab31bba5a4-s.p.b67c2e04.woff2",
       "static/media/c7d9ca68f9942779-s.p.5f8f1848.woff2",
       "static/media/c875c6f5d3e977ac-s.p.80fc2c9e.woff2",
@@ -14,7 +14,7 @@
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/my-project/app/page": [
+    "[project]/app/page": [
       "static/media/043b82ab31bba5a4-s.p.b67c2e04.woff2",
       "static/media/c7d9ca68f9942779-s.p.5f8f1848.woff2",
       "static/media/c875c6f5d3e977ac-s.p.80fc2c9e.woff2",
@@ -28,7 +28,7 @@
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/my-project/app/task/page": [
+    "[project]/app/task/page": [
       "static/media/043b82ab31bba5a4-s.p.b67c2e04.woff2",
       "static/media/c7d9ca68f9942779-s.p.5f8f1848.woff2",
       "static/media/c875c6f5d3e977ac-s.p.80fc2c9e.woff2",
