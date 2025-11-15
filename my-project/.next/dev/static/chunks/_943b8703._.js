@@ -720,26 +720,33 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const ShopItemCard = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(24);
-    if ($[0] !== "830b1ee560f6804555a98c55de4f9ee5d3b851cc8a61569f6ff6fecd9d39c02a") {
+    if ($[0] !== "5982fd12f820f18d27b44f57dc51215d7344a472278971fc2edfc9fa05f03643") {
         for(let $i = 0; $i < 24; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "830b1ee560f6804555a98c55de4f9ee5d3b851cc8a61569f6ff6fecd9d39c02a";
+        $[0] = "5982fd12f820f18d27b44f57dc51215d7344a472278971fc2edfc9fa05f03643";
     }
     const { item, userPoints, onBuy } = t0;
     const affordable = userPoints >= item.cost;
     let t1;
-    if ($[1] !== item.image || $[2] !== item.name) {
-        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-            src: item.image,
-            alt: item.name,
-            className: "w-32 h-32 object-cover rounded-xl mb-3"
+    if ($[1] !== item.imageUrl || $[2] !== item.name) {
+        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "w-32 h-32 flex items-center justify-center bg-gray-100 rounded-xl mb-3 overflow-hidden",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                src: item.imageUrl,
+                alt: item.name,
+                className: "max-w-full max-h-full object-contain"
+            }, void 0, false, {
+                fileName: "[project]/components/ShopItemCard.tsx",
+                lineNumber: 26,
+                columnNumber: 114
+            }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
             lineNumber: 26,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[1] = item.image;
+        $[1] = item.imageUrl;
         $[2] = item.name;
         $[3] = t1;
     } else {
@@ -763,7 +770,7 @@ const ShopItemCard = (t0)=>{
     let t3;
     if ($[6] !== item.description) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-sm text-green-700 mb-2",
+            className: "text-sm text-green-700 mb-2 text-center",
             children: item.description
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
@@ -828,7 +835,7 @@ const ShopItemCard = (t0)=>{
     let t10;
     if ($[18] !== t1 || $[19] !== t2 || $[20] !== t3 || $[21] !== t4 || $[22] !== t9) {
         t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col items-center p-4 bg-white/80 rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer w-64",
+            className: "flex flex-col items-center p-4 rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer w-64",
             children: [
                 t1,
                 t2,
