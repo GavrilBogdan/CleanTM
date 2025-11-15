@@ -9,82 +9,103 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/my-project/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/my-project/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/my-project/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/my-project/node_modules/next/navigation.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
+;
 const Navbar = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(34);
-    if ($[0] !== "c2aa17f80393f2b37771a0a421a367af6950087c77f832b1d7c382dd3d90ba00") {
-        for(let $i = 0; $i < 34; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(62);
+    if ($[0] !== "e4bb0c396b1ef76212abc7543ec05b26cdb12fc4c8615fa8c49baebce41b5598") {
+        for(let $i = 0; $i < 62; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "c2aa17f80393f2b37771a0a421a367af6950087c77f832b1d7c382dd3d90ba00";
+        $[0] = "e4bb0c396b1ef76212abc7543ec05b26cdb12fc4c8615fa8c49baebce41b5598";
     }
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     let t0;
-    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[1] !== router) {
         t0 = (id)=>{
-            const element = document.getElementById(id);
-            if (element) {
-                const y = element.getBoundingClientRect().top + window.pageYOffset + -100;
-                window.scrollTo({
-                    top: y,
-                    behavior: "smooth"
-                });
+            if (id.startsWith("/")) {
+                router.push(id);
+            } else {
+                const element = document.getElementById(id);
+                if (element) {
+                    const y = element.getBoundingClientRect().top + window.pageYOffset + -100;
+                    window.scrollTo({
+                        top: y,
+                        behavior: "smooth"
+                    });
+                }
             }
             setOpen(false);
         };
-        $[1] = t0;
+        $[1] = router;
+        $[2] = t0;
     } else {
-        t0 = $[1];
+        t0 = $[2];
     }
     const handleScroll = t0;
     let t1;
-    if ($[2] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[3] !== handleScroll) {
         t1 = ()=>handleScroll("/");
-        $[2] = t1;
+        $[3] = handleScroll;
+        $[4] = t1;
     } else {
-        t1 = $[2];
+        t1 = $[4];
     }
     let t2;
-    if ($[3] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t3;
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
+        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+            className: "h-8 w-auto",
+            src: "https://cdn-icons-png.flaticon.com/128/892/892930.png",
+            alt: "CleanTM Logo"
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 50,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: "text-xl font-bold text-green-800 md:block",
+            children: "CleanTM"
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 51,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[5] = t2;
+        $[6] = t3;
+    } else {
+        t2 = $[5];
+        t3 = $[6];
+    }
+    let t4;
+    if ($[7] !== t1) {
+        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             onClick: t1,
             className: "flex items-center space-x-2 cursor-pointer",
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                    className: "h-8 w-auto",
-                    src: "https://cdn-icons-png.flaticon.com/128/892/892930.png",
-                    alt: "CleanTM Logo"
-                }, void 0, false, {
-                    fileName: "[project]/my-project/components/Navbar.tsx",
-                    lineNumber: 41,
-                    columnNumber: 83
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "text-xl font-bold text-green-800 md:block",
-                    children: "CleanTM"
-                }, void 0, false, {
-                    fileName: "[project]/my-project/components/Navbar.tsx",
-                    lineNumber: 41,
-                    columnNumber: 192
-                }, ("TURBOPACK compile-time value", void 0))
+                t2,
+                t3
             ]
         }, void 0, true, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 41,
+            lineNumber: 60,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[3] = t2;
+        $[7] = t1;
+        $[8] = t4;
     } else {
-        t2 = $[3];
+        t4 = $[8];
     }
-    let t3;
-    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+    let t5;
+    if ($[9] !== handleScroll) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
             className: "hover:text-green-900 transition",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "hover:underline-animation-b cursor-pointer",
@@ -92,21 +113,22 @@ const Navbar = ()=>{
                 children: "Home"
             }, void 0, false, {
                 fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 48,
+                lineNumber: 68,
                 columnNumber: 58
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 48,
+            lineNumber: 68,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[4] = t3;
+        $[9] = handleScroll;
+        $[10] = t5;
     } else {
-        t3 = $[4];
+        t5 = $[10];
     }
-    let t4;
-    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+    let t6;
+    if ($[11] !== handleScroll) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
             className: "hover:text-green-900 transition",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "hover:underline-animation-b cursor-pointer",
@@ -114,211 +136,235 @@ const Navbar = ()=>{
                 children: "Map"
             }, void 0, false, {
                 fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 55,
-                columnNumber: 58
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 55,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[5] = t4;
-    } else {
-        t4 = $[5];
-    }
-    let t5;
-    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-            className: "hover:text-green-900 transition",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "hover:underline-animation-b cursor-pointer",
-                onClick: ()=>handleScroll("progress"),
-                children: "Tasks"
-            }, void 0, false, {
-                fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 62,
-                columnNumber: 58
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 62,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[6] = t5;
-    } else {
-        t5 = $[6];
-    }
-    let t6;
-    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hidden lg:block",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                className: "flex space-x-10 text-lg font-semibold text-green-700",
-                children: [
-                    t3,
-                    t4,
-                    t5,
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "hover:text-green-900 transition",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "hover:underline-animation-b cursor-pointer",
-                            onClick: ()=>handleScroll("rewards"),
-                            children: "Rewards"
-                        }, void 0, false, {
-                            fileName: "[project]/my-project/components/Navbar.tsx",
-                            lineNumber: 69,
-                            columnNumber: 172
-                        }, ("TURBOPACK compile-time value", void 0))
-                    }, void 0, false, {
-                        fileName: "[project]/my-project/components/Navbar.tsx",
-                        lineNumber: 69,
-                        columnNumber: 124
-                    }, ("TURBOPACK compile-time value", void 0))
-                ]
-            }, void 0, true, {
-                fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 69,
-                columnNumber: 43
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 69,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[7] = t6;
-    } else {
-        t6 = $[7];
-    }
-    let t7;
-    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hidden lg:flex lg:items-center gap-x-2",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                className: "cursor-pointer rounded-full bg-green-500 text-white px-6 py-2.5 font-bold hover:bg-green-600 shadow-md transition",
-                children: "Login"
-            }, void 0, false, {
-                fileName: "[project]/my-project/components/Navbar.tsx",
                 lineNumber: 76,
-                columnNumber: 66
+                columnNumber: 58
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
             lineNumber: 76,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[8] = t7;
+        $[11] = handleScroll;
+        $[12] = t6;
     } else {
-        t7 = $[8];
+        t6 = $[12];
+    }
+    let t7;
+    if ($[13] !== handleScroll) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+            className: "hover:text-green-900 transition",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "hover:underline-animation-b cursor-pointer",
+                onClick: ()=>handleScroll("/task"),
+                children: "Tasks"
+            }, void 0, false, {
+                fileName: "[project]/my-project/components/Navbar.tsx",
+                lineNumber: 84,
+                columnNumber: 58
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 84,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[13] = handleScroll;
+        $[14] = t7;
+    } else {
+        t7 = $[14];
     }
     let t8;
-    if ($[9] !== open) {
-        t8 = ()=>setOpen(!open);
-        $[9] = open;
-        $[10] = t8;
-    } else {
-        t8 = $[10];
-    }
-    const t9 = `absolute top-2 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`;
-    let t10;
-    if ($[11] !== t9) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t9
+    if ($[15] !== handleScroll) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+            className: "hover:text-green-900 transition",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "hover:underline-animation-b cursor-pointer",
+                onClick: ()=>handleScroll("rewards"),
+                children: "Rewards"
+            }, void 0, false, {
+                fileName: "[project]/my-project/components/Navbar.tsx",
+                lineNumber: 92,
+                columnNumber: 58
+            }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
             lineNumber: 92,
-            columnNumber: 11
+            columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[11] = t9;
-        $[12] = t10;
+        $[15] = handleScroll;
+        $[16] = t8;
     } else {
-        t10 = $[12];
+        t8 = $[16];
     }
-    const t11 = `absolute top-3.5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "opacity-0" : ""}`;
-    let t12;
-    if ($[13] !== t11) {
-        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t11
+    let t9;
+    if ($[17] !== t5 || $[18] !== t6 || $[19] !== t7 || $[20] !== t8) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "hidden lg:block",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                className: "flex space-x-10 text-lg font-semibold text-green-700",
+                children: [
+                    t5,
+                    t6,
+                    t7,
+                    t8
+                ]
+            }, void 0, true, {
+                fileName: "[project]/my-project/components/Navbar.tsx",
+                lineNumber: 100,
+                columnNumber: 43
+            }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 101,
-            columnNumber: 11
+            lineNumber: 100,
+            columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[13] = t11;
-        $[14] = t12;
+        $[17] = t5;
+        $[18] = t6;
+        $[19] = t7;
+        $[20] = t8;
+        $[21] = t9;
     } else {
-        t12 = $[14];
+        t9 = $[21];
     }
-    const t13 = `absolute top-5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`;
-    let t14;
-    if ($[15] !== t13) {
-        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t13
+    let t10;
+    if ($[22] === Symbol.for("react.memo_cache_sentinel")) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "hidden lg:flex lg:items-center gap-x-2",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                className: "cursor-pointer rounded-full bg-green-500 text-white px-6 py-2.5 font-bold hover:bg-green-600 shadow-md transition",
+                children: "Login"
+            }, void 0, false, {
+                fileName: "[project]/my-project/components/Navbar.tsx",
+                lineNumber: 111,
+                columnNumber: 67
+            }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 110,
+            lineNumber: 111,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[15] = t13;
-        $[16] = t14;
+        $[22] = t10;
     } else {
-        t14 = $[16];
+        t10 = $[22];
     }
+    let t11;
+    if ($[23] !== open) {
+        t11 = ()=>setOpen(!open);
+        $[23] = open;
+        $[24] = t11;
+    } else {
+        t11 = $[24];
+    }
+    const t12 = `absolute top-2 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`;
+    let t13;
+    if ($[25] !== t12) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: t12
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 127,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[25] = t12;
+        $[26] = t13;
+    } else {
+        t13 = $[26];
+    }
+    const t14 = `absolute top-3.5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "opacity-0" : ""}`;
     let t15;
-    if ($[17] !== t10 || $[18] !== t12 || $[19] !== t14) {
-        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    if ($[27] !== t14) {
+        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: t14
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 136,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[27] = t14;
+        $[28] = t15;
+    } else {
+        t15 = $[28];
+    }
+    const t16 = `absolute top-5 left-0 h-1 w-full bg-green-800 rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`;
+    let t17;
+    if ($[29] !== t16) {
+        t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: t16
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 145,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[29] = t16;
+        $[30] = t17;
+    } else {
+        t17 = $[30];
+    }
+    let t18;
+    if ($[31] !== t13 || $[32] !== t15 || $[33] !== t17) {
+        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "relative w-8 h-8",
             children: [
-                t10,
-                t12,
-                t14
+                t13,
+                t15,
+                t17
             ]
         }, void 0, true, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 118,
+            lineNumber: 153,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[17] = t10;
-        $[18] = t12;
-        $[19] = t14;
-        $[20] = t15;
+        $[31] = t13;
+        $[32] = t15;
+        $[33] = t17;
+        $[34] = t18;
     } else {
-        t15 = $[20];
+        t18 = $[34];
     }
-    let t16;
-    if ($[21] !== t15 || $[22] !== t8) {
-        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+    let t19;
+    if ($[35] !== t11 || $[36] !== t18) {
+        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            onClick: t11,
+            className: "lg:hidden text-green-700 focus:outline-none",
+            children: t18
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 163,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[35] = t11;
+        $[36] = t18;
+        $[37] = t19;
+    } else {
+        t19 = $[37];
+    }
+    let t20;
+    if ($[38] !== t19 || $[39] !== t4 || $[40] !== t9) {
+        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: "fixed mt-5 flex w-full items-center justify-between mx-auto max-w-7xl px-6 py-3 lg:px-8 lg:py-4 bg-lime-50 rounded-[3rem] shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 backdrop-blur-lg",
             children: [
-                t2,
-                t6,
-                t7,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: t8,
-                    className: "lg:hidden text-green-700 focus:outline-none",
-                    children: t15
-                }, void 0, false, {
-                    fileName: "[project]/my-project/components/Navbar.tsx",
-                    lineNumber: 128,
-                    columnNumber: 296
-                }, ("TURBOPACK compile-time value", void 0))
+                t4,
+                t9,
+                t10,
+                t19
             ]
         }, void 0, true, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 128,
+            lineNumber: 172,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[21] = t15;
-        $[22] = t8;
-        $[23] = t16;
+        $[38] = t19;
+        $[39] = t4;
+        $[40] = t9;
+        $[41] = t20;
     } else {
-        t16 = $[23];
+        t20 = $[41];
     }
-    const t17 = `fixed top-[5.5rem] w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl px-8 py-6 transition-all duration-500 ease-in-out mx-auto
+    const t21 = `fixed top-[5.5rem] w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl px-8 py-6 transition-all duration-500 ease-in-out mx-auto
         ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
         `;
-    let t18;
-    if ($[24] === Symbol.for("react.memo_cache_sentinel")) {
-        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+    let t22;
+    if ($[42] !== handleScroll) {
+        t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
             className: "hover:text-green-900 transition",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "cursor-pointer",
@@ -326,21 +372,22 @@ const Navbar = ()=>{
                 children: "Home"
             }, void 0, false, {
                 fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 140,
+                lineNumber: 185,
                 columnNumber: 59
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 140,
+            lineNumber: 185,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[24] = t18;
+        $[42] = handleScroll;
+        $[43] = t22;
     } else {
-        t18 = $[24];
+        t22 = $[43];
     }
-    let t19;
-    if ($[25] === Symbol.for("react.memo_cache_sentinel")) {
-        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+    let t23;
+    if ($[44] !== handleScroll) {
+        t23 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
             className: "hover:text-green-900 transition",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "cursor-pointer",
@@ -348,21 +395,22 @@ const Navbar = ()=>{
                 children: "Map"
             }, void 0, false, {
                 fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 147,
+                lineNumber: 193,
                 columnNumber: 59
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 147,
+            lineNumber: 193,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[25] = t19;
+        $[44] = handleScroll;
+        $[45] = t23;
     } else {
-        t19 = $[25];
+        t23 = $[45];
     }
-    let t20;
-    if ($[26] === Symbol.for("react.memo_cache_sentinel")) {
-        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+    let t24;
+    if ($[46] !== handleScroll) {
+        t24 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
             className: "hover:text-green-900 transition",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "cursor-pointer",
@@ -370,113 +418,131 @@ const Navbar = ()=>{
                 children: "Tasks"
             }, void 0, false, {
                 fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 154,
+                lineNumber: 201,
                 columnNumber: 59
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 154,
+            lineNumber: 201,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[26] = t20;
+        $[46] = handleScroll;
+        $[47] = t24;
     } else {
-        t20 = $[26];
+        t24 = $[47];
     }
-    let t21;
-    if ($[27] === Symbol.for("react.memo_cache_sentinel")) {
-        t21 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+    let t25;
+    if ($[48] !== handleScroll) {
+        t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+            className: "hover:text-green-900 transition",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "cursor-pointer",
+                onClick: ()=>handleScroll("rewards"),
+                children: "Rewards"
+            }, void 0, false, {
+                fileName: "[project]/my-project/components/Navbar.tsx",
+                lineNumber: 209,
+                columnNumber: 59
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/my-project/components/Navbar.tsx",
+            lineNumber: 209,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[48] = handleScroll;
+        $[49] = t25;
+    } else {
+        t25 = $[49];
+    }
+    let t26;
+    if ($[50] !== t22 || $[51] !== t23 || $[52] !== t24 || $[53] !== t25) {
+        t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             className: "flex flex-col space-y-4 text-lg font-semibold text-green-800",
             children: [
-                t18,
-                t19,
-                t20,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                    className: "hover:text-green-900 transition",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "cursor-pointer",
-                        onClick: ()=>handleScroll("rewards"),
-                        children: "Rewards"
-                    }, void 0, false, {
-                        fileName: "[project]/my-project/components/Navbar.tsx",
-                        lineNumber: 161,
-                        columnNumber: 151
-                    }, ("TURBOPACK compile-time value", void 0))
-                }, void 0, false, {
-                    fileName: "[project]/my-project/components/Navbar.tsx",
-                    lineNumber: 161,
-                    columnNumber: 103
-                }, ("TURBOPACK compile-time value", void 0))
+                t22,
+                t23,
+                t24,
+                t25
             ]
         }, void 0, true, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 161,
+            lineNumber: 217,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[27] = t21;
+        $[50] = t22;
+        $[51] = t23;
+        $[52] = t24;
+        $[53] = t25;
+        $[54] = t26;
     } else {
-        t21 = $[27];
+        t26 = $[54];
     }
-    let t22;
-    if ($[28] === Symbol.for("react.memo_cache_sentinel")) {
-        t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t27;
+    if ($[55] === Symbol.for("react.memo_cache_sentinel")) {
+        t27 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex flex-col mt-6 gap-y-3",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 className: "rounded-full bg-green-500 text-white py-2.5 font-bold hover:bg-green-600 transition shadow-md w-full",
                 children: "Login"
             }, void 0, false, {
                 fileName: "[project]/my-project/components/Navbar.tsx",
-                lineNumber: 168,
+                lineNumber: 228,
                 columnNumber: 55
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 168,
+            lineNumber: 228,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[28] = t22;
+        $[55] = t27;
     } else {
-        t22 = $[28];
+        t27 = $[55];
     }
-    let t23;
-    if ($[29] !== t17) {
-        t23 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: t17,
+    let t28;
+    if ($[56] !== t21 || $[57] !== t26) {
+        t28 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: t21,
             children: [
-                t21,
-                t22
+                t26,
+                t27
             ]
         }, void 0, true, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 175,
+            lineNumber: 235,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[29] = t17;
-        $[30] = t23;
+        $[56] = t21;
+        $[57] = t26;
+        $[58] = t28;
     } else {
-        t23 = $[30];
+        t28 = $[58];
     }
-    let t24;
-    if ($[31] !== t16 || $[32] !== t23) {
-        t24 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t29;
+    if ($[59] !== t20 || $[60] !== t28) {
+        t29 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "relative z-50 w-screen flex justify-center cursor-pointer",
             children: [
-                t16,
-                t23
+                t20,
+                t28
             ]
         }, void 0, true, {
             fileName: "[project]/my-project/components/Navbar.tsx",
-            lineNumber: 183,
+            lineNumber: 244,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[31] = t16;
-        $[32] = t23;
-        $[33] = t24;
+        $[59] = t20;
+        $[60] = t28;
+        $[61] = t29;
     } else {
-        t24 = $[33];
+        t29 = $[61];
     }
-    return t24;
+    return t29;
 };
-_s(Navbar, "xG1TONbKtDWtdOTrXaTAsNhPg/Q=");
+_s(Navbar, "ytWOlNORoNjKCJyRctHL6U+Vztg=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = Navbar;
 const __TURBOPACK__default__export__ = Navbar;
 var _c;

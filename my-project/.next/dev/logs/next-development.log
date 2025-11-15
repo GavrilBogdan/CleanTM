@@ -13133,3 +13133,3541 @@ Import trace:
 
 [01:29:06.964] Server  LOG      ✓ Compiled in 28ms
 [01:29:19.258] Server  LOG      ✓ Compiled in 30ms
+[01:31:27.445] Server  LOG      ✓ Compiled in 42ms
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.080] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.384] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.385] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:15.508] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/task" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/my-projec...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "96.99687909270949%"
+-                                     left: "8.609541%"
++                                     animationDelay: "3.5019572551611375s"
+-                                     animation-delay: "4.520395s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "51.57573863030886%"
+-                                     left: "46.436197%"
++                                     animationDelay: "2.325988687982255s"
+-                                     animation-delay: "0.649661s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "43.77716499545928%"
+-                                     left: "55.380474%"
++                                     animationDelay: "2.83383886862681s"
+-                                     animation-delay: "1.805332s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "30.91358902684902%"
+-                                     left: "40.0202%"
++                                     animationDelay: "3.428979881036641s"
+-                                     animation-delay: "3.745696s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "69.67596763522847%"
+-                                     left: "31.061609%"
++                                     animationDelay: "4.038292443442901s"
+-                                     animation-delay: "1.543661s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "62.085126315365144%"
+-                                     left: "50.266439%"
++                                     animationDelay: "2.012105405855131s"
+-                                     animation-delay: "1.540731s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "8.926079954980482%"
+-                                     left: "79.004359%"
++                                     animationDelay: "0.05395261653180827s"
+-                                     animation-delay: "0.056909s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "6.14753237605421%"
+-                                     left: "40.584906%"
++                                     animationDelay: "0.38990534831123524s"
+-                                     animation-delay: "0.530992s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "62.563215832489114%"
+-                                     left: "67.00301%"
++                                     animationDelay: "4.594100649236073s"
+-                                     animation-delay: "4.943544s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "88.04213350048639%"
+-                                     left: "8.527675%"
++                                     animationDelay: "4.749026659840406s"
+-                                     animation-delay: "0.764186s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "76.487112626562%"
+-                                     left: "0.580078%"
++                                     animationDelay: "4.7631331674274495s"
+-                                     animation-delay: "2.415866s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "60.98286208632282%"
+-                                     left: "90.062721%"
++                                     animationDelay: "0.8625711237033823s"
+-                                     animation-delay: "3.580242s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "4.406001066562093%"
+-                                     left: "19.101362%"
++                                     animationDelay: "3.5237554385402454s"
+-                                     animation-delay: "3.598914s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "28.991199902645693%"
+-                                     left: "92.481499%"
++                                     animationDelay: "3.6380675258918105s"
+-                                     animation-delay: "4.150031s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "8.280667684504117%"
+-                                     left: "63.181467%"
++                                     animationDelay: "4.111370165509868s"
+-                                     animation-delay: "1.125724s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "48.99641770803546%"
+-                                     left: "95.527392%"
++                                     animationDelay: "1.2751932559986179s"
+-                                     animation-delay: "0.612841s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "20.647786556847525%"
+-                                     left: "14.613197%"
++                                     animationDelay: "3.116210810435496s"
+-                                     animation-delay: "2.086384s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "59.34152310135678%"
+-                                     left: "48.969784%"
++                                     animationDelay: "0.7159424115331942s"
+-                                     animation-delay: "4.849714s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "74.33110831987244%"
+-                                     left: "19.094619%"
++                                     animationDelay: "2.7047332978987364s"
+-                                     animation-delay: "2.691355s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "46.540905027533164%"
+-                                     left: "66.448439%"
++                                     animationDelay: "4.77895403876678s"
+-                                     animation-delay: "3.844857s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "38.06821326910309%"
+-                                     left: "1.25963%"
++                                     animationDelay: "4.685128681320869s"
+-                                     animation-delay: "2.240554s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "37.21476829083179%"
+-                                     left: "34.134282%"
++                                     animationDelay: "0.1480746273061745s"
+-                                     animation-delay: "2.351424s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "62.44169888621324%"
+-                                     left: "55.0366%"
++                                     animationDelay: "2.994001470838889s"
+-                                     animation-delay: "4.86612s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "29.851344457981533%"
+-                                     left: "27.22229%"
++                                     animationDelay: "0.11973839758454952s"
+-                                     animation-delay: "4.725912s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "39.61334833607523%"
+-                                     left: "36.022233%"
++                                     animationDelay: "1.7549791603218918s"
+-                                     animation-delay: "1.99627s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                  ...
+
+[01:32:41.523] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.523] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.523] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.523] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.524] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.524] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.524] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.524] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.939] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.940] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.941] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:41.941] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.001] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.001] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.001] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.001] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.002] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.002] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.002] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.002] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.030] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[01:32:42.300] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.300] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.300] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.300] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.301] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.301] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.301] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.301] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:32:42.327] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[01:32:42.362] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/my-projec...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "78.19840247166997%"
+-                                     left: "82.125615%"
++                                     animationDelay: "1.867788466482474s"
+-                                     animation-delay: "1.318364s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "8.002251876984168%"
+-                                     left: "58.129704%"
++                                     animationDelay: "3.0134613572126803s"
+-                                     animation-delay: "2.911459s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "89.43297486569033%"
+-                                     left: "54.345161%"
++                                     animationDelay: "0.10988335855189435s"
+-                                     animation-delay: "1.731997s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "95.48153949782177%"
+-                                     left: "62.334064%"
++                                     animationDelay: "0.07645810235365758s"
+-                                     animation-delay: "4.206178s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "52.66620443942863%"
+-                                     left: "81.967301%"
++                                     animationDelay: "4.217846930562796s"
+-                                     animation-delay: "2.126296s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "2.83528811799707%"
+-                                     left: "8.976038%"
++                                     animationDelay: "0.5199692085999397s"
+-                                     animation-delay: "1.252473s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "31.106207491828965%"
+-                                     left: "28.750302%"
++                                     animationDelay: "4.554650658669789s"
+-                                     animation-delay: "1.546128s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "59.303855234071065%"
+-                                     left: "25.474134%"
++                                     animationDelay: "3.25551665679901s"
+-                                     animation-delay: "0.750566s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "37.89637300493904%"
+-                                     left: "72.429882%"
++                                     animationDelay: "0.8702923398010465s"
+-                                     animation-delay: "0.489361s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "74.79613797981712%"
+-                                     left: "79.929107%"
++                                     animationDelay: "3.8366753939890126s"
+-                                     animation-delay: "2.474423s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "58.57276709690068%"
+-                                     left: "22.555024%"
++                                     animationDelay: "4.728719154784348s"
+-                                     animation-delay: "4.753166s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "57.13166890289231%"
+-                                     left: "50.205198%"
++                                     animationDelay: "1.9805965325291708s"
+-                                     animation-delay: "2.023109s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "88.85848500043282%"
+-                                     left: "92.973888%"
++                                     animationDelay: "4.120603761813938s"
+-                                     animation-delay: "4.31514s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "5.5918995432909675%"
+-                                     left: "82.851564%"
++                                     animationDelay: "0.8658636398531111s"
+-                                     animation-delay: "0.124437s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "13.573205775503228%"
+-                                     left: "12.521648%"
++                                     animationDelay: "0.48528350673003706s"
+-                                     animation-delay: "2.782736s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "52.52141098733768%"
+-                                     left: "68.961789%"
++                                     animationDelay: "4.03183918661028s"
+-                                     animation-delay: "4.667981s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "43.43574768343795%"
+-                                     left: "90.459975%"
++                                     animationDelay: "2.9871115497294283s"
+-                                     animation-delay: "1.079798s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "80.016419112314%"
+-                                     left: "83.690081%"
++                                     animationDelay: "2.6506460769254114s"
+-                                     animation-delay: "4.273945s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "99.55960295187104%"
+-                                     left: "45.093232%"
++                                     animationDelay: "1.4256551687757608s"
+-                                     animation-delay: "0.894s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "0.12629409559760107%"
+-                                     left: "67.999672%"
++                                     animationDelay: "1.8219461366819494s"
+-                                     animation-delay: "2.225541s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "29.43121703686208%"
+-                                     left: "45.426794%"
++                                     animationDelay: "0.38116711918578516s"
+-                                     animation-delay: "1.058132s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "38.885297520294074%"
+-                                     left: "71.111774%"
++                                     animationDelay: "0.1936849108624994s"
+-                                     animation-delay: "2.407669s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "21.027603707540997%"
+-                                     left: "43.340679%"
++                                     animationDelay: "4.548126725726325s"
+-                                     animation-delay: "0.885633s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "94.67418080830518%"
+-                                     left: "2.193848%"
++                                     animationDelay: "4.865286031799228s"
+-                                     animation-delay: "3.594513s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "37.88824233547864%"
+-                                     left: "88.108854%"
++                                     animationDelay: "4.68319758353674s"
+-                                     animation-delay: "4.672981s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                              <div className={"fixed to..."}>
+                                <ul className="flex flex-...">
+                                  <li>
+                                  <li>
+                                  <li className="hover:text...">
+                                    <p className="cursor-pointer" onClick={function onClick}>
++                                     Progress
+-                                     Tasks
+                                  ...
+                                ...
+                  ...
+
+[01:32:42.477] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:33:07.777] Server  LOG      ✓ Compiled in 62ms
+[01:33:07.812] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:33:07.837] Browser ERROR   uncaughtError: ReferenceError: Can't find variable: useRouter
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.847] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:07.923] Server  ERROR    ⨯ ReferenceError: useRouter is not defined
+[01:33:07.932] Browser ERROR   uncaughtError: ReferenceError: Can't find variable: useRouter
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.234] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:08.767] Browser ERROR   uncaughtError: ReferenceError: Can't find variable: useRouter
+[01:33:16.043] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:33:16.047] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:33:16.063] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.067] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.111] Server  LOG      ✓ Compiled in 79ms
+[01:33:16.179] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:16.185] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.051] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.052] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.370] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.370] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.370] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.370] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.371] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.371] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.371] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.371] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.402] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.403] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.404] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:17.491] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/task" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/my-projec...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "6.3717061182278485%"
+-                                     left: "95.989649%"
++                                     animationDelay: "3.5246006138202413s"
+-                                     animation-delay: "3.016995s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "15.476962340631628%"
+-                                     left: "70.313988%"
++                                     animationDelay: "0.129351930861078s"
+-                                     animation-delay: "3.939982s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "40.28568182262761%"
+-                                     left: "18.635181%"
++                                     animationDelay: "4.602139605446822s"
+-                                     animation-delay: "1.640921s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "44.072462242139174%"
+-                                     left: "13.932745%"
++                                     animationDelay: "2.512574365933502s"
+-                                     animation-delay: "4.023374s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "97.41691376150338%"
+-                                     left: "31.712469%"
++                                     animationDelay: "3.0630891088635863s"
+-                                     animation-delay: "1.77303s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "76.52649011766853%"
+-                                     left: "98.786866%"
++                                     animationDelay: "4.485618119441773s"
+-                                     animation-delay: "1.257728s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "77.964161694985%"
+-                                     left: "41.377435%"
++                                     animationDelay: "3.295738515553712s"
+-                                     animation-delay: "0.053685s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "79.04972820702969%"
+-                                     left: "95.617242%"
++                                     animationDelay: "0.5084316979549558s"
+-                                     animation-delay: "2.410648s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "40.721535619134364%"
+-                                     left: "79.826752%"
++                                     animationDelay: "2.0352385698756743s"
+-                                     animation-delay: "0.922488s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "4.345851313598192%"
+-                                     left: "52.39294%"
++                                     animationDelay: "4.563512739925005s"
+-                                     animation-delay: "4.848826s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "18.44752076479823%"
+-                                     left: "82.274517%"
++                                     animationDelay: "0.807164466541595s"
+-                                     animation-delay: "2.043209s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "68.0480039125065%"
+-                                     left: "3.227326%"
++                                     animationDelay: "1.2409884512993674s"
+-                                     animation-delay: "0.901774s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "37.54859601545745%"
+-                                     left: "1.368489%"
++                                     animationDelay: "0.06266536981366588s"
+-                                     animation-delay: "0.822549s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "98.88439909910485%"
+-                                     left: "9.01269%"
++                                     animationDelay: "4.819503315628601s"
+-                                     animation-delay: "4.080915s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "31.61321309320354%"
+-                                     left: "50.074473%"
++                                     animationDelay: "3.279683615123239s"
+-                                     animation-delay: "1.261293s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "90.0435276910133%"
+-                                     left: "71.847635%"
++                                     animationDelay: "1.1228083353433331s"
+-                                     animation-delay: "0.376815s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "55.93850440276693%"
+-                                     left: "52.162291%"
++                                     animationDelay: "1.5375080108099919s"
+-                                     animation-delay: "1.031517s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "14.986054911274394%"
+-                                     left: "44.458231%"
++                                     animationDelay: "0.036238990159514484s"
+-                                     animation-delay: "3.934256s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.938360507014416%"
+-                                     left: "64.347888%"
++                                     animationDelay: "2.88016755724822s"
+-                                     animation-delay: "3.218026s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "46.31048301224776%"
+-                                     left: "61.94535%"
++                                     animationDelay: "0.7770032237773544s"
+-                                     animation-delay: "4.818614s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "88.18437646286745%"
+-                                     left: "98.723335%"
++                                     animationDelay: "1.92091816274865s"
+-                                     animation-delay: "0.465747s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "5.463335904301692%"
+-                                     left: "27.936049%"
++                                     animationDelay: "2.969859560863255s"
+-                                     animation-delay: "4.20579s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "42.63391201820358%"
+-                                     left: "21.165724%"
++                                     animationDelay: "3.8230901905916626s"
+-                                     animation-delay: "4.949706s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "7.848276568594592%"
+-                                     left: "69.691461%"
++                                     animationDelay: "2.3451663562532787s"
+-                                     animation-delay: "4.499769s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "48.537739099320135%"
+-                                     left: "87.677296%"
++                                     animationDelay: "2.72821455623594s"
+-                                     animation-delay: "3.266188s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                  ...
+
+[01:33:17.656] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/my-projec...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "60.13298559746052%"
+-                                     left: "94.593628%"
++                                     animationDelay: "0.2967676475144748s"
+-                                     animation-delay: "3.330596s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "84.8545606886992%"
+-                                     left: "84.928435%"
++                                     animationDelay: "2.378699709360081s"
+-                                     animation-delay: "3.245727s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "3.6108963079831913%"
+-                                     left: "39.828087%"
++                                     animationDelay: "2.14183218131791s"
+-                                     animation-delay: "3.573582s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "45.91947254450479%"
+-                                     left: "72.228723%"
++                                     animationDelay: "4.922958904015273s"
+-                                     animation-delay: "2.164359s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "0.7139914346788401%"
+-                                     left: "63.009613%"
++                                     animationDelay: "2.665298957691747s"
+-                                     animation-delay: "3.180795s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "54.85030057357295%"
+-                                     left: "38.840441%"
++                                     animationDelay: "1.5849118396931605s"
+-                                     animation-delay: "0.074892s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "47.247431373071336%"
+-                                     left: "20.667497%"
++                                     animationDelay: "1.7176516161737325s"
+-                                     animation-delay: "2.762737s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "72.92491441807125%"
+-                                     left: "69.886888%"
++                                     animationDelay: "3.0670099131267667s"
+-                                     animation-delay: "1.793497s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "12.93475729572564%"
+-                                     left: "39.597136%"
++                                     animationDelay: "3.6655197590382183s"
+-                                     animation-delay: "0.433835s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "8.57556527474208%"
+-                                     left: "14.71837%"
++                                     animationDelay: "1.1948557059916354s"
+-                                     animation-delay: "3.343692s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "72.56594729680299%"
+-                                     left: "7.207687%"
++                                     animationDelay: "3.2328416623763356s"
+-                                     animation-delay: "2.577146s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "79.81965158127771%"
+-                                     left: "53.30949%"
++                                     animationDelay: "2.3066594583978572s"
+-                                     animation-delay: "4.185536s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "34.930776130211314%"
+-                                     left: "30.96403%"
++                                     animationDelay: "4.486651246125804s"
+-                                     animation-delay: "4.445418s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "14.205363522401782%"
+-                                     left: "60.688331%"
++                                     animationDelay: "2.9271589707626693s"
+-                                     animation-delay: "0.668096s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "50.17558647716013%"
+-                                     left: "80.245727%"
++                                     animationDelay: "2.672623697782087s"
+-                                     animation-delay: "1.632556s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "1.9204489760050847%"
+-                                     left: "23.268886%"
++                                     animationDelay: "4.926263194856067s"
+-                                     animation-delay: "3.864712s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "70.51876005478307%"
+-                                     left: "16.043649%"
++                                     animationDelay: "4.811178049645815s"
+-                                     animation-delay: "3.422613s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "57.94957042915687%"
+-                                     left: "38.30329%"
++                                     animationDelay: "4.636319906150129s"
+-                                     animation-delay: "0.547906s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "68.22629491379666%"
+-                                     left: "69.449792%"
++                                     animationDelay: "3.0153692236340697s"
+-                                     animation-delay: "0.11284s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "60.81215836475536%"
+-                                     left: "30.282676%"
++                                     animationDelay: "1.779519660410274s"
+-                                     animation-delay: "2.81115s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "17.05469627018227%"
+-                                     left: "78.647018%"
++                                     animationDelay: "2.0117591599512714s"
+-                                     animation-delay: "0.712897s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "86.58340192851519%"
+-                                     left: "23.726914%"
++                                     animationDelay: "4.931937988045649s"
+-                                     animation-delay: "0.689977s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "95.78818268059626%"
+-                                     left: "62.414533%"
++                                     animationDelay: "0.7039312504480977s"
+-                                     animation-delay: "3.036773s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "59.08936800659035%"
+-                                     left: "78.249333%"
++                                     animationDelay: "1.5156011431930183s"
+-                                     animation-delay: "0.030362s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "32.22400695963425%"
+-                                     left: "3.05712%"
++                                     animationDelay: "2.8636612897823346s"
+-                                     animation-delay: "2.710826s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                              <Home>
+                                <main>
+                                  <Hero>
+                                    <section id="home" className="relative m...">
+                                      <div className="absolute i...">
+                                        <img>
+                                        <div>
+                                        <div>
+                                        <div className="absolute i...">
+                                          <div
+                                            className="absolute"
+                                            style={{
++                                             top: "44.0569654600251%"
+-                                             top: "31.385017%"
++                                             left: "40.71786993300056%"
+-                                             left: "74.333589%"
+                                            }}
+                                          >
+                                          <div
+                                            className="absolute"
+                                            style={{
++                                             top: "40.248383257005294%"
+-                                             top: "66.680923%"
++                                             left: "51.850306449641046%"
+-                                             left: "43.796389%"
+                                            }}
+                                          >
+                                          <div
+                                            className="absolute"
+                                            style={{
++                                             top: "43.30477797469368%"
+-                                             top: "43.972338%"
++                                             left: "36.27982456352608%"
+-                                             left: "67.712706%"
+                                            }}
+                                          >
+                                          <div
+                                            className="absolute"
+                                            style={{
++                                             top: "50.5881037677257%"
+-                                             top: "45.712598%"
++                                             left: "59.96982331379919%"
+-                                             left: "26.634703%"
+                                            }}
+                                          >
+                                        <FloatingParticle img="/images/le..." size={40} delay={0}>
+                                          <motion.div initial={{y:50,opacity:0}} animate={{y:[...], ...}} ...>
+                                            <div
+                                              className="absolute"
+                                              style={{
++                                               left: "89.9807261452989%"
+-                                               left: "72.56207%"
++                                               top: "2.601184435193704%"
+-                                               top: "51.373174%"
++                                               opacity: 0
+-                                               opacity: "0"
++                                               transform: "translateY(50px)"
+-                                               transform: "translateY(50px)"
+                                              }}
+                                              ref={function useMotionRef.useCallback}
+                                            >
+                                        <FloatingParticle img="/images/le..." size={40} delay={0.8}>
+                                          <motion.div initial={{y:50,opacity:0}} animate={{y:[...], ...}} ...>
+                                            <div
+                                              className="absolute"
+                                              style={{
++                                               left: "10.69693639685827%"
+-                                               left: "95.292134%"
++                                               top: "49.32501517588545%"
+-                                               top: "55.259855%"
++                                               opacity: 0
+-                                               opacity: "0"
++                                               transform: "translateY(50px)"
+-                                               transform: "translateY(50px)"
+                                              }}
+                                              ref={function useMotionRef.useCallback}
+                                            >
+                                        <FloatingParticle img="/images/re..." size={28} delay={1.6}>
+                                          <motion.div initial={{y:50,opacity:0}} animate={{y:[...], ...}} ...>
+                                            <div
+                                              className="absolute"
+                                              style={{
++                                               left: "96.98260868184917%"
+-                                               left: "38.798125%"
++                                               top: "12.747341821767911%"
+-                                               top: "29.05939%"
++                                               opacity: 0
+-                                               opacity: "0"
++                                               transform: "translateY(50px)"
+-                                               transform: "translateY(50px)"
+                                              }}
+                                              ref={function useMotionRef.useCallback}
+                                            >
+                                        <FloatingParticle img="/images/le..." size={22} delay={2.4000000000000004}>
+                                          <motion.div initial={{y:50,opacity:0}} animate={{y:[...], ...}} ...>
+                                            <div
+                                              className="absolute"
+                                              style={{
++                                               left: "2.0068527862730834%"
+-                                               left: "97.045283%"
++                                               top: "32.96057481327171%"
+-                                               top: "85.764968%"
++                                               opacity: 0
+-                                               opacity: "0"
++                                               transform: "translateY(50px)"
+-                                               transform: "translateY(50px)"
+                                              }}
+                                              ref={function useMotionRef.useCallback}
+                                            >
+                                        <FloatingParticle img="/images/le..." size={35} delay={3.2}>
+                                          <motion.div initial={{y:50,opacity:0}} animate={{y:[...], ...}} ...>
+                                            <div
+                                              className="absolute"
+                                              style={{
++                                               left: "28.845369506044328%"
+-                                               left: "19.265401%"
++                                               top: "42.839935904343086%"
+-                                               top: "68.189818%"
++                                               opacity: 0
+-                                               opacity: "0"
++                                               transform: "translateY(50px)"
+-                                               transform: "translateY(50px)"
+                                              }}
+                                              ref={function useMotionRef.useCallback}
+                                            >
+                                      <motion.div initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} ...>
+                                        <div
++                                         className={"relative z-20 w-full max-w-3xl px-6 text-center \n        bg-wh..."}
+-                                         className={"relative z-20 w-full max-w-3xl px-6 text-center  bg-white/10 ba..."}
+                                          style={{opacity:0,transform:"translateY..."}}
+                                          ref={function useMotionRef.useCallback}
+                                        >
+                                  <HowItWorks>
+                                    <section className="min-h-scre...">
+                                      <div className="p-5 flex j...">
+                                        <div
++                                         className={"bg-white/90 backdrop-blur-2xl border border-white/20 \n        ..."}
+-                                         className="bg-white/90 backdrop-blur-2xl border border-white/20  rounded-3xl..."
+                                        >
+                                          <div className="sm:flex w-...">
+                                            <img>
+                                            <h1>
+                                            <div>
+                                            <div className="flex flex-...">
+                                              <div
++                                               className={"bg-white/50 backdrop-blur-md border border-white/70\n    ..."}
+-                                               className="bg-white/50 backdrop-blur-md border border-white/70 p-6 rou..."
+                                                style={{animationDelay:"0.1s"}}
+                                              >
+                                              <div
++                                               className={"bg-white/50 backdrop-blur-md border border-white/70\n    ..."}
+-                                               className="bg-white/50 backdrop-blur-md border border-white/70 p-6 rou..."
+                                                style={{animationDelay:"0.3s"}}
+                                              >
+                                              <div
++                                               className={"bg-white/50 backdrop-blur-md border border-white/70\n    ..."}
+-                                               className="bg-white/50 backdrop-blur-md border border-white/70 p-6 rou..."
+                                                style={{animationDelay:"0.5s"}}
+                                              >
+                                            ...
+                                  ...
+                  ...
+
+[01:33:17.656] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:33:22.802] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.802] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.802] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.803] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.803] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.803] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.803] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.803] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:22.966] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:33:31.316] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.316] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.317] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.317] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.317] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.317] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.317] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.317] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.455] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.456] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.456] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.457] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.457] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.457] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.458] Server  WARN     ⚠ [next]/internal/font/google/montserrat_872f714a.module.css
+next/font: warning:
+Failed to download `Montserrat` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/montserrat_872f714a.module.css
+    [next]/internal/font/google/montserrat_872f714a.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.458] Server  WARN     ⚠ [next]/internal/font/google/poppins_b89dbd8f.module.css
+next/font: warning:
+Failed to download `Poppins` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/poppins_b89dbd8f.module.css
+    [next]/internal/font/google/poppins_b89dbd8f.js
+    ./my-project/app/layout.tsx
+
+
+[01:33:31.481] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null

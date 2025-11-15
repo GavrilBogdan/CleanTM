@@ -1,17 +1,23 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter(); // <-- add this
 
-  // Smooth scroll with offset
+  // Smooth scroll for sections on the same page
   const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -100; // adjust for navbar height
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+    if (id.startsWith("/")) {
+      router.push(id); // navigate to a different page
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -100; // adjust for navbar height
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
     setOpen(false); // close mobile menu
   };
@@ -56,7 +62,7 @@ const Navbar = () => {
             <li className="hover:text-green-900 transition">
               <p
                 className="hover:underline-animation-b cursor-pointer"
-                onClick={() => handleScroll("progress")}
+                onClick={() => handleScroll("/task")}
               >
                 Tasks
               </p>
