@@ -1,7 +1,5 @@
-[00:00:00.596] Server  LOG      ✓ Ready in 455ms
-[00:00:01.895] Server  WARN     ⚠ Lockfile was successfully patched, please run "npm install" to ensure @next/swc dependencies are downloaded
-[00:00:07.502] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
-[00:00:07.510] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.422] Server  LOG      ✓ Ready in 1259ms
+[00:00:05.283] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -40,226 +38,226 @@ It can also happen if the client has a browser extension installed which messes 
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "74.91020241405111%"
--                                     left: "81.302541%"
-+                                     animationDelay: "3.429482018293393s"
--                                     animation-delay: "0.712789s"
++                                     left: "68.56174358157486%"
+-                                     left: "79.409275%"
++                                     animationDelay: "3.548245460599823s"
+-                                     animation-delay: "1.979693s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "20.23213380693679%"
--                                     left: "21.675012%"
-+                                     animationDelay: "2.895300186219421s"
--                                     animation-delay: "2.139753s"
++                                     left: "99.55074283646579%"
+-                                     left: "23.696918%"
++                                     animationDelay: "3.910583029611133s"
+-                                     animation-delay: "1.492951s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "97.50753450075311%"
--                                     left: "45.42444%"
-+                                     animationDelay: "3.584206552390268s"
--                                     animation-delay: "1.288725s"
++                                     left: "76.36933524809618%"
+-                                     left: "42.344619%"
++                                     animationDelay: "4.906216217759164s"
+-                                     animation-delay: "1.912844s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "83.56986177214105%"
--                                     left: "85.427021%"
-+                                     animationDelay: "4.419307788925461s"
--                                     animation-delay: "4.427277s"
++                                     left: "11.356130771878615%"
+-                                     left: "38.847058%"
++                                     animationDelay: "4.802792163047186s"
+-                                     animation-delay: "2.51987s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "83.10142571495814%"
--                                     left: "41.203717%"
-+                                     animationDelay: "3.4549003493805017s"
--                                     animation-delay: "3.800979s"
++                                     left: "66.32703835124269%"
+-                                     left: "8.248126%"
++                                     animationDelay: "4.256636097104617s"
+-                                     animation-delay: "3.340915s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "96.52940365287274%"
--                                     left: "32.532131%"
-+                                     animationDelay: "4.512955365626126s"
--                                     animation-delay: "2.35477s"
++                                     left: "43.585207994051714%"
+-                                     left: "92.749373%"
++                                     animationDelay: "4.450987302669974s"
+-                                     animation-delay: "4.069453s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "71.26399711304491%"
--                                     left: "76.873349%"
-+                                     animationDelay: "2.955707717543952s"
--                                     animation-delay: "4.445721s"
++                                     left: "19.847504860771757%"
+-                                     left: "54.515907%"
++                                     animationDelay: "3.7622755257469964s"
+-                                     animation-delay: "1.382554s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "36.60421786310738%"
--                                     left: "34.945375%"
-+                                     animationDelay: "4.5902974552079225s"
--                                     animation-delay: "3.474227s"
++                                     left: "83.54843667448716%"
+-                                     left: "83.858777%"
++                                     animationDelay: "4.158155825912689s"
+-                                     animation-delay: "4.511985s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "26.498831437201975%"
--                                     left: "60.585111%"
-+                                     animationDelay: "2.0279320886751133s"
--                                     animation-delay: "3.776905s"
++                                     left: "15.568730762789917%"
+-                                     left: "66.259665%"
++                                     animationDelay: "0.8631168491974461s"
+-                                     animation-delay: "1.31803s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "50.82249804961797%"
--                                     left: "64.296472%"
-+                                     animationDelay: "3.1577313237203475s"
--                                     animation-delay: "2.453831s"
++                                     left: "14.33753537253838%"
+-                                     left: "18.888007%"
++                                     animationDelay: "0.36358355203329307s"
+-                                     animation-delay: "2.910149s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "2.737349788505139%"
--                                     left: "65.405089%"
-+                                     animationDelay: "2.044626033528714s"
--                                     animation-delay: "3.888155s"
++                                     left: "93.63243742822351%"
+-                                     left: "49.026487%"
++                                     animationDelay: "4.1941149422178245s"
+-                                     animation-delay: "4.562397s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "63.86464372977362%"
--                                     left: "15.820197%"
-+                                     animationDelay: "0.10316137886361654s"
--                                     animation-delay: "3.703163s"
++                                     left: "71.6124005821985%"
+-                                     left: "26.579735%"
++                                     animationDelay: "2.9793250041114105s"
+-                                     animation-delay: "4.984377s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "75.64525240272224%"
--                                     left: "70.605041%"
-+                                     animationDelay: "3.287030773796118s"
--                                     animation-delay: "1.124578s"
++                                     left: "56.23042885094104%"
+-                                     left: "28.678107%"
++                                     animationDelay: "3.9745981258239156s"
+-                                     animation-delay: "3.102853s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "95.31495127271043%"
--                                     left: "58.657361%"
-+                                     animationDelay: "3.7485059642190617s"
--                                     animation-delay: "3.200188s"
++                                     left: "48.24057072636193%"
+-                                     left: "97.468521%"
++                                     animationDelay: "2.447330905141905s"
+-                                     animation-delay: "3.875693s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "49.41326373551592%"
--                                     left: "20.28358%"
-+                                     animationDelay: "1.6081365572044244s"
--                                     animation-delay: "3.749654s"
++                                     left: "54.66113136537526%"
+-                                     left: "78.60583%"
++                                     animationDelay: "0.9525462355492786s"
+-                                     animation-delay: "1.429178s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "75.24634471612161%"
--                                     left: "42.584394%"
-+                                     animationDelay: "4.350745437559046s"
--                                     animation-delay: "3.92837s"
++                                     left: "66.30956517028478%"
+-                                     left: "4.772491%"
++                                     animationDelay: "0.09260262353093296s"
+-                                     animation-delay: "1.612656s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "58.10385552805057%"
--                                     left: "68.86617%"
-+                                     animationDelay: "0.5466794947086173s"
--                                     animation-delay: "0.939558s"
++                                     left: "8.222863218992027%"
+-                                     left: "37.331498%"
++                                     animationDelay: "1.9815978521583215s"
+-                                     animation-delay: "2.806776s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "50.97605366044746%"
--                                     left: "23.588845%"
-+                                     animationDelay: "3.756713331244554s"
--                                     animation-delay: "1.477182s"
++                                     left: "11.162745539025899%"
+-                                     left: "94.037928%"
++                                     animationDelay: "1.6779105056022132s"
+-                                     animation-delay: "3.960707s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "28.982466537885077%"
--                                     left: "4.614934%"
-+                                     animationDelay: "1.9724052929882667s"
--                                     animation-delay: "0.341969s"
++                                     left: "81.20800174696099%"
+-                                     left: "27.870458%"
++                                     animationDelay: "1.518541359504439s"
+-                                     animation-delay: "3.842377s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "96.37909243356127%"
--                                     left: "0.916172%"
-+                                     animationDelay: "3.3119418042236997s"
--                                     animation-delay: "3.245453s"
++                                     left: "56.32293471201753%"
+-                                     left: "79.43025%"
++                                     animationDelay: "3.2212868530778866s"
+-                                     animation-delay: "3.366019s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "97.53220293087041%"
--                                     left: "82.791906%"
-+                                     animationDelay: "4.756365520344829s"
--                                     animation-delay: "2.67978s"
++                                     left: "27.68857158579746%"
+-                                     left: "48.287286%"
++                                     animationDelay: "0.8344400311296707s"
+-                                     animation-delay: "3.411013s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "17.394605402354635%"
--                                     left: "56.496725%"
-+                                     animationDelay: "4.929550458668121s"
--                                     animation-delay: "2.672093s"
++                                     left: "83.30189436516321%"
+-                                     left: "15.301239%"
++                                     animationDelay: "4.240230806537257s"
+-                                     animation-delay: "3.086684s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "5.0927241863231165%"
--                                     left: "51.07003%"
-+                                     animationDelay: "4.217607036825371s"
--                                     animation-delay: "1.816344s"
++                                     left: "6.653310403703749%"
+-                                     left: "1.421806%"
++                                     animationDelay: "2.646333462511845s"
+-                                     animation-delay: "4.581895s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "14.91102521143073%"
--                                     left: "66.061931%"
-+                                     animationDelay: "1.167510611184862s"
--                                     animation-delay: "4.571799s"
++                                     left: "32.90112640558826%"
+-                                     left: "70.298819%"
++                                     animationDelay: "0.1870133822685771s"
+-                                     animation-delay: "0.803594s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "12.453566873689049%"
--                                     left: "55.528793%"
-+                                     animationDelay: "3.325578836966544s"
--                                     animation-delay: "3.074051s"
++                                     left: "15.163324631153497%"
+-                                     left: "91.442113%"
++                                     animationDelay: "0.3047760922836634s"
+-                                     animation-delay: "3.263309s"
                                     }}
                                   >
                                 ...
@@ -276,37 +274,37 @@ It can also happen if the client has a browser extension installed which messes 
                                           <div
                                             className="absolute"
                                             style={{
-+                                             top: "64.10269320943684%"
--                                             top: "47.195192%"
-+                                             left: "67.05131144526199%"
--                                             left: "23.201763%"
++                                             top: "39.34898295082388%"
+-                                             top: "22.024433%"
++                                             left: "37.81660775404681%"
+-                                             left: "21.232162%"
                                             }}
                                           >
                                           <div
                                             className="absolute"
                                             style={{
-+                                             top: "69.93158492255472%"
--                                             top: "44.839337%"
-+                                             left: "51.35477332598348%"
--                                             left: "77.436027%"
++                                             top: "56.7531869189511%"
+-                                             top: "64.292524%"
++                                             left: "38.93145918844547%"
+-                                             left: "71.336897%"
                                             }}
                                           >
                                           <div
                                             className="absolute"
                                             style={{
-+                                             top: "32.41424970020719%"
--                                             top: "35.667619%"
-+                                             left: "61.909915503134755%"
--                                             left: "69.928515%"
++                                             top: "71.29508202052537%"
+-                                             top: "28.098549%"
++                                             left: "47.737268923167086%"
+-                                             left: "21.72122%"
                                             }}
                                           >
                                           <div
                                             className="absolute"
                                             style={{
-+                                             top: "58.79934265981406%"
--                                             top: "24.287898%"
-+                                             left: "58.59142121997756%"
--                                             left: "22.990733%"
++                                             top: "69.32773770824036%"
+-                                             top: "70.227675%"
++                                             left: "57.11248059073579%"
+-                                             left: "63.558262%"
                                             }}
                                           >
                                         <FloatingParticle img="/images/le..." size={40} delay={0}>
@@ -314,10 +312,10 @@ It can also happen if the client has a browser extension installed which messes 
                                             <div
                                               className="absolute"
                                               style={{
-+                                               left: "69.4276921580689%"
--                                               left: "61.434625%"
-+                                               top: "66.98055643670502%"
--                                               top: "73.816709%"
++                                               left: "91.21845575143637%"
+-                                               left: "17.050924%"
++                                               top: "94.65916748526017%"
+-                                               top: "75.273553%"
 +                                               opacity: 0
 -                                               opacity: "0"
 +                                               transform: "translateY(50px)"
@@ -330,10 +328,10 @@ It can also happen if the client has a browser extension installed which messes 
                                             <div
                                               className="absolute"
                                               style={{
-+                                               left: "19.200162167801505%"
--                                               left: "41.551252%"
-+                                               top: "50.55053866968174%"
--                                               top: "6.909096%"
++                                               left: "91.0964467813069%"
+-                                               left: "29.504741%"
++                                               top: "98.04534447747074%"
+-                                               top: "17.211448%"
 +                                               opacity: 0
 -                                               opacity: "0"
 +                                               transform: "translateY(50px)"
@@ -346,10 +344,10 @@ It can also happen if the client has a browser extension installed which messes 
                                             <div
                                               className="absolute"
                                               style={{
-+                                               left: "62.505913655560505%"
--                                               left: "30.163461%"
-+                                               top: "92.72783537677263%"
--                                               top: "58.028471%"
++                                               left: "58.46937252065851%"
+-                                               left: "95.83901%"
++                                               top: "99.31649936836784%"
+-                                               top: "58.549993%"
 +                                               opacity: 0
 -                                               opacity: "0"
 +                                               transform: "translateY(50px)"
@@ -362,10 +360,10 @@ It can also happen if the client has a browser extension installed which messes 
                                             <div
                                               className="absolute"
                                               style={{
-+                                               left: "85.0422163309871%"
--                                               left: "96.122745%"
-+                                               top: "35.28061254363604%"
--                                               top: "84.656299%"
++                                               left: "4.6109039427765675%"
+-                                               left: "93.064537%"
++                                               top: "10.489148707805152%"
+-                                               top: "46.64465%"
 +                                               opacity: 0
 -                                               opacity: "0"
 +                                               transform: "translateY(50px)"
@@ -378,10 +376,10 @@ It can also happen if the client has a browser extension installed which messes 
                                             <div
                                               className="absolute"
                                               style={{
-+                                               left: "6.728001370132686%"
--                                               left: "87.415078%"
-+                                               top: "94.12774540969706%"
--                                               top: "93.393224%"
++                                               left: "98.60081904663731%"
+-                                               left: "43.858954%"
++                                               top: "90.08233790482578%"
+-                                               top: "61.707871%"
 +                                               opacity: 0
 -                                               opacity: "0"
 +                                               transform: "translateY(50px)"
@@ -427,5 +425,7 @@ It can also happen if the client has a browser extension installed which messes 
                                   ...
                   ...
 
-[00:00:07.510] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:14.836] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:05.283] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:05.708] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[00:00:24.518] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:35.760] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
