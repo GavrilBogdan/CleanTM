@@ -51,7 +51,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden text-white"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden text-white px-5 sm:px-0"
     >
       {/* BACKGROUND */}
       <div className="absolute inset-0 -z-20">
@@ -102,7 +102,7 @@ const Hero = () => {
         bg-white/10 backdrop-blur-2xl border border-white/20 
         rounded-3xl py-14 shadow-[0_0_25px_rgba(0,255,150,0.7)] 
         hover:shadow-[0_0_40px_rgba(0,255,150,1)] 
-        transition-all duration-500"
+        transition-all duration-500 "
       >
         <h1
           className={` text-5xl sm:text-7xl font-bold drop-shadow-[0_0_20px_rgba(0,255,150,0.9)]

@@ -1151,11 +1151,11 @@ var _s = __turbopack_context__.k.signature();
 const Navbar = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(34);
-    if ($[0] !== "2eae092dc074d0832627b59c8d9b51bdeb5bf4d844f724dd068ee516dfd14142") {
+    if ($[0] !== "a6c509f88db1a19a9e394f64300c970248a1785ddc36c2872bf79a72e69dadae") {
         for(let $i = 0; $i < 34; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2eae092dc074d0832627b59c8d9b51bdeb5bf4d844f724dd068ee516dfd14142";
+        $[0] = "a6c509f88db1a19a9e394f64300c970248a1785ddc36c2872bf79a72e69dadae";
     }
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$my$2d$project$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;

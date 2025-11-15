@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="fixed mt-5 flex w-full items-center justify-between mx-auto max-w-7xl px-6 py-3 lg:px-8 lg:py-4 bg-lime-50 rounded-[3rem] shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 backdrop-blur-lg">
         {/* LOGO */}
         <div
-          onClick={() => handleScroll("home")}
+          onClick={() => handleScroll("/")}
           className="flex items-center space-x-2 cursor-pointer"
         >
           <img
@@ -58,7 +58,7 @@ const Navbar = () => {
                 className="hover:underline-animation-b cursor-pointer"
                 onClick={() => handleScroll("progress")}
               >
-                Progress
+                Tasks
               </p>
             </li>
             <li className="hover:text-green-900 transition">
@@ -130,7 +130,7 @@ const Navbar = () => {
               className="cursor-pointer"
               onClick={() => handleScroll("progress")}
             >
-              Progress
+              Tasks
             </p>
           </li>
           <li className="hover:text-green-900 transition">
