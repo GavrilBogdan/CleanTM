@@ -669,18 +669,12 @@ const initialTasks = [
         uploadedImage: null
     }
 ];
+const COOLDOWN = 6 * 60 * 60 * 1000; // 6 hours in ms
 function TasksPage() {
     const [tasks, setTasks] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialTasks);
     const [activeTaskId, setActiveTaskId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [userPoints, setUserPoints] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [timeLeft, setTimeLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    // Restore your file upload system EXACTLY
-    const handleImageUpload = (taskId, file)=>{
-        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
-                    ...t,
-                    uploadedImage: file
-                } : t));
-    };
     // Fetch user points
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         fetch("/api/auth/me").then((res)=>res.json()).then((data)=>{
@@ -689,19 +683,30 @@ function TasksPage() {
             }
         }).catch((err)=>console.error("Error fetching user points:", err));
     }, []);
-    const startTask = (taskId)=>{
-        if (!activeTaskId) {
-            const task = tasks.find((t)=>t.id === taskId);
-            setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
-                        ...t,
-                        points: t.basePoints * t.difficulty,
-                        startedAt: Date.now()
-                    } : t));
-            setActiveTaskId(taskId);
-            setTimeLeft(3 * 60 * 60); // 3 hours
-        }
+    // Handle file uploads
+    const handleImageUpload = (taskId, file)=>{
+        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
+                    ...t,
+                    uploadedImage: file
+                } : t));
     };
-    // Timer
+    const startTask = (taskId)=>{
+        const task = tasks.find((t)=>t.id === taskId);
+        if (!task) return;
+        // Check cooldown
+        if (task.lastCompleted && Date.now() - task.lastCompleted < COOLDOWN) {
+            alert("Task is on cooldown!");
+            return;
+        }
+        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
+                    ...t,
+                    points: t.basePoints * t.difficulty,
+                    startedAt: Date.now()
+                } : t));
+        setActiveTaskId(taskId);
+        setTimeLeft(3 * 60 * 60); // 3 hours timer
+    };
+    // Timer for active task
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!activeTaskId) return;
         const interval = setInterval(()=>{
@@ -717,10 +722,10 @@ function TasksPage() {
     }, [
         activeTaskId
     ]);
-    // Finish Task
+    // Finish task
     const finishTask = async (taskId)=>{
         const task = tasks.find((t)=>t.id === taskId);
-        if (!task) return;
+        if (!task || !task.uploadedImage) return;
         try {
             const res = await fetch("/api/tasks/addPoints", {
                 method: "POST",
@@ -735,7 +740,6 @@ function TasksPage() {
             if (data.user && typeof data.user.points === "number") {
                 setUserPoints(data.user.points);
             }
-            // Reset task after finishing
             setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
                         ...t,
                         startedAt: null,
@@ -748,38 +752,42 @@ function TasksPage() {
             console.error("Error updating points:", err);
         }
     };
-    // Format Time
     const formatTime = (seconds)=>{
         const h = Math.floor(seconds / 3600);
         const m = Math.floor(seconds % 3600 / 60);
         const s = seconds % 60;
         return `${h}h ${m}m ${s}s`;
     };
+    const getCooldownLeft = (lastCompleted)=>{
+        if (!lastCompleted) return 0;
+        const remaining = COOLDOWN - (Date.now() - lastCompleted);
+        return remaining > 0 ? Math.floor(remaining / 1000) : 0;
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 153,
+                lineNumber: 158,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "min-h-screen pt-28 px-6 md:px-12 flex flex-col items-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-5xl md:text-6xl font-extrabold text-center  bg-gradient-to-b from-white to-neutral-300 text-transparent bg-clip-text tracking-wide drop-shadow-2xl mb-6",
+                        className: "text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-b from-white to-neutral-300 text-transparent bg-clip-text tracking-wide drop-shadow-2xl mb-6",
                         children: "Weekly Quests"
                     }, void 0, false, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 156,
+                        lineNumber: 160,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative mb-16 bg-white/40 backdrop-blur-xl px-10 py-4  rounded-full shadow-xl border border-white/40 text-green-900 font-bold text-center",
+                        className: "relative mb-16 bg-white/40 backdrop-blur-xl px-10 py-4 rounded-full shadow-xl border border-white/40 text-green-900 font-bold text-center",
                         children: [
                             "Your Points ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 170,
+                                lineNumber: 165,
                                 columnNumber: 23
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -787,30 +795,33 @@ function TasksPage() {
                                 children: userPoints
                             }, void 0, false, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 171,
+                                lineNumber: 166,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 165,
+                        lineNumber: 164,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl pb-20",
-                        children: tasks.map((task, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "group flex flex-col items-center justify-between  p-8 rounded-3xl bg-gradient-to-br from-white/70 to-white/30  backdrop-blur-xl border border-white/40 shadow-2xl hover:scale-[1.03] transition-all duration-500",
+                        children: tasks.map((task, idx)=>{
+                            const cooldownLeft = getCooldownLeft(task.lastCompleted);
+                            const onCooldown = cooldownLeft > 0;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "group flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-xl border border-white/40 shadow-2xl hover:scale-[1.03] transition-all duration-500",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-2xl font-bold bg-white/40 px-6 py-2 rounded-full mb-4  shadow-md text-green-800",
+                                        className: "text-2xl font-bold bg-white/40 px-6 py-2 rounded-full mb-4 shadow-md text-green-800",
                                         children: [
                                             "Task ",
                                             idx + 1
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 185,
-                                        columnNumber: 15
+                                        lineNumber: 179,
+                                        columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex flex-col items-center mb-4",
@@ -820,8 +831,8 @@ function TasksPage() {
                                                 children: "Difficulty"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 194,
-                                                columnNumber: 17
+                                                lineNumber: 184,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex items-center gap-1",
@@ -831,13 +842,13 @@ function TasksPage() {
                                                         className: "w-5 h-5 text-yellow-400"
                                                     }, i, false, {
                                                         fileName: "[project]/app/task/page.tsx",
-                                                        lineNumber: 199,
-                                                        columnNumber: 21
+                                                        lineNumber: 189,
+                                                        columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 197,
-                                                columnNumber: 17
+                                                lineNumber: 187,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-green-700 font-semibold mt-2",
@@ -847,22 +858,22 @@ function TasksPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 202,
-                                                columnNumber: 17
+                                                lineNumber: 192,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 193,
-                                        columnNumber: 15
+                                        lineNumber: 183,
+                                        columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-center font-semibold text-black/90 mb-6 min-h-[60px]",
                                         children: task.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 208,
-                                        columnNumber: 15
+                                        lineNumber: 197,
+                                        columnNumber: 17
                                     }, this),
                                     activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-green-700 font-medium mb-4",
@@ -872,8 +883,8 @@ function TasksPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 214,
-                                        columnNumber: 17
+                                        lineNumber: 202,
+                                        columnNumber: 19
                                     }, this),
                                     activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         className: "relative mt-4 mb-4 inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-800/30 hover:shadow-emerald-600/40 hover:scale-105 transition-all cursor-pointer",
@@ -886,23 +897,24 @@ function TasksPage() {
                                                 className: "absolute inset-0 opacity-0 cursor-pointer"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 231,
-                                                columnNumber: 19
+                                                lineNumber: 210,
+                                                columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 221,
-                                        columnNumber: 17
+                                        lineNumber: 208,
+                                        columnNumber: 19
                                     }, this),
                                     !activeTaskId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>startTask(task.id),
-                                        className: "mt-2 w-full text-center bg-gradient-to-r  from-green-500 to-emerald-600 text-white py-3 rounded-full  font-bold shadow-lg hover:scale-105 transition-all",
-                                        children: "Start Task"
+                                        disabled: onCooldown,
+                                        className: `mt-2 w-full text-center bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-all ${onCooldown ? "opacity-50 cursor-not-allowed" : ""}`,
+                                        children: onCooldown ? `Cooldown: ${formatTime(cooldownLeft)}` : "Start Task"
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 245,
-                                        columnNumber: 17
+                                        lineNumber: 223,
+                                        columnNumber: 19
                                     }, this),
                                     activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>finishTask(task.id),
@@ -911,29 +923,30 @@ function TasksPage() {
                                         children: "Finish Task"
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 257,
-                                        columnNumber: 17
+                                        lineNumber: 237,
+                                        columnNumber: 19
                                     }, this)
                                 ]
                             }, task.id, true, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 177,
-                                columnNumber: 13
-                            }, this))
+                                lineNumber: 175,
+                                columnNumber: 15
+                            }, this);
+                        })
                     }, void 0, false, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 175,
+                        lineNumber: 169,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 154,
+                lineNumber: 159,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 273,
+                lineNumber: 254,
                 columnNumber: 7
             }, this)
         ]
