@@ -1005,11 +1005,11 @@ var _s = __turbopack_context__.k.signature();
 function ShopPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(23);
-    if ($[0] !== "3122b338c4919de924f73905ffac0b6568f2826b27fd801d18ed59a02a573b45") {
+    if ($[0] !== "6dfb8e34bba5e47247a3fbd3e138e3edc105faa32c07db97a33de42d4d494194") {
         for(let $i = 0; $i < 23; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "3122b338c4919de924f73905ffac0b6568f2826b27fd801d18ed59a02a573b45";
+        $[0] = "6dfb8e34bba5e47247a3fbd3e138e3edc105faa32c07db97a33de42d4d494194";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {

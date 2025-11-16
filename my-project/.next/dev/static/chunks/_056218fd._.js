@@ -784,23 +784,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx_
 ;
 ;
 ;
-// importă componenta mare (cea în care e harta + statistici + heatmap)
 const TimisoaraProblemsMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.A("[project]/components/Map.tsx [app-client] (ecmascript, next/dynamic entry, async loader)"), {
     loadableGenerated: {
         modules: [
             "[project]/components/Map.tsx [app-client] (ecmascript, next/dynamic entry)"
         ]
     },
-    ssr: false // foarte important pentru ca leaflet să nu ruleze pe server
+    ssr: false
 });
 _c = TimisoaraProblemsMap;
 function Page() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "c5fd1a5edaa365fe52730f1f1af42dabe2eae71a20057fff723ca91ab213b58b") {
+    if ($[0] !== "b0d0f15acbeb808e35e5c3194881633fb9197212682f1086ab752a71b0d6eea1") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "c5fd1a5edaa365fe52730f1f1af42dabe2eae71a20057fff723ca91ab213b58b";
+        $[0] = "b0d0f15acbeb808e35e5c3194881633fb9197212682f1086ab752a71b0d6eea1";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -808,25 +807,25 @@ function Page() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/Participate/page.tsx",
-                    lineNumber: 22,
+                    lineNumber: 20,
                     columnNumber: 12
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TimisoaraProblemsMap, {}, void 0, false, {
                             fileName: "[project]/app/Participate/page.tsx",
-                            lineNumber: 22,
+                            lineNumber: 20,
                             columnNumber: 28
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/Participate/page.tsx",
-                            lineNumber: 22,
+                            lineNumber: 20,
                             columnNumber: 52
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/Participate/page.tsx",
-                    lineNumber: 22,
+                    lineNumber: 20,
                     columnNumber: 22
                 }, this)
             ]

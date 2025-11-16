@@ -817,7 +817,7 @@ function ShopPage() {
             const data = await res.json();
             if (data.success) {
                 setUserPoints(data.pointsLeft);
-                return true; // signal success for confetti
+                return true;
             } else {
                 alert(data.error);
                 return false;
