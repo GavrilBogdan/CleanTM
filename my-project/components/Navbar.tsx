@@ -60,8 +60,24 @@ const Navbar = ({ className }: { className?: string }) => {
   };
 
   return (
-    <div className={`relative w-full flex justify-center ${className || ""}`}>
-      <nav className="fixed top-6 w-full max-w-7xl mx-auto flex items-center justify-between px-10 py-4 rounded-full shadow-lg bg-white/5 backdrop-blur-lg border border-gray-200/10 z-50">
+    <div
+      className={`relative z-[9999] w-full flex justify-center ${
+        className || ""
+      }`}
+    >
+      <nav
+        className="
+          fixed top-4 w-[92%] max-w-7xl mx-auto
+          flex items-center justify-between
+          px-6 md:px-10 py-3
+          rounded-full
+          shadow-[0_0_25px_rgba(16,185,129,0.6)]
+          bg-slate-900/85
+          border border-emerald-500/40
+          backdrop-blur-2xl
+          z-[10000]
+        "
+      >
         {/* Logo */}
         <div
           onClick={() => handleScroll("/")}
@@ -70,26 +86,41 @@ const Navbar = ({ className }: { className?: string }) => {
           <img
             src="https://cdn-icons-png.flaticon.com/128/892/892930.png"
             alt="CleanTM Logo"
-            className="h-10 w-10"
+            className="h-9 w-9 drop-shadow-[0_0_10px_rgba(16,185,129,0.9)]"
           />
-          <span className="text-xl font-extrabold text-gray-900">CleanTM</span>
+          <span className="text-xl font-extrabold text-emerald-100 tracking-wide">
+            CleanTM
+          </span>
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden lg:flex items-center gap-12 text-gray-700 font-medium text-lg">
+        <ul className="hidden lg:flex items-center gap-10 text-emerald-50 font-medium text-sm md:text-base">
           {[
             { label: "Home", id: "/" },
-            { label: "Map", id: "map" },
+            { label: "Map", id: "/Participate" },
             { label: "Weekly Quests", id: "/task" },
             { label: "Rewards", id: "/shop" },
           ].map((i) => (
             <li
               key={i.label}
               onClick={() => handleScroll(i.id)}
-              className="relative cursor-pointer hover:text-green-600 transition-colors duration-300"
+              className="
+                relative cursor-pointer group
+                transition-colors duration-300
+                text-emerald-100
+                hover:text-emerald-300
+              "
             >
               {i.label}
-              <span className="absolute left-0 -bottom-1 w-0 h-1 bg-green-500 rounded-full group-hover:w-full transition-all duration-300"></span>
+              <span
+                className="
+                  absolute left-1/2 -bottom-1 h-[2px] w-0
+                  bg-emerald-400 rounded-full
+                  group-hover:w-full
+                  group-hover:-translate-x-1/2
+                  transition-all duration-300
+                "
+              />
             </li>
           ))}
         </ul>
@@ -103,23 +134,61 @@ const Navbar = ({ className }: { className?: string }) => {
             <>
               <div
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
-                className="font-semibold text-gray-700 cursor-pointer px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                className="
+                  font-semibold text-emerald-50 cursor-pointer px-3 py-2
+                  rounded-xl
+                  bg-emerald-500/5
+                  hover:bg-emerald-500/15
+                  border border-emerald-400/30
+                  transition
+                "
               >
                 {user.email}
               </div>
 
               {/* Dropdown */}
               {userMenuOpen && (
-                <div className="absolute right-0 top-12 bg-white rounded-lg shadow-lg border border-gray-200/20 w-40 py-2 z-50 animate-slide-down">
+                <div
+                  className="
+                    absolute right-0 top-12
+                    bg-slate-900/95
+                    rounded-xl shadow-2xl
+                    border border-emerald-500/30
+                    w-44 py-2 z-[10001]
+                    animate-slide-down
+                    backdrop-blur-xl
+                  "
+                >
+                  <button
+                    onClick={() => handleScroll("/Dashboard")}
+                    className="
+                      w-full text-left px-4 py-2
+                      text-emerald-50 text-sm
+                      hover:bg-emerald-500/10
+                      transition
+                    "
+                  >
+                    Dashboard
+                  </button>
                   <button
                     onClick={() => handleScroll("/shop/inventory")}
-                    className="w-full text-left px-4 py-2 hover:bg-gray-100 transition"
+                    className="
+                      w-full text-left px-4 py-2
+                      text-emerald-50 text-sm
+                      hover:bg-emerald-500/10
+                      transition
+                    "
                   >
                     Inventory
                   </button>
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition"
+                    className="
+                      w-full text-left px-4 py-2
+                      text-red-400 text-sm
+                      hover:bg-red-500/10
+                      transition
+                    "
                   >
                     Logout
                   </button>
@@ -129,7 +198,15 @@ const Navbar = ({ className }: { className?: string }) => {
           ) : (
             <button
               onClick={() => handleScroll("/api/login")}
-              className="px-6 py-2 rounded-full bg-green-600 text-white font-bold hover:bg-green-700 transition-all shadow-md"
+              className="
+                px-5 py-2 rounded-full
+                bg-emerald-500
+                text-white text-sm font-bold
+                shadow-lg shadow-emerald-500/40
+                hover:bg-emerald-400
+                hover:shadow-emerald-400/60
+                transition-all
+              "
             >
               Login
             </button>
@@ -139,22 +216,31 @@ const Navbar = ({ className }: { className?: string }) => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden relative w-10 h-10 flex flex-col justify-between"
+          className="lg:hidden relative w-10 h-10 flex flex-col justify-between items-center z-[10002]"
         >
           <span
-            className={`block h-1 w-full bg-gray-900 rounded transition-transform duration-300 ${
-              open ? "rotate-45 translate-y-4" : ""
-            }`}
+            className={`
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-transform duration-300
+              ${open ? "rotate-45 translate-y-3" : ""}
+            `}
           ></span>
           <span
-            className={`block h-1 w-full bg-gray-900 rounded transition-opacity duration-300 ${
-              open ? "opacity-0" : ""
-            }`}
+            className={`
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-opacity duration-300
+              ${open ? "opacity-0" : ""}
+            `}
           ></span>
           <span
-            className={`block h-1 w-full bg-gray-900 rounded transition-transform duration-300 ${
-              open ? "-rotate-45 -translate-y-4" : ""
-            }`}
+            className={`
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-transform duration-300
+              ${open ? "-rotate-45 -translate-y-3" : ""}
+            `}
           ></span>
         </button>
       </nav>
@@ -162,9 +248,13 @@ const Navbar = ({ className }: { className?: string }) => {
       {/* Mobile Dropdown */}
       <div
         className={`
-          lg:hidden fixed top-[6.5rem] w-full max-w-7xl mx-auto px-8 py-6
-          rounded-2xl bg-white/95 backdrop-blur-lg shadow-md border border-gray-200/10
-          transition-all duration-500
+          lg:hidden fixed top-[5.5rem] left-1/2 -translate-x-1/2 w-[92%] max-w-7xl px-6 py-6
+          rounded-3xl
+          bg-slate-900/95
+          backdrop-blur-2xl
+          shadow-[0_20px_40px_rgba(0,0,0,0.8)]
+          border border-emerald-500/30
+          transition-all duration-500 z-[9999]
           ${
             open
               ? "opacity-100 translate-y-0"
@@ -172,28 +262,28 @@ const Navbar = ({ className }: { className?: string }) => {
           }
         `}
       >
-        <ul className="flex flex-col gap-6 text-lg font-medium text-gray-700">
+        <ul className="flex flex-col gap-5 text-base font-medium text-emerald-50">
           <li
             onClick={() => handleScroll("/")}
-            className="hover:text-green-600 cursor-pointer"
+            className="hover:text-emerald-300 cursor-pointer"
           >
             Home
           </li>
           <li
-            onClick={() => handleScroll("map")}
-            className="hover:text-green-600 cursor-pointer"
+            onClick={() => handleScroll("/Participate")}
+            className="hover:text-emerald-300 cursor-pointer"
           >
             Map
           </li>
           <li
             onClick={() => handleScroll("/task")}
-            className="hover:text-green-600 cursor-pointer"
+            className="hover:text-emerald-300 cursor-pointer"
           >
             Weekly Quests
           </li>
           <li
             onClick={() => handleScroll("/shop")}
-            className="hover:text-green-600 cursor-pointer"
+            className="hover:text-emerald-300 cursor-pointer"
           >
             Rewards
           </li>
@@ -202,16 +292,45 @@ const Navbar = ({ className }: { className?: string }) => {
         <div className="mt-6 flex flex-col gap-3">
           {user ? (
             <>
-              <span className="text-gray-700 font-semibold">{user.email}</span>
+              <span className="text-emerald-100 font-semibold">
+                {user.email}
+              </span>
               <button
-                onClick={() => handleScroll("/inventory")}
-                className="w-full py-3 rounded-full bg-gray-200 text-gray-800 font-bold hover:bg-gray-300 transition-all shadow-md"
+                onClick={() => handleScroll("/Dashboard")}
+                className="
+                  w-full py-3 rounded-full
+                  bg-emerald-500/10
+                  text-emerald-100 font-bold
+                  border border-emerald-400/40
+                  hover:bg-emerald-500/20
+                  transition-all shadow-md
+                "
+              >
+                Dashboard
+              </button>
+              <button
+                onClick={() => handleScroll("/shop/inventory")}
+                className="
+                  w-full py-3 rounded-full
+                  bg-emerald-500/10
+                  text-emerald-100 font-bold
+                  border border-emerald-400/40
+                  hover:bg-emerald-500/20
+                  transition-all shadow-md
+                "
               >
                 Inventory
               </button>
               <button
                 onClick={handleLogout}
-                className="w-full py-3 rounded-full bg-red-400 text-white font-bold hover:bg-red-700 transition-all shadow-md"
+                className="
+                  w-full py-3 rounded-full
+                  bg-red-500/15
+                  text-red-200 font-bold
+                  border border-red-400/40
+                  hover:bg-red-500/30
+                  transition-all shadow-md
+                "
               >
                 Logout
               </button>
@@ -219,7 +338,13 @@ const Navbar = ({ className }: { className?: string }) => {
           ) : (
             <button
               onClick={() => handleScroll("/api/login")}
-              className="w-full py-3 rounded-full bg-green-600 text-white font-bold hover:bg-green-700 transition-all shadow-md"
+              className="
+                w-full py-3 rounded-full
+                bg-emerald-500
+                text-white font-bold
+                hover:bg-emerald-400
+                transition-all shadow-lg shadow-emerald-500/50
+              "
             >
               Login
             </button>

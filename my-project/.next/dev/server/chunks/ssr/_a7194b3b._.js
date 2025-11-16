@@ -10,18 +10,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/context/UserContext.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
 ;
 const Navbar = ({ className })=>{
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [userMenuOpen, setUserMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const { user, setUser } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$UserContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useUser"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const userMenuRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchUser = async ()=>{
             try {
@@ -38,6 +37,16 @@ const Navbar = ({ className })=>{
     }, [
         setUser
     ]);
+    // Close dropdown if clicked outside
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const handleClickOutside = (event)=>{
+            if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+                setUserMenuOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return ()=>document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
     const handleScroll = (id)=>{
         if (id.startsWith("/")) router.push(id);
         else {
@@ -52,6 +61,7 @@ const Navbar = ({ className })=>{
             }
         }
         setOpen(false);
+        setUserMenuOpen(false);
     };
     const handleLogout = async ()=>{
         await fetch("/api/auth/logout", {
@@ -61,65 +71,40 @@ const Navbar = ({ className })=>{
         router.push("/");
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `relative w-full flex justify-center ${className || ""}`,
+        className: `relative z-[9999] w-full flex justify-center ${className || ""}`,
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].nav, {
-                initial: {
-                    y: -100,
-                    opacity: 0
-                },
-                animate: {
-                    y: 0,
-                    opacity: 1
-                },
-                transition: {
-                    type: "spring",
-                    stiffness: 120,
-                    damping: 20
-                },
-                className: "fixed top-6 w-full max-w-7xl mx-auto flex items-center justify-between px-12 py-4 z-50 rounded-[2rem] backdrop-blur-xl border border-gray-100/10 bg-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.15)]",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                className: " fixed top-4 w-[92%] max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-3 rounded-full shadow-[0_0_25px_rgba(16,185,129,0.6)] bg-slate-900/85 border border-emerald-500/40 backdrop-blur-2xl z-[10000] ",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         onClick: ()=>handleScroll("/"),
-                        className: "flex items-center gap-4 cursor-pointer",
-                        whileHover: {
-                            scale: 1.1,
-                            rotate: [
-                                0,
-                                5,
-                                -5,
-                                0
-                            ]
-                        },
-                        transition: {
-                            duration: 0.6
-                        },
+                        className: "flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform duration-300",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "https://cdn-icons-png.flaticon.com/128/892/892930.png",
                                 alt: "CleanTM Logo",
-                                className: "h-10 w-10"
+                                className: "h-9 w-9 drop-shadow-[0_0_10px_rgba(16,185,129,0.9)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 61,
+                                lineNumber: 86,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-2xl font-extrabold text-gray-900",
+                                className: "text-xl font-extrabold text-emerald-100 tracking-wide",
                                 children: "CleanTM"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 66,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 55,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "hidden lg:flex items-center gap-14 font-semibold text-gray-700 text-lg",
+                        className: "hidden lg:flex items-center gap-10 text-emerald-50 font-medium text-sm md:text-base",
                         children: [
                             {
                                 label: "Home",
@@ -127,7 +112,7 @@ const Navbar = ({ className })=>{
                             },
                             {
                                 label: "Map",
-                                id: "map"
+                                id: "/Participate"
                             },
                             {
                                 label: "Weekly Quests",
@@ -137,250 +122,267 @@ const Navbar = ({ className })=>{
                                 label: "Rewards",
                                 id: "/shop"
                             }
-                        ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].li, {
+                        ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 onClick: ()=>handleScroll(i.id),
-                                className: "relative cursor-pointer",
-                                whileHover: {
-                                    y: -3
-                                },
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 200,
-                                    damping: 10
-                                },
+                                className: " relative cursor-pointer group transition-colors duration-300 text-emerald-100 hover:text-emerald-300 ",
                                 children: [
+                                    i.label,
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "hover:text-green-600 transition-colors duration-300",
-                                        children: i.label
+                                        className: " absolute left-1/2 -bottom-1 h-[2px] w-0 bg-emerald-400 rounded-full group-hover:w-full group-hover:-translate-x-1/2 transition-all duration-300 "
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 84,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                        layoutId: "underline",
-                                        className: "absolute left-0 -bottom-1 h-1 bg-green-500 rounded-full"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 87,
+                                        lineNumber: 115,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, i.label, true, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 77,
+                                lineNumber: 104,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 70,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden lg:flex items-center gap-4",
+                        className: "hidden lg:flex items-center gap-4 relative",
+                        ref: userMenuRef,
                         children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "font-semibold text-gray-700",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    onClick: ()=>setUserMenuOpen(!userMenuOpen),
+                                    className: " font-semibold text-emerald-50 cursor-pointer px-3 py-2 rounded-xl bg-emerald-500/5 hover:bg-emerald-500/15 border border-emerald-400/30 transition ",
                                     children: user.email
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 135,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                    onClick: handleLogout,
-                                    className: "px-6 py-2 rounded-full bg-red-600 text-white font-bold shadow-lg",
-                                    whileHover: {
-                                        scale: 1.05
-                                    },
-                                    transition: {
-                                        type: "spring",
-                                        stiffness: 300
-                                    },
-                                    children: "Logout"
-                                }, void 0, false, {
+                                userMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: " absolute right-0 top-12 bg-slate-900/95 rounded-xl shadow-2xl border border-emerald-500/30 w-44 py-2 z-[10001] animate-slide-down backdrop-blur-xl ",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>handleScroll("/Dashboard"),
+                                            className: " w-full text-left px-4 py-2 text-emerald-50 text-sm hover:bg-emerald-500/10 transition ",
+                                            children: "Dashboard"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 162,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>handleScroll("/shop/inventory"),
+                                            className: " w-full text-left px-4 py-2 text-emerald-50 text-sm hover:bg-emerald-500/10 transition ",
+                                            children: "Inventory"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 173,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: handleLogout,
+                                            className: " w-full text-left px-4 py-2 text-red-400 text-sm hover:bg-red-500/10 transition ",
+                                            children: "Logout"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.tsx",
+                                            lineNumber: 184,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 100,
-                                    columnNumber: 15
+                                    lineNumber: 151,
+                                    columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
-                        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
+                        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>handleScroll("/api/login"),
-                            className: "px-6 py-2 rounded-full bg-green-600 text-white font-bold shadow-lg",
-                            whileHover: {
-                                scale: 1.05
-                            },
-                            transition: {
-                                type: "spring",
-                                stiffness: 300
-                            },
+                            className: " px-5 py-2 rounded-full bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 hover:shadow-emerald-400/60 transition-all ",
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 110,
+                            lineNumber: 199,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 96,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setOpen(!open),
-                        className: "lg:hidden relative w-10 h-10 flex flex-col justify-between",
+                        className: "lg:hidden relative w-10 h-10 flex flex-col justify-between items-center z-[10002]",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: `block h-1 w-full bg-gray-900 rounded transition-transform duration-300 ${open ? "rotate-45 translate-y-4" : ""}`
+                                className: `
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-transform duration-300
+              ${open ? "rotate-45 translate-y-3" : ""}
+            `
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 126,
+                                lineNumber: 221,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: `block h-1 w-full bg-gray-900 rounded transition-opacity duration-300 ${open ? "opacity-0" : ""}`
+                                className: `
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-opacity duration-300
+              ${open ? "opacity-0" : ""}
+            `
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 131,
+                                lineNumber: 229,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: `block h-1 w-full bg-gray-900 rounded transition-transform duration-300 ${open ? "-rotate-45 -translate-y-4" : ""}`
+                                className: `
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-transform duration-300
+              ${open ? "-rotate-45 -translate-y-3" : ""}
+            `
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 136,
+                                lineNumber: 237,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 122,
+                        lineNumber: 217,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 48,
+                lineNumber: 68,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                children: open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                    initial: {
-                        opacity: 0,
-                        y: -20
-                    },
-                    animate: {
-                        opacity: 1,
-                        y: 0
-                    },
-                    exit: {
-                        opacity: 0,
-                        y: -20
-                    },
-                    className: "lg:hidden fixed top-[6.5rem] w-full max-w-7xl mx-auto px-8 py-6 rounded-2xl bg-white/95 backdrop-blur-lg shadow-lg border border-gray-200/10",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                            className: "flex flex-col gap-6 text-lg font-medium text-gray-700",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `
+          lg:hidden fixed top-[5.5rem] left-1/2 -translate-x-1/2 w-[92%] max-w-7xl px-6 py-6
+          rounded-3xl
+          bg-slate-900/95
+          backdrop-blur-2xl
+          shadow-[0_20px_40px_rgba(0,0,0,0.8)]
+          border border-emerald-500/30
+          transition-all duration-500 z-[9999]
+          ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"}
+        `,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "flex flex-col gap-5 text-base font-medium text-emerald-50",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("/"),
+                                className: "hover:text-emerald-300 cursor-pointer",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 266,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("/Participate"),
+                                className: "hover:text-emerald-300 cursor-pointer",
+                                children: "Map"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 272,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("/task"),
+                                className: "hover:text-emerald-300 cursor-pointer",
+                                children: "Weekly Quests"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 278,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                onClick: ()=>handleScroll("/shop"),
+                                className: "hover:text-emerald-300 cursor-pointer",
+                                children: "Rewards"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Navbar.tsx",
+                                lineNumber: 284,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 265,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-6 flex flex-col gap-3",
+                        children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    onClick: ()=>handleScroll("/"),
-                                    className: "hover:text-green-600 cursor-pointer",
-                                    children: "Home"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-emerald-100 font-semibold",
+                                    children: user.email
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 295,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    onClick: ()=>handleScroll("map"),
-                                    className: "hover:text-green-600 cursor-pointer",
-                                    children: "Map"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>handleScroll("/Dashboard"),
+                                    className: " w-full py-3 rounded-full bg-emerald-500/10 text-emerald-100 font-bold border border-emerald-400/40 hover:bg-emerald-500/20 transition-all shadow-md ",
+                                    children: "Dashboard"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 298,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    onClick: ()=>handleScroll("/task"),
-                                    className: "hover:text-green-600 cursor-pointer",
-                                    children: "Weekly Quests"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>handleScroll("/shop/inventory"),
+                                    className: " w-full py-3 rounded-full bg-emerald-500/10 text-emerald-100 font-bold border border-emerald-400/40 hover:bg-emerald-500/20 transition-all shadow-md ",
+                                    children: "Inventory"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 311,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    onClick: ()=>handleScroll("/shop"),
-                                    className: "hover:text-green-600 cursor-pointer",
-                                    children: "Rewards"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handleLogout,
+                                    className: " w-full py-3 rounded-full bg-red-500/15 text-red-200 font-bold border border-red-400/40 hover:bg-red-500/30 transition-all shadow-md ",
+                                    children: "Logout"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 324,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 153,
-                            columnNumber: 13
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mt-6 flex flex-col gap-3",
-                            children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-gray-700 font-semibold",
-                                        children: user.email
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 183,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                        onClick: handleLogout,
-                                        className: "w-full py-3 rounded-full bg-red-600 text-white font-bold shadow-md",
-                                        whileHover: {
-                                            scale: 1.05
-                                        },
-                                        children: "Logout"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 186,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                onClick: ()=>handleScroll("/api/login"),
-                                className: "w-full py-3 rounded-full bg-green-600 text-white font-bold shadow-md",
-                                whileHover: {
-                                    scale: 1.05
-                                },
-                                children: "Login"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 195,
-                                columnNumber: 17
-                            }, ("TURBOPACK compile-time value", void 0))
+                        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>handleScroll("/api/login"),
+                            className: " w-full py-3 rounded-full bg-emerald-500 text-white font-bold hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/50 ",
+                            children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 180,
+                            lineNumber: 339,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/Navbar.tsx",
-                    lineNumber: 147,
-                    columnNumber: 11
-                }, ("TURBOPACK compile-time value", void 0))
-            }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "[project]/components/Navbar.tsx",
+                        lineNumber: 292,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 145,
+                lineNumber: 249,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Navbar.tsx",
-        lineNumber: 47,
+        lineNumber: 63,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -666,7 +668,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/star.js [app-ssr] (ecmascript) <export default as Star>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Navbar.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Footer.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -704,18 +708,12 @@ const initialTasks = [
         uploadedImage: null
     }
 ];
+const COOLDOWN = 6 * 60 * 60 * 1000; // 6 hours in ms
 function TasksPage() {
     const [tasks, setTasks] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialTasks);
     const [activeTaskId, setActiveTaskId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [userPoints, setUserPoints] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [timeLeft, setTimeLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    // Restore your file upload system EXACTLY
-    const handleImageUpload = (taskId, file)=>{
-        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
-                    ...t,
-                    uploadedImage: file
-                } : t));
-    };
     // Fetch user points
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         fetch("/api/auth/me").then((res)=>res.json()).then((data)=>{
@@ -724,19 +722,30 @@ function TasksPage() {
             }
         }).catch((err)=>console.error("Error fetching user points:", err));
     }, []);
-    const startTask = (taskId)=>{
-        if (!activeTaskId) {
-            const task = tasks.find((t)=>t.id === taskId);
-            setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
-                        ...t,
-                        points: t.basePoints * t.difficulty,
-                        startedAt: Date.now()
-                    } : t));
-            setActiveTaskId(taskId);
-            setTimeLeft(3 * 60 * 60); // 3 hours
-        }
+    // Handle file uploads
+    const handleImageUpload = (taskId, file)=>{
+        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
+                    ...t,
+                    uploadedImage: file
+                } : t));
     };
-    // Timer
+    const startTask = (taskId)=>{
+        const task = tasks.find((t)=>t.id === taskId);
+        if (!task) return;
+        // Check cooldown
+        if (task.lastCompleted && Date.now() - task.lastCompleted < COOLDOWN) {
+            alert("Task is on cooldown!");
+            return;
+        }
+        setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
+                    ...t,
+                    points: t.basePoints * t.difficulty,
+                    startedAt: Date.now()
+                } : t));
+        setActiveTaskId(taskId);
+        setTimeLeft(3 * 60 * 60); // 3 hours timer
+    };
+    // Timer for active task
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!activeTaskId) return;
         const interval = setInterval(()=>{
@@ -752,10 +761,10 @@ function TasksPage() {
     }, [
         activeTaskId
     ]);
-    // Finish Task
+    // Finish task
     const finishTask = async (taskId)=>{
         const task = tasks.find((t)=>t.id === taskId);
-        if (!task) return;
+        if (!task || !task.uploadedImage) return;
         try {
             const res = await fetch("/api/tasks/addPoints", {
                 method: "POST",
@@ -770,7 +779,6 @@ function TasksPage() {
             if (data.user && typeof data.user.points === "number") {
                 setUserPoints(data.user.points);
             }
-            // Reset task after finishing
             setTasks((prev)=>prev.map((t)=>t.id === taskId ? {
                         ...t,
                         startedAt: null,
@@ -783,80 +791,186 @@ function TasksPage() {
             console.error("Error updating points:", err);
         }
     };
-    // Format Time
     const formatTime = (seconds)=>{
         const h = Math.floor(seconds / 3600);
         const m = Math.floor(seconds % 3600 / 60);
         const s = seconds % 60;
         return `${h}h ${m}m ${s}s`;
     };
+    const getCooldownLeft = (lastCompleted)=>{
+        if (!lastCompleted) return 0;
+        const remaining = COOLDOWN - (Date.now() - lastCompleted);
+        return remaining > 0 ? Math.floor(remaining / 1000) : 0;
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 153,
+                lineNumber: 158,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "min-h-screen pt-28 px-6 md:px-12 flex flex-col items-center",
+                className: "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900 pt-28 pb-20 px-5 md:px-10 flex flex-col items-center",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-5xl md:text-6xl font-extrabold text-center  bg-gradient-to-b from-white to-neutral-300 text-transparent bg-clip-text tracking-wide drop-shadow-2xl mb-6",
-                        children: "Weekly Quests"
-                    }, void 0, false, {
-                        fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 156,
-                        columnNumber: 9
-                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative mb-16 bg-white/40 backdrop-blur-xl px-10 py-4  rounded-full shadow-xl border border-white/40 text-green-900 font-bold text-center",
+                        className: "w-full max-w-7xl flex flex-col items-center text-center mb-10",
                         children: [
-                            "Your Points ",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 170,
-                                columnNumber: 23
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-3xl font-extrabold",
-                                children: userPoints
+                                className: "inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-400/40 px-4 py-1 text-[11px] font-semibold text-emerald-200 tracking-[0.18em] uppercase",
+                                children: [
+                                    "Weekly rotation",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "h-1 w-1 rounded-full bg-emerald-300"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 164,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/task/page.tsx",
+                                lineNumber: 162,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: "mt-3 text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-b from-emerald-100 via-white to-emerald-200 text-transparent bg-clip-text tracking-wide drop-shadow-[0_0_25px_rgba(16,185,129,0.8)]",
+                                children: "Weekly Quests"
+                            }, void 0, false, {
+                                fileName: "[project]/app/task/page.tsx",
+                                lineNumber: 167,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mt-3 max-w-2xl text-sm md:text-base text-emerald-100/80",
+                                children: "Accept time-limited cleanup quests, upload proof and earn points for the global leaderboard and eco rewards."
                             }, void 0, false, {
                                 fileName: "[project]/app/task/page.tsx",
                                 lineNumber: 171,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative mt-8 bg-slate-950/70 backdrop-blur-xl px-8 py-4 rounded-2xl shadow-[0_0_30px_rgba(16,185,129,0.6)] border border-emerald-400/50 text-emerald-50 font-bold text-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-[11px] uppercase tracking-[0.22em] text-emerald-300",
+                                        children: "Your points"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 178,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mt-1 text-3xl md:text-4xl font-extrabold",
+                                        children: userPoints
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 181,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mt-1 text-[11px] text-emerald-200/80",
+                                        children: "Earn more by completing and verifying quests"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 184,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "pointer-events-none absolute inset-x-10 -top-3 h-[2px] bg-gradient-to-r from-transparent via-emerald-300 to-transparent opacity-80"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 189,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/task/page.tsx",
+                                lineNumber: 177,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-5",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/Leaderboard",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: " inline-flex items-center gap-2  px-6 py-2 rounded-full  bg-emerald-500/80 hover:bg-emerald-400  text-slate-950 font-semibold text-sm shadow-lg shadow-emerald-800/40 hover:shadow-emerald-500/60 transition-all duration-300 hover:scale-[1.03] cursor-pointer ",
+                                        children: "View leaderboard 🏆"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 195,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/task/page.tsx",
+                                    lineNumber: 194,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/task/page.tsx",
+                                lineNumber: 193,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 165,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl pb-20",
-                        children: tasks.map((task, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "group flex flex-col items-center justify-between  p-8 rounded-3xl bg-gradient-to-br from-white/70 to-white/30  backdrop-blur-xl border border-white/40 shadow-2xl hover:scale-[1.03] transition-all duration-500",
+                        className: "grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl",
+                        children: tasks.map((task, idx)=>{
+                            const cooldownLeft = getCooldownLeft(task.lastCompleted);
+                            const onCooldown = cooldownLeft > 0;
+                            const isActive = activeTaskId === task.id;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `group flex flex-col items-stretch justify-between p-7 rounded-3xl 
+                  bg-slate-900/70 backdrop-blur-2xl border border-emerald-500/25 
+                  shadow-[0_0_35px_rgba(15,23,42,0.9)]
+                  hover:shadow-[0_0_45px_rgba(16,185,129,0.7)]
+                  transition-all duration-400 hover:-translate-y-2`,
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-2xl font-bold bg-white/40 px-6 py-2 rounded-full mb-4  shadow-md text-green-800",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center justify-between mb-4",
                                         children: [
-                                            "Task ",
-                                            idx + 1
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: "text-lg font-bold text-emerald-50",
+                                                children: [
+                                                    "Task ",
+                                                    idx + 1
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 231,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 border border-emerald-400/40 text-emerald-200",
+                                                children: [
+                                                    "+",
+                                                    task.points,
+                                                    " pts"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 234,
+                                                columnNumber: 19
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 185,
-                                        columnNumber: 15
+                                        lineNumber: 230,
+                                        columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex flex-col items-center mb-4",
+                                        className: "flex flex-col items-start mb-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-green-600 font-semibold text-lg mb-1",
+                                                className: "text-xs font-semibold text-emerald-200 uppercase tracking-[0.18em] mb-1",
                                                 children: "Difficulty"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 194,
-                                                columnNumber: 17
+                                                lineNumber: 241,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex items-center gap-1",
@@ -866,52 +980,60 @@ function TasksPage() {
                                                         className: "w-5 h-5 text-yellow-400"
                                                     }, i, false, {
                                                         fileName: "[project]/app/task/page.tsx",
-                                                        lineNumber: 199,
-                                                        columnNumber: 21
+                                                        lineNumber: 246,
+                                                        columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 197,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-green-700 font-semibold mt-2",
-                                                children: [
-                                                    task.points,
-                                                    " points"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 202,
-                                                columnNumber: 17
+                                                lineNumber: 244,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 193,
-                                        columnNumber: 15
+                                        lineNumber: 240,
+                                        columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-center font-semibold text-black/90 mb-6 min-h-[60px]",
+                                        className: "text-sm md:text-[15px] font-medium text-emerald-50 mb-4 min-h-[60px]",
                                         children: task.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 208,
-                                        columnNumber: 15
+                                        lineNumber: 252,
+                                        columnNumber: 17
                                     }, this),
-                                    activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-green-700 font-medium mb-4",
+                                    isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xs font-medium text-emerald-200 mb-4",
                                         children: [
-                                            "Time Left: ",
-                                            formatTime(timeLeft)
+                                            "Time Left:",
+                                            " ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-emerald-300",
+                                                children: formatTime(timeLeft)
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/task/page.tsx",
+                                                lineNumber: 260,
+                                                columnNumber: 21
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 214,
-                                        columnNumber: 17
+                                        lineNumber: 258,
+                                        columnNumber: 19
                                     }, this),
-                                    activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "relative mt-4 mb-4 inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-800/30 hover:shadow-emerald-600/40 hover:scale-105 transition-all cursor-pointer",
+                                    !isActive && onCooldown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xs font-medium text-amber-300 mb-4",
+                                        children: [
+                                            "On cooldown: ",
+                                            formatTime(cooldownLeft)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 267,
+                                        columnNumber: 19
+                                    }, this),
+                                    isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        className: "relative mt-2 mb-4 inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-800/30 hover:shadow-emerald-600/40 hover:scale-[1.02] transition-all cursor-pointer",
                                         children: [
                                             task.uploadedImage ? "📁 File Selected" : "⬆ Upload Proof",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -921,54 +1043,68 @@ function TasksPage() {
                                                 className: "absolute inset-0 opacity-0 cursor-pointer"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/task/page.tsx",
-                                                lineNumber: 231,
-                                                columnNumber: 19
+                                                lineNumber: 276,
+                                                columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 221,
+                                        lineNumber: 274,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/task/page.tsx",
+                                        lineNumber: 289,
                                         columnNumber: 17
                                     }, this),
                                     !activeTaskId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>startTask(task.id),
-                                        className: "mt-2 w-full text-center bg-gradient-to-r  from-green-500 to-emerald-600 text-white py-3 rounded-full  font-bold shadow-lg hover:scale-105 transition-all",
-                                        children: "Start Task"
+                                        disabled: onCooldown,
+                                        className: `mt-2 w-full text-center py-3 rounded-full font-bold text-sm
+                      bg-gradient-to-r from-emerald-500 to-emerald-600 text-white 
+                      shadow-lg shadow-emerald-800/40
+                      hover:shadow-emerald-500/60 hover:scale-[1.03] transition-all
+                      ${onCooldown ? "opacity-40 cursor-not-allowed hover:scale-100 hover:shadow-none" : ""}`,
+                                        children: onCooldown ? `Cooldown: ${formatTime(cooldownLeft)}` : "Start Task"
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 245,
-                                        columnNumber: 17
+                                        lineNumber: 293,
+                                        columnNumber: 19
                                     }, this),
-                                    activeTaskId === task.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>finishTask(task.id),
                                         disabled: !task.uploadedImage,
-                                        className: `mt-2 w-full text-center py-3 rounded-full font-bold transition-all ${task.uploadedImage ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:scale-105" : "bg-gray-400 text-white cursor-not-allowed"}`,
+                                        className: `mt-2 w-full text-center py-3 rounded-full font-bold text-sm transition-all 
+                      ${task.uploadedImage ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-700/50 hover:scale-[1.03]" : "bg-slate-600 text-slate-200 cursor-not-allowed"}`,
                                         children: "Finish Task"
                                     }, void 0, false, {
                                         fileName: "[project]/app/task/page.tsx",
-                                        lineNumber: 257,
-                                        columnNumber: 17
+                                        lineNumber: 313,
+                                        columnNumber: 19
                                     }, this)
                                 ]
                             }, task.id, true, {
                                 fileName: "[project]/app/task/page.tsx",
-                                lineNumber: 177,
-                                columnNumber: 13
-                            }, this))
+                                lineNumber: 221,
+                                columnNumber: 15
+                            }, this);
+                        })
                     }, void 0, false, {
                         fileName: "[project]/app/task/page.tsx",
-                        lineNumber: 175,
+                        lineNumber: 214,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 154,
+                lineNumber: 159,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/task/page.tsx",
-                lineNumber: 273,
+                lineNumber: 331,
                 columnNumber: 7
             }, this)
         ]

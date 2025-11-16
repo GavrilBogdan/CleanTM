@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const initialTasks: any[] = [
   {
@@ -156,32 +156,89 @@ export default function TasksPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen pt-28 px-6 md:px-12 flex flex-col items-center">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-b from-white to-neutral-300 text-transparent bg-clip-text tracking-wide drop-shadow-2xl mb-6">
-          Weekly Quests
-        </h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900 pt-28 pb-20 px-5 md:px-10 flex flex-col items-center">
+        {/* Header */}
+        <div className="w-full max-w-7xl flex flex-col items-center text-center mb-10">
+          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-400/40 px-4 py-1 text-[11px] font-semibold text-emerald-200 tracking-[0.18em] uppercase">
+            Weekly rotation
+            <span className="h-1 w-1 rounded-full bg-emerald-300" />
+          </span>
 
-        <div className="relative mb-16 bg-white/40 backdrop-blur-xl px-10 py-4 rounded-full shadow-xl border border-white/40 text-green-900 font-bold text-center">
-          Your Points <br />
-          <span className="text-3xl font-extrabold">{userPoints}</span>
+          <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-b from-emerald-100 via-white to-emerald-200 text-transparent bg-clip-text tracking-wide drop-shadow-[0_0_25px_rgba(16,185,129,0.8)]">
+            Weekly Quests
+          </h1>
+
+          <p className="mt-3 max-w-2xl text-sm md:text-base text-emerald-100/80">
+            Accept time-limited cleanup quests, upload proof and earn points for
+            the global leaderboard and eco rewards.
+          </p>
+
+          {/* Points badge */}
+          <div className="relative mt-8 bg-slate-950/70 backdrop-blur-xl px-8 py-4 rounded-2xl shadow-[0_0_30px_rgba(16,185,129,0.6)] border border-emerald-400/50 text-emerald-50 font-bold text-center">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-emerald-300">
+              Your points
+            </div>
+            <div className="mt-1 text-3xl md:text-4xl font-extrabold">
+              {userPoints}
+            </div>
+            <div className="mt-1 text-[11px] text-emerald-200/80">
+              Earn more by completing and verifying quests
+            </div>
+
+            {/* subtle top glow bar */}
+            <div className="pointer-events-none absolute inset-x-10 -top-3 h-[2px] bg-gradient-to-r from-transparent via-emerald-300 to-transparent opacity-80" />
+          </div>
+
+          {/* Leaderboard button – soft, below points */}
+          <div className="mt-5">
+            <Link href="/Leaderboard">
+              <button
+                className="
+                  inline-flex items-center gap-2 
+                  px-6 py-2 rounded-full 
+                  bg-emerald-500/80 hover:bg-emerald-400 
+                  text-slate-950 font-semibold text-sm
+                  shadow-lg shadow-emerald-800/40
+                  hover:shadow-emerald-500/60
+                  transition-all duration-300
+                  hover:scale-[1.03] cursor-pointer
+                "
+              >
+                View leaderboard 🏆
+              </button>
+            </Link>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl pb-20">
+        {/* Tasks grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
           {tasks.map((task, idx) => {
             const cooldownLeft = getCooldownLeft(task.lastCompleted);
             const onCooldown = cooldownLeft > 0;
+            const isActive = activeTaskId === task.id;
 
             return (
               <div
                 key={task.id}
-                className="group flex flex-col items-center justify-between p-8 rounded-3xl bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-xl border border-white/40 shadow-2xl hover:scale-[1.03] transition-all duration-500"
+                className={`group flex flex-col items-stretch justify-between p-7 rounded-3xl 
+                  bg-slate-900/70 backdrop-blur-2xl border border-emerald-500/25 
+                  shadow-[0_0_35px_rgba(15,23,42,0.9)]
+                  hover:shadow-[0_0_45px_rgba(16,185,129,0.7)]
+                  transition-all duration-400 hover:-translate-y-2`}
               >
-                <h2 className="text-2xl font-bold bg-white/40 px-6 py-2 rounded-full mb-4 shadow-md text-green-800">
-                  Task {idx + 1}
-                </h2>
+                {/* Top label */}
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-lg font-bold text-emerald-50">
+                    Task {idx + 1}
+                  </h2>
+                  <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 border border-emerald-400/40 text-emerald-200">
+                    +{task.points} pts
+                  </span>
+                </div>
 
-                <div className="flex flex-col items-center mb-4">
-                  <span className="text-green-600 font-semibold text-lg mb-1">
+                {/* Difficulty */}
+                <div className="flex flex-col items-start mb-4">
+                  <span className="text-xs font-semibold text-emerald-200 uppercase tracking-[0.18em] mb-1">
                     Difficulty
                   </span>
                   <div className="flex items-center gap-1">
@@ -189,23 +246,32 @@ export default function TasksPage() {
                       <Star key={i} className="w-5 h-5 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-green-700 font-semibold mt-2">
-                    {task.points} points
-                  </p>
                 </div>
 
-                <p className="text-center font-semibold text-black/90 mb-6 min-h-[60px]">
+                {/* Title */}
+                <p className="text-sm md:text-[15px] font-medium text-emerald-50 mb-4 min-h-[60px]">
                   {task.title}
                 </p>
 
-                {activeTaskId === task.id && (
-                  <p className="text-green-700 font-medium mb-4">
-                    Time Left: {formatTime(timeLeft)}
+                {/* Active timer / cooldown info */}
+                {isActive && (
+                  <p className="text-xs font-medium text-emerald-200 mb-4">
+                    Time Left:{" "}
+                    <span className="text-emerald-300">
+                      {formatTime(timeLeft)}
+                    </span>
                   </p>
                 )}
 
-                {activeTaskId === task.id && (
-                  <label className="relative mt-4 mb-4 inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-800/30 hover:shadow-emerald-600/40 hover:scale-105 transition-all cursor-pointer">
+                {!isActive && onCooldown && (
+                  <p className="text-xs font-medium text-amber-300 mb-4">
+                    On cooldown: {formatTime(cooldownLeft)}
+                  </p>
+                )}
+
+                {/* Upload proof (only for active task) */}
+                {isActive && (
+                  <label className="relative mt-2 mb-4 inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-800/30 hover:shadow-emerald-600/40 hover:scale-[1.02] transition-all cursor-pointer">
                     {task.uploadedImage ? "📁 File Selected" : "⬆ Upload Proof"}
                     <input
                       type="file"
@@ -219,13 +285,23 @@ export default function TasksPage() {
                   </label>
                 )}
 
+                {/* Spacer */}
+                <div className="flex-1" />
+
+                {/* Start / Finish buttons */}
                 {!activeTaskId && (
                   <button
                     onClick={() => startTask(task.id)}
                     disabled={onCooldown}
-                    className={`mt-2 w-full text-center bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-all ${
-                      onCooldown ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                    className={`mt-2 w-full text-center py-3 rounded-full font-bold text-sm
+                      bg-gradient-to-r from-emerald-500 to-emerald-600 text-white 
+                      shadow-lg shadow-emerald-800/40
+                      hover:shadow-emerald-500/60 hover:scale-[1.03] transition-all
+                      ${
+                        onCooldown
+                          ? "opacity-40 cursor-not-allowed hover:scale-100 hover:shadow-none"
+                          : ""
+                      }`}
                   >
                     {onCooldown
                       ? `Cooldown: ${formatTime(cooldownLeft)}`
@@ -233,15 +309,16 @@ export default function TasksPage() {
                   </button>
                 )}
 
-                {activeTaskId === task.id && (
+                {isActive && (
                   <button
                     onClick={() => finishTask(task.id)}
                     disabled={!task.uploadedImage}
-                    className={`mt-2 w-full text-center py-3 rounded-full font-bold transition-all ${
-                      task.uploadedImage
-                        ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:scale-105"
-                        : "bg-gray-400 text-white cursor-not-allowed"
-                    }`}
+                    className={`mt-2 w-full text-center py-3 rounded-full font-bold text-sm transition-all 
+                      ${
+                        task.uploadedImage
+                          ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-700/50 hover:scale-[1.03]"
+                          : "bg-slate-600 text-slate-200 cursor-not-allowed"
+                      }`}
                   >
                     Finish Task
                   </button>

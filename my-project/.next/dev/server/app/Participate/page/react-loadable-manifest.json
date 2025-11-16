@@ -1,0 +1,14 @@
+{
+  "[project]/components/Map.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/Map.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_d5b33ccf._.js",
+      "static/chunks/node_modules_0e6c69cf._.js",
+      "static/chunks/components_Map_tsx_d5f8fd9f._.js",
+      "static/chunks/node_modules_7b87efd6._.css",
+      "static/chunks/components_Map_tsx_6502904c._.js",
+      "static/chunks/node_modules_leaflet_heat_dist_leaflet-heat_b57cca29.js",
+      "static/chunks/node_modules_leaflet_heat_dist_leaflet-heat_51985f73.js"
+    ]
+  }
+}

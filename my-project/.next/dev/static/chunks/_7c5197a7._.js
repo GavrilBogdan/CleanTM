@@ -83,10 +83,10 @@ const Navbar = ({ className })=>{
         router.push("/");
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `relative w-full flex justify-center ${className || ""}`,
+        className: `relative z-[9999] w-full flex justify-center ${className || ""}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                className: "fixed top-6 w-full max-w-7xl mx-auto flex items-center justify-between px-10 py-4 rounded-full shadow-lg bg-white/5 backdrop-blur-lg border border-gray-200/10 z-50",
+                className: " fixed top-4 w-[92%] max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-3 rounded-full shadow-[0_0_25px_rgba(16,185,129,0.6)] bg-slate-900/85 border border-emerald-500/40 backdrop-blur-2xl z-[10000] ",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         onClick: ()=>handleScroll("/"),
@@ -95,28 +95,28 @@ const Navbar = ({ className })=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "https://cdn-icons-png.flaticon.com/128/892/892930.png",
                                 alt: "CleanTM Logo",
-                                className: "h-10 w-10"
+                                className: "h-9 w-9 drop-shadow-[0_0_10px_rgba(16,185,129,0.9)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 70,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-xl font-extrabold text-gray-900",
+                                className: "text-xl font-extrabold text-emerald-100 tracking-wide",
                                 children: "CleanTM"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 71,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 69,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "hidden lg:flex items-center gap-12 text-gray-700 font-medium text-lg",
+                        className: "hidden lg:flex items-center gap-10 text-emerald-50 font-medium text-sm md:text-base",
                         children: [
                             {
                                 label: "Home",
@@ -124,7 +124,7 @@ const Navbar = ({ className })=>{
                             },
                             {
                                 label: "Map",
-                                id: "map"
+                                id: "/Participate"
                             },
                             {
                                 label: "Weekly Quests",
@@ -136,25 +136,25 @@ const Navbar = ({ className })=>{
                             }
                         ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 onClick: ()=>handleScroll(i.id),
-                                className: "relative cursor-pointer hover:text-green-600 transition-colors duration-300",
+                                className: " relative cursor-pointer group transition-colors duration-300 text-emerald-100 hover:text-emerald-300 ",
                                 children: [
                                     i.label,
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "absolute left-0 -bottom-1 w-0 h-1 bg-green-500 rounded-full group-hover:w-full transition-all duration-300"
+                                        className: " absolute left-1/2 -bottom-1 h-[2px] w-0 bg-emerald-400 rounded-full group-hover:w-full group-hover:-translate-x-1/2 transition-all duration-300 "
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 107,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, i.label, true, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 88,
+                                lineNumber: 100,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 75,
+                        lineNumber: 87,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -164,84 +164,99 @@ const Navbar = ({ className })=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     onClick: ()=>setUserMenuOpen(!userMenuOpen),
-                                    className: "font-semibold text-gray-700 cursor-pointer px-3 py-2 rounded-md hover:bg-gray-100 transition",
+                                    className: " font-semibold text-emerald-50 cursor-pointer px-3 py-2 rounded-xl bg-emerald-500/5 hover:bg-emerald-500/15 border border-emerald-400/30 transition ",
                                     children: user.email
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 120,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 userMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute right-0 top-12 bg-white rounded-lg shadow-lg border border-gray-200/20 w-40 py-2 z-50 animate-slide-down",
+                                    className: " absolute right-0 top-12 bg-slate-900/95 rounded-xl shadow-2xl border border-emerald-500/30 w-44 py-2 z-[10001] animate-slide-down backdrop-blur-xl ",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>handleScroll("/shop/inventory"),
-                                            className: "w-full text-left px-4 py-2 hover:bg-gray-100 transition",
+                                            className: " w-full text-left px-4 py-2 text-emerald-50 text-sm hover:bg-emerald-500/10 transition ",
                                             children: "Inventory"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 103,
+                                            lineNumber: 141,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: handleLogout,
-                                            className: "w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition",
+                                            className: " w-full text-left px-4 py-2 text-red-400 text-sm hover:bg-red-500/10 transition ",
                                             children: "Logout"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 149,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 132,
                                     columnNumber: 32
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>handleScroll("/api/login"),
-                            className: "px-6 py-2 rounded-full bg-green-600 text-white font-bold hover:bg-green-700 transition-all shadow-md",
+                            className: " px-5 py-2 rounded-full bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 hover:shadow-emerald-400/60 transition-all ",
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 110,
+                            lineNumber: 158,
                             columnNumber: 19
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 95,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setOpen(!open),
-                        className: "lg:hidden relative w-10 h-10 flex flex-col justify-between",
+                        className: "lg:hidden relative w-10 h-10 flex flex-col justify-between items-center z-[10002]",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: `block h-1 w-full bg-gray-900 rounded transition-transform duration-300 ${open ? "rotate-45 translate-y-4" : ""}`
+                                className: `
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-transform duration-300
+              ${open ? "rotate-45 translate-y-3" : ""}
+            `
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 117,
+                                lineNumber: 173,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: `block h-1 w-full bg-gray-900 rounded transition-opacity duration-300 ${open ? "opacity-0" : ""}`
+                                className: `
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-opacity duration-300
+              ${open ? "opacity-0" : ""}
+            `
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 118,
+                                lineNumber: 179,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: `block h-1 w-full bg-gray-900 rounded transition-transform duration-300 ${open ? "-rotate-45 -translate-y-4" : ""}`
+                                className: `
+              block h-[3px] w-8 rounded-full
+              bg-emerald-50 shadow
+              transition-transform duration-300
+              ${open ? "-rotate-45 -translate-y-3" : ""}
+            `
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 119,
+                                lineNumber: 185,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 116,
+                        lineNumber: 172,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -252,55 +267,59 @@ const Navbar = ({ className })=>{
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `
-          lg:hidden fixed top-[6.5rem] w-full max-w-7xl mx-auto px-8 py-6
-          rounded-2xl bg-white/95 backdrop-blur-lg shadow-md border border-gray-200/10
-          transition-all duration-500
+          lg:hidden fixed top-[5.5rem] left-1/2 -translate-x-1/2 w-[92%] max-w-7xl px-6 py-6
+          rounded-3xl
+          bg-slate-900/95
+          backdrop-blur-2xl
+          shadow-[0_20px_40px_rgba(0,0,0,0.8)]
+          border border-emerald-500/30
+          transition-all duration-500 z-[9999]
           ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"}
         `,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "flex flex-col gap-6 text-lg font-medium text-gray-700",
+                        className: "flex flex-col gap-5 text-base font-medium text-emerald-50",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 onClick: ()=>handleScroll("/"),
-                                className: "hover:text-green-600 cursor-pointer",
+                                className: "hover:text-emerald-300 cursor-pointer",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 131,
+                                lineNumber: 206,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                onClick: ()=>handleScroll("map"),
-                                className: "hover:text-green-600 cursor-pointer",
+                                onClick: ()=>handleScroll("/Participate"),
+                                className: "hover:text-emerald-300 cursor-pointer",
                                 children: "Map"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 134,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 onClick: ()=>handleScroll("/task"),
-                                className: "hover:text-green-600 cursor-pointer",
+                                className: "hover:text-emerald-300 cursor-pointer",
                                 children: "Weekly Quests"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 137,
+                                lineNumber: 212,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 onClick: ()=>handleScroll("/shop"),
-                                className: "hover:text-green-600 cursor-pointer",
+                                className: "hover:text-emerald-300 cursor-pointer",
                                 children: "Rewards"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 140,
+                                lineNumber: 215,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 130,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -308,50 +327,50 @@ const Navbar = ({ className })=>{
                         children: user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-gray-700 font-semibold",
+                                    className: "text-emerald-100 font-semibold",
                                     children: user.email
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 222,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>handleScroll("/inventory"),
-                                    className: "w-full py-3 rounded-full bg-gray-200 text-gray-800 font-bold hover:bg-gray-300 transition-all shadow-md",
+                                    onClick: ()=>handleScroll("/shop/inventory"),
+                                    className: " w-full py-3 rounded-full bg-emerald-500/10 text-emerald-100 font-bold border border-emerald-400/40 hover:bg-emerald-500/20 transition-all shadow-md ",
                                     children: "Inventory"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 225,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: handleLogout,
-                                    className: "w-full py-3 rounded-full bg-red-400 text-white font-bold hover:bg-red-700 transition-all shadow-md",
+                                    className: " w-full py-3 rounded-full bg-red-500/15 text-red-200 font-bold border border-red-400/40 hover:bg-red-500/30 transition-all shadow-md ",
                                     children: "Logout"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 235,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>handleScroll("/api/login"),
-                            className: "w-full py-3 rounded-full bg-green-600 text-white font-bold hover:bg-green-700 transition-all shadow-md",
+                            className: " w-full py-3 rounded-full bg-emerald-500 text-white font-bold hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/50 ",
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 154,
+                            lineNumber: 245,
                             columnNumber: 19
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 145,
+                        lineNumber: 220,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 124,
+                lineNumber: 195,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -747,12 +766,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx_
 ;
 ;
 const AboutUsPage = ()=>{
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "9904a08bd14ce79828c5080627ffc72a8c5099058dfca8d277102b3905adcac8") {
-        for(let $i = 0; $i < 8; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
+    if ($[0] !== "5a4bd991d8cb5c15664379f8a40fb9440ecd366cebc8deb10557f3c0a13d1cd2") {
+        for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "9904a08bd14ce79828c5080627ffc72a8c5099058dfca8d277102b3905adcac8";
+        $[0] = "5a4bd991d8cb5c15664379f8a40fb9440ecd366cebc8deb10557f3c0a13d1cd2";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -783,60 +802,11 @@ const AboutUsPage = ()=>{
     }
     let t2;
     if ($[3] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "relative z-10 flex flex-col items-center justify-center text-center pt-32 px-6 lg:px-16",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-4xl bg-white/20 backdrop-blur-xl border border-green-300 rounded-3xl shadow-[0_0_24px_2px_rgba(0,255,0,0.3)] hover:shadow-[0_0_36px_6px_rgba(0,255,0,0.5)] transition-all duration-700 p-12",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-5xl md:text-6xl font-extrabold text-green-800 mb-6",
-                        children: [
-                            "About ",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-green-400",
-                                children: "CleanTM"
-                            }, void 0, false, {
-                                fileName: "[project]/app/AboutUs/page.tsx",
-                                lineNumber: 33,
-                                columnNumber: 408
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/AboutUs/page.tsx",
-                        lineNumber: 33,
-                        columnNumber: 330
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-lg md:text-xl text-green-700 font-semibold leading-relaxed mb-6",
-                        children: "CleanTM is a platform built to inspire action for a cleaner planet. Our mission is simple: motivate people to collect trash, complete challenges, and make a real impact on nature."
-                    }, void 0, false, {
-                        fileName: "[project]/app/AboutUs/page.tsx",
-                        lineNumber: 33,
-                        columnNumber: 460
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-green-700 text-lg md:text-xl font-medium leading-relaxed mb-8",
-                        children: "Earn points for your efforts, track your impact, and exchange them for rewards while joining a vibrant, eco-conscious community."
-                    }, void 0, false, {
-                        fileName: "[project]/app/AboutUs/page.tsx",
-                        lineNumber: 33,
-                        columnNumber: 727
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: _temp2,
-                        className: "px-10 py-4 rounded-3xl bg-green-400 text-gray-900 font-bold text-lg hover:bg-green-500 shadow-[0_0_16px_rgba(0,255,0,0.4)] hover:shadow-[0_0_32px_rgba(0,255,0,0.6)] transition-all duration-500",
-                        children: "Explore Rewards"
-                    }, void 0, false, {
-                        fileName: "[project]/app/AboutUs/page.tsx",
-                        lineNumber: 33,
-                        columnNumber: 941
-                    }, ("TURBOPACK compile-time value", void 0))
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/AboutUs/page.tsx",
-                lineNumber: 33,
-                columnNumber: 119
-            }, ("TURBOPACK compile-time value", void 0))
+        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "absolute inset-0 z-0 pointer-events-none",
+            children: Array.from({
+                length: 10
+            }).map(_temp2)
         }, void 0, false, {
             fileName: "[project]/app/AboutUs/page.tsx",
             lineNumber: 33,
@@ -848,14 +818,63 @@ const AboutUsPage = ()=>{
     }
     let t3;
     if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "absolute inset-0 z-0",
-            children: Array.from({
-                length: 10
-            }).map(_temp3)
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            className: "relative z-10 flex flex-col items-center justify-center text-center px-6 lg:px-16",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "\n              max-w-4xl\n              bg-slate-900/70\n              backdrop-blur-2xl\n              border border-emerald-500/40\n              rounded-3xl\n              shadow-[0_0_35px_rgba(16,185,129,0.7)]\n              hover:shadow-[0_0_55px_rgba(16,185,129,1)]\n              transition-all duration-700\n              p-10 md:p-14\n            ",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        className: "text-4xl md:text-6xl font-extrabold text-emerald-50 mb-6 tracking-tight",
+                        children: [
+                            "About ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-emerald-400",
+                                children: "CleanTM"
+                            }, void 0, false, {
+                                fileName: "[project]/app/AboutUs/page.tsx",
+                                lineNumber: 42,
+                                columnNumber: 584
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/AboutUs/page.tsx",
+                        lineNumber: 42,
+                        columnNumber: 490
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-base md:text-lg text-emerald-100/90 font-medium leading-relaxed mb-4",
+                        children: "CleanTM is a platform built to inspire action for a cleaner city and planet. Our mission is simple: turn cleaning into quests, rewards and community."
+                    }, void 0, false, {
+                        fileName: "[project]/app/AboutUs/page.tsx",
+                        lineNumber: 42,
+                        columnNumber: 638
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-base md:text-lg text-emerald-100/80 leading-relaxed mb-8",
+                        children: "Collect trash, complete eco-challenges, earn points and see your impact grow. Gamified, trackable, and made for people who care about where they live."
+                    }, void 0, false, {
+                        fileName: "[project]/app/AboutUs/page.tsx",
+                        lineNumber: 42,
+                        columnNumber: 880
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: _temp3,
+                        className: "\n                px-10 py-3.5 rounded-full\n                bg-gradient-to-r from-emerald-500 to-green-400\n                text-slate-900 font-bold text-base md:text-lg\n                shadow-lg shadow-emerald-500/40\n                hover:shadow-emerald-400/70\n                hover:scale-105\n                transition-all duration-300\n              ",
+                        children: "Explore Rewards"
+                    }, void 0, false, {
+                        fileName: "[project]/app/AboutUs/page.tsx",
+                        lineNumber: 42,
+                        columnNumber: 1111
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/AboutUs/page.tsx",
+                lineNumber: 42,
+                columnNumber: 113
+            }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/app/AboutUs/page.tsx",
-            lineNumber: 40,
+            lineNumber: 42,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[4] = t3;
@@ -867,7 +886,7 @@ const AboutUsPage = ()=>{
         t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-4xl font-extrabold text-green-800 mb-6 drop-shadow-[0_0_8px_rgba(0,255,0,0.3)]",
+                    className: "text-3xl md:text-4xl font-extrabold text-emerald-50 mb-6 drop-shadow-[0_0_15px_rgba(16,185,129,0.7)]",
                     children: "Our Vision"
                 }, void 0, false, {
                     fileName: "[project]/app/AboutUs/page.tsx",
@@ -875,20 +894,20 @@ const AboutUsPage = ()=>{
                     columnNumber: 15
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-green-700 text-lg leading-relaxed mb-4",
-                    children: "CleanTM is designed to turn small actions into global impact. Every challenge completed and every piece of trash collected contributes to a cleaner, greener world."
+                    className: "text-emerald-100/90 text-base md:text-lg leading-relaxed mb-4",
+                    children: "CleanTM is designed to turn small actions into visible, local impact. Every challenge completed and every bag of trash collected contributes to cleaner streets, parks and riverbanks."
                 }, void 0, false, {
                     fileName: "[project]/app/AboutUs/page.tsx",
                     lineNumber: 49,
-                    columnNumber: 130
+                    columnNumber: 147
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-green-700 text-lg leading-relaxed",
-                    children: "Our platform creates a sense of community, rewards engagement, and tracks measurable impact. It's fun, competitive, and meaningful."
+                    className: "text-emerald-100/80 text-base md:text-lg leading-relaxed",
+                    children: "We want to make eco-action rewarding and fun: a live map of quests, leaderboards, weekly missions and rewards that recognize your effort. It’s a movement where anyone can join and see their contribution in real time."
                 }, void 0, false, {
                     fileName: "[project]/app/AboutUs/page.tsx",
                     lineNumber: 49,
-                    columnNumber: 356
+                    columnNumber: 410
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
@@ -903,21 +922,30 @@ const AboutUsPage = ()=>{
     let t5;
     if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
         t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "relative z-10 max-w-6xl mx-auto mt-32 px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
+            className: "relative z-10 max-w-6xl mx-auto mt-24 px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
             children: [
                 t4,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative w-full h-80 md:h-96 rounded-3xl overflow-hidden shadow-lg",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                        src: "/images/community-clean.jpg",
-                        alt: "Community cleaning",
-                        className: "w-full h-full object-cover rounded-3xl drop-shadow-[0_0_8px_rgba(0,255,0,0.3)]"
-                    }, void 0, false, {
-                        fileName: "[project]/app/AboutUs/page.tsx",
-                        lineNumber: 56,
-                        columnNumber: 223
-                    }, ("TURBOPACK compile-time value", void 0))
-                }, void 0, false, {
+                    className: "relative w-full h-80 md:h-96 rounded-3xl overflow-hidden shadow-[0_0_35px_rgba(16,185,129,0.7)] border border-emerald-500/40",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: "/images/community-clean.jpg",
+                            alt: "Community cleaning",
+                            className: "w-full h-full object-cover scale-[1.03] hover:scale-105 transition-transform duration-700"
+                        }, void 0, false, {
+                            fileName: "[project]/app/AboutUs/page.tsx",
+                            lineNumber: 56,
+                            columnNumber: 281
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"
+                        }, void 0, false, {
+                            fileName: "[project]/app/AboutUs/page.tsx",
+                            lineNumber: 56,
+                            columnNumber: 449
+                        }, ("TURBOPACK compile-time value", void 0))
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/app/AboutUs/page.tsx",
                     lineNumber: 56,
                     columnNumber: 139
@@ -934,78 +962,197 @@ const AboutUsPage = ()=>{
     }
     let t6;
     if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "bg-slate-900/80 border border-emerald-500/30 rounded-2xl p-6 shadow-lg shadow-emerald-500/20",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                    className: "text-emerald-300 font-bold text-lg mb-2",
+                    children: "🌍 Local Impact"
+                }, void 0, false, {
+                    fileName: "[project]/app/AboutUs/page.tsx",
+                    lineNumber: 63,
+                    columnNumber: 120
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-emerald-100/80 text-sm md:text-base",
+                    children: "Every quest is mapped in Timișoara so you can see exactly where you help and how your actions change the city."
+                }, void 0, false, {
+                    fileName: "[project]/app/AboutUs/page.tsx",
+                    lineNumber: 63,
+                    columnNumber: 196
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/app/AboutUs/page.tsx",
+            lineNumber: 63,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[7] = t6;
+    } else {
+        t6 = $[7];
+    }
+    let t7;
+    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "bg-slate-900/80 border border-emerald-500/30 rounded-2xl p-6 shadow-lg shadow-emerald-500/20",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                    className: "text-emerald-300 font-bold text-lg mb-2",
+                    children: "🎮 Gamified Cleaning"
+                }, void 0, false, {
+                    fileName: "[project]/app/AboutUs/page.tsx",
+                    lineNumber: 70,
+                    columnNumber: 120
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-emerald-100/80 text-sm md:text-base",
+                    children: "Points, quests, weekly challenges and leaderboards turn cleaning into a game that rewards consistency."
+                }, void 0, false, {
+                    fileName: "[project]/app/AboutUs/page.tsx",
+                    lineNumber: 70,
+                    columnNumber: 201
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/app/AboutUs/page.tsx",
+            lineNumber: 70,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[8] = t7;
+    } else {
+        t7 = $[8];
+    }
+    let t8;
+    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            className: "relative z-10 max-w-6xl mx-auto mt-20 px-6 lg:px-16",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "grid grid-cols-1 md:grid-cols-3 gap-8",
+                children: [
+                    t6,
+                    t7,
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-slate-900/80 border border-emerald-500/30 rounded-2xl p-6 shadow-lg shadow-emerald-500/20",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                className: "text-emerald-300 font-bold text-lg mb-2",
+                                children: "🤝 Community"
+                            }, void 0, false, {
+                                fileName: "[project]/app/AboutUs/page.tsx",
+                                lineNumber: 77,
+                                columnNumber: 256
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-emerald-100/80 text-sm md:text-base",
+                                children: "You’re not doing it alone. Join others who care about the same parks, streets and neighborhoods as you."
+                            }, void 0, false, {
+                                fileName: "[project]/app/AboutUs/page.tsx",
+                                lineNumber: 77,
+                                columnNumber: 329
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/AboutUs/page.tsx",
+                        lineNumber: 77,
+                        columnNumber: 146
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/AboutUs/page.tsx",
+                lineNumber: 77,
+                columnNumber: 83
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/app/AboutUs/page.tsx",
+            lineNumber: 77,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[9] = t8;
+    } else {
+        t8 = $[9];
+    }
+    let t9;
+    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
             children: [
                 t0,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-1f5ab72a90c5fe3e" + " " + "relative min-h-screen bg-gradient-to-b from-green-50 via-green-100 to-lime-50 overflow-hidden",
+                    className: "jsx-58bc1a6eef36b795" + " " + "relative min-h-screen bg-gradient-to-b from-slate-950 via-emerald-950 to-slate-900 overflow-hidden pt-28",
                     children: [
                         t1,
                         t2,
                         t3,
                         t5,
+                        t8,
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                            className: "jsx-1f5ab72a90c5fe3e" + " " + "relative z-10 text-center mt-32 mb-32",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-1f5ab72a90c5fe3e" + " " + "text-4xl md:text-5xl font-extrabold text-green-800 mb-6 drop-shadow-[0_0_12px_rgba(0,255,0,0.5)]",
-                                    children: "Join the Movement"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/AboutUs/page.tsx",
-                                    lineNumber: 63,
-                                    columnNumber: 202
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "jsx-1f5ab72a90c5fe3e" + " " + "text-green-700 text-lg md:text-xl mb-8 max-w-2xl mx-auto",
-                                    children: "Take part in challenges, collect points, redeem rewards, and contribute to a cleaner future for everyone."
-                                }, void 0, false, {
-                                    fileName: "[project]/app/AboutUs/page.tsx",
-                                    lineNumber: 63,
-                                    columnNumber: 337
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: _temp4,
-                                    className: "jsx-1f5ab72a90c5fe3e" + " " + "px-10 py-4 rounded-3xl bg-green-400 text-gray-900 font-bold text-lg hover:bg-green-500 shadow-[0_0_16px_rgba(0,255,0,0.4)] hover:shadow-[0_0_32px_rgba(0,255,0,0.6)] transition-all duration-500",
-                                    children: "Explore Quests"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/AboutUs/page.tsx",
-                                    lineNumber: 63,
-                                    columnNumber: 518
-                                }, ("TURBOPACK compile-time value", void 0))
-                            ]
-                        }, void 0, true, {
+                            className: "jsx-58bc1a6eef36b795" + " " + "relative z-10 text-center mt-24 mb-24 px-6",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "jsx-58bc1a6eef36b795" + " " + "max-w-3xl mx-auto bg-slate-900/80 border border-emerald-500/40 rounded-3xl px-8 py-10 shadow-[0_0_30px_rgba(16,185,129,0.7)]",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "jsx-58bc1a6eef36b795" + " " + "text-3xl md:text-5xl font-extrabold text-emerald-50 mb-5 drop-shadow-[0_0_18px_rgba(16,185,129,0.9)]",
+                                        children: "Join the Movement"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/AboutUs/page.tsx",
+                                        lineNumber: 84,
+                                        columnNumber: 364
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "jsx-58bc1a6eef36b795" + " " + "text-emerald-100/90 text-base md:text-lg mb-8",
+                                        children: "Start a quest, earn points, redeem rewards and help keep Timișoara clean. Every action you take moves the city in the right direction."
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/AboutUs/page.tsx",
+                                        lineNumber: 84,
+                                        columnNumber: 503
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: _temp4,
+                                        className: "jsx-58bc1a6eef36b795" + " " + "\n                px-10 py-3.5 rounded-full\n                bg-gradient-to-r from-emerald-500 to-green-400\n                text-slate-900 font-bold text-base md:text-lg\n                shadow-lg shadow-emerald-500/40\n                hover:shadow-emerald-400/70\n                hover:scale-105\n                transition-all duration-300\n              ",
+                                        children: "Explore Quests"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/AboutUs/page.tsx",
+                                        lineNumber: 84,
+                                        columnNumber: 702
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/AboutUs/page.tsx",
+                                lineNumber: 84,
+                                columnNumber: 222
+                            }, ("TURBOPACK compile-time value", void 0))
+                        }, void 0, false, {
                             fileName: "[project]/app/AboutUs/page.tsx",
-                            lineNumber: 63,
-                            columnNumber: 143
+                            lineNumber: 84,
+                            columnNumber: 158
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/AboutUs/page.tsx",
-                    lineNumber: 63,
+                    lineNumber: 84,
                     columnNumber: 16
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/AboutUs/page.tsx",
-                    lineNumber: 63,
-                    columnNumber: 787
+                    lineNumber: 84,
+                    columnNumber: 1145
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    id: "1f5ab72a90c5fe3e",
-                    children: "@keyframes float{0%{opacity:.5;transform:translateY(0)translate(0)}50%{opacity:.8;transform:translateY(-20px)translate(10px)}to{opacity:.5;transform:translateY(0)translate(0)}}@keyframes fly{0%{opacity:.6;transform:translateY(0)rotate(0)}50%{opacity:1;transform:translateY(-100px)rotate(20deg)}to{opacity:.6;transform:translateY(0)rotate(0)}}.animate-float.jsx-1f5ab72a90c5fe3e{animation:6s ease-in-out infinite float}.animate-fly.jsx-1f5ab72a90c5fe3e{animation:linear infinite fly}"
+                    id: "58bc1a6eef36b795",
+                    children: "@keyframes float{0%{opacity:.4;transform:translateY(0)translate(0)}50%{opacity:.9;transform:translateY(-18px)translate(10px)}to{opacity:.4;transform:translateY(0)translate(0)}}@keyframes fly{0%{opacity:.5;transform:translateY(0)translate(0)rotate(0)}50%{opacity:1;transform:translateY(-120px)translate(30px)rotate(18deg)}to{opacity:.5;transform:translateY(0)translate(0)rotate(0)}}.animate-float.jsx-58bc1a6eef36b795{animation:6s ease-in-out infinite float}.animate-fly.jsx-58bc1a6eef36b795{animation:linear infinite fly}"
                 }, void 0, false, void 0, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true);
-        $[7] = t6;
+        $[10] = t9;
     } else {
-        t6 = $[7];
+        t9 = $[10];
     }
-    return t6;
+    return t9;
 };
 _c = AboutUsPage;
 const __TURBOPACK__default__export__ = AboutUsPage;
 function _temp(_, i) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "absolute w-1 h-1 rounded-full bg-green-400 opacity-40 animate-float",
+        className: "absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float",
         style: {
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
@@ -1014,18 +1161,15 @@ function _temp(_, i) {
         }
     }, i, false, {
         fileName: "[project]/app/AboutUs/page.tsx",
-        lineNumber: 72,
+        lineNumber: 93,
         columnNumber: 10
     }, this);
 }
-function _temp2() {
-    return window.location.href = "/shop";
-}
-function _temp3(__0, i_0) {
+function _temp2(__0, i_0) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
         src: "/images/leaf.png",
         alt: "leaf",
-        className: "absolute w-12 h-12 opacity-70 animate-fly",
+        className: "absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(16,185,129,0.8)]",
         style: {
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
@@ -1034,9 +1178,12 @@ function _temp3(__0, i_0) {
         }
     }, i_0, false, {
         fileName: "[project]/app/AboutUs/page.tsx",
-        lineNumber: 83,
+        lineNumber: 101,
         columnNumber: 10
     }, this);
+}
+function _temp3() {
+    return window.location.href = "/shop";
 }
 function _temp4() {
     return window.location.href = "/task";

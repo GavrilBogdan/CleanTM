@@ -1,12 +1,9 @@
 {
+  "/Dashboard/page": "app/Dashboard/page.js",
+  "/Leaderboard/page": "app/Leaderboard/page.js",
+  "/Participate/page": "app/Participate/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/shop/buyItem/route": "app/api/shop/buyItem/route.js",
-  "/api/shop/getItems/route": "app/api/shop/getItems/route.js",
-  "/api/shop/getPurchases/route": "app/api/shop/getPurchases/route.js",
-  "/api/tasks/addPoints/route": "app/api/tasks/addPoints/route.js",
   "/page": "app/page.js",
-  "/shop/inventory/page": "app/shop/inventory/page.js",
-  "/shop/page": "app/shop/page.js",
   "/task/page": "app/task/page.js"
 }
