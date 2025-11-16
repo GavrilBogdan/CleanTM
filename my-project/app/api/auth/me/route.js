@@ -17,7 +17,6 @@ export async function GET(req) {
 
     const user = await prisma.user.findUnique({
       where: { id: decoded.userId },
-      // right now your schema only has: id, email, password, points, purchases
       select: {
         id: true,
         email: true,

@@ -26,7 +26,7 @@ export default function RewardsPage() {
 
     const res = await fetch("/api/rewards/buy", {
       method: "POST",
-      body: JSON.stringify({ itemId: item.id }), // unchanged backend payload
+      body: JSON.stringify({ itemId: item.id }),
     });
 
     const data = await res.json();

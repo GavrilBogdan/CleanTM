@@ -1,6 +1,7 @@
 {
   "/AboutUs/page": "app/AboutUs/page.js",
   "/Dashboard/page": "app/Dashboard/page.js",
+  "/Devs/page": "app/Devs/page.js",
   "/Leaderboard/page": "app/Leaderboard/page.js",
   "/Participate/page": "app/Participate/page.js",
   "/_not-found/page": "app/_not-found/page.js",

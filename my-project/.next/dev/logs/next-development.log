@@ -5217,3 +5217,1879 @@ It can also happen if the client has a browser extension installed which messes 
 [01:55:04.772] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
 [01:56:45.670] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
 [01:56:45.784] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:18:36.084] Server  LOG      ✓ Compiled in 103ms
+[02:18:36.547] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[02:21:25.894] Server  LOG      ✓ Compiled in 70ms
+[02:22:57.754] Server  LOG      ✓ Compiled in 71ms
+[02:23:03.285] Server  LOG      ✓ Compiled in 55ms
+[02:23:05.391] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/marian.jpg" "received" null
+[02:23:05.393] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/bogdan.jpg" "received" null
+[02:23:05.585] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/Devs" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.14629162558145%"
+-                                     left: "18.43886%"
++                                     animationDelay: "0.8345629569060914s"
+-                                     animation-delay: "0.50826s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "56.098852343685145%"
+-                                     left: "63.440664%"
++                                     animationDelay: "4.5645599312668805s"
+-                                     animation-delay: "3.7931s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "31.77463538322246%"
+-                                     left: "36.78849%"
++                                     animationDelay: "0.9882891979853475s"
+-                                     animation-delay: "1.290494s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "33.11000212181974%"
+-                                     left: "32.126752%"
++                                     animationDelay: "0.1441270960158425s"
+-                                     animation-delay: "2.509327s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "19.991308152812024%"
+-                                     left: "5.451046%"
++                                     animationDelay: "3.910800508615373s"
+-                                     animation-delay: "0.266457s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "30.259488250526434%"
+-                                     left: "82.295094%"
++                                     animationDelay: "0.18225253017568777s"
+-                                     animation-delay: "1.764607s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "5.778385911679774%"
+-                                     left: "80.243626%"
++                                     animationDelay: "1.1351488902636941s"
+-                                     animation-delay: "3.949998s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "34.37029442005414%"
+-                                     left: "43.807727%"
++                                     animationDelay: "2.737971084584419s"
+-                                     animation-delay: "0.884712s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "17.955655057336795%"
+-                                     left: "10.876933%"
++                                     animationDelay: "3.7661399785947336s"
+-                                     animation-delay: "2.632039s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "8.912718978115263%"
+-                                     left: "68.867709%"
++                                     animationDelay: "4.6709380612761215s"
+-                                     animation-delay: "0.830635s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "55.52789404500433%"
+-                                     left: "90.414196%"
++                                     animationDelay: "2.18865788929834s"
+-                                     animation-delay: "4.787268s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "49.33227627286454%"
+-                                     left: "80.275033%"
++                                     animationDelay: "0.3509122314408769s"
+-                                     animation-delay: "2.418164s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "35.053956249931495%"
+-                                     left: "91.678946%"
++                                     animationDelay: "1.2292119802004564s"
+-                                     animation-delay: "0.105974s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.453440426461338%"
+-                                     left: "85.885849%"
++                                     animationDelay: "4.262359824542489s"
+-                                     animation-delay: "2.577974s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "4.2992809048023055%"
+-                                     left: "43.665102%"
++                                     animationDelay: "3.1076710489033212s"
+-                                     animation-delay: "4.879897s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "64.9924545658292%"
+-                                     left: "77.666942%"
++                                     animationDelay: "4.316188755257567s"
+-                                     animation-delay: "0.012424s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "46.82367281981631%"
+-                                     left: "19.939088%"
++                                     animationDelay: "3.240029691258634s"
+-                                     animation-delay: "2.379613s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "6.0447984362667295%"
+-                                     left: "9.027986%"
++                                     animationDelay: "3.7370592909349103s"
+-                                     animation-delay: "1.42825s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "24.08490248736832%"
+-                                     left: "69.509291%"
++                                     animationDelay: "4.499687833888727s"
+-                                     animation-delay: "3.152652s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "83.62492962992502%"
+-                                     left: "9.360266%"
++                                     animationDelay: "1.4339511665922626s"
+-                                     animation-delay: "0.944077s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "98.48317811174411%"
+-                                     left: "4.040828%"
++                                     animationDelay: "2.7312993678077206s"
+-                                     animation-delay: "2.306844s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "69.88423754511288%"
+-                                     left: "51.104629%"
++                                     animationDelay: "0.48122680291376785s"
+-                                     animation-delay: "0.425118s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "11.896777025546168%"
+-                                     left: "19.362636%"
++                                     animationDelay: "4.346107290061109s"
+-                                     animation-delay: "3.489475s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "73.47664271850363%"
+-                                     left: "18.136366%"
++                                     animationDelay: "4.552841826692402s"
+-                                     animation-delay: "1.617395s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "0.6656980481721919%"
+-                                     left: "52.799654%"
++                                     animationDelay: "1.767724107739737s"
+-                                     animation-delay: "2.633464s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                  ...
+
+[02:24:02.811] Server  LOG      ✓ Compiled in 66ms
+[02:24:09.901] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/bogdan.jpg" "received" null
+[02:24:09.904] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/marian.jpg" "received" null
+[02:24:10.056] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/Devs" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "70.7414122233895%"
+-                                     left: "37.614081%"
++                                     animationDelay: "4.5759850517076375s"
+-                                     animation-delay: "0.298255s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "94.2067377917411%"
+-                                     left: "22.609965%"
++                                     animationDelay: "4.209151342530603s"
+-                                     animation-delay: "2.191594s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "96.93280487092304%"
+-                                     left: "71.777928%"
++                                     animationDelay: "1.708277387416215s"
+-                                     animation-delay: "0.778091s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "39.12942335868349%"
+-                                     left: "92.690807%"
++                                     animationDelay: "4.645526884328312s"
+-                                     animation-delay: "2.270362s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "47.57396675822877%"
+-                                     left: "51.484789%"
++                                     animationDelay: "3.590111778494634s"
+-                                     animation-delay: "3.140724s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "59.6607109462114%"
+-                                     left: "94.972823%"
++                                     animationDelay: "2.7719622388912937s"
+-                                     animation-delay: "4.811865s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "80.85662949224277%"
+-                                     left: "66.481134%"
++                                     animationDelay: "4.218992261743669s"
+-                                     animation-delay: "0.888724s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "91.80002419104125%"
+-                                     left: "41.867935%"
++                                     animationDelay: "2.5710283662329974s"
+-                                     animation-delay: "0.82611s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "39.57738782503583%"
+-                                     left: "76.648063%"
++                                     animationDelay: "4.161990026595046s"
+-                                     animation-delay: "3.967977s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "35.01318740659589%"
+-                                     left: "6.234443%"
++                                     animationDelay: "1.0261466239748755s"
+-                                     animation-delay: "4.2425s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "88.83943143619462%"
+-                                     left: "45.430191%"
++                                     animationDelay: "0.18665621872555105s"
+-                                     animation-delay: "2.891393s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "28.2148566307278%"
+-                                     left: "71.221809%"
++                                     animationDelay: "4.390656012237811s"
+-                                     animation-delay: "4.582893s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "52.85658131515167%"
+-                                     left: "68.492138%"
++                                     animationDelay: "0.9185434542164728s"
+-                                     animation-delay: "4.741527s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "20.637985239561274%"
+-                                     left: "11.979416%"
++                                     animationDelay: "4.210552782243854s"
+-                                     animation-delay: "4.034638s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "93.98165581268906%"
+-                                     left: "57.378796%"
++                                     animationDelay: "4.05162609282837s"
+-                                     animation-delay: "0.254119s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "18.611098984638275%"
+-                                     left: "25.823913%"
++                                     animationDelay: "2.056235748441864s"
+-                                     animation-delay: "4.956704s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "89.38988828461919%"
+-                                     left: "65.472914%"
++                                     animationDelay: "0.5666343994490108s"
+-                                     animation-delay: "3.636514s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "53.59380916758813%"
+-                                     left: "79.012857%"
++                                     animationDelay: "3.622613307808966s"
+-                                     animation-delay: "4.294327s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.048116962537758%"
+-                                     left: "7.49228%"
++                                     animationDelay: "2.9123482525582585s"
+-                                     animation-delay: "1.579934s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "10.229761248418134%"
+-                                     left: "60.093437%"
++                                     animationDelay: "4.822408659097992s"
+-                                     animation-delay: "1.699347s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "44.36040321329875%"
+-                                     left: "12.33804%"
++                                     animationDelay: "2.60613740115158s"
+-                                     animation-delay: "1.703588s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "27.25347877050438%"
+-                                     left: "31.904544%"
++                                     animationDelay: "3.8436186481563777s"
+-                                     animation-delay: "0.963851s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "1.8825834991461399%"
+-                                     left: "34.452226%"
++                                     animationDelay: "1.4176248708164167s"
+-                                     animation-delay: "4.926157s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.860648112574637%"
+-                                     left: "16.039891%"
++                                     animationDelay: "4.123490574329197s"
+-                                     animation-delay: "0.759823s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "1.4239653326963975%"
+-                                     left: "25.491527%"
++                                     animationDelay: "4.445197194983233s"
+-                                     animation-delay: "1.724858s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                  ...
+
+[02:25:20.844] Server  LOG      ✓ Compiled in 24ms
+[02:25:25.425] Server  LOG      ✓ Compiled in 48ms
+[02:26:13.079] Server  LOG      ✓ Compiled in 42ms
+[02:32:38.852] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/marian.jpg" "received" null
+[02:32:39.028] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/Devs" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "18.201779385839767%"
+-                                     left: "71.823431%"
++                                     animationDelay: "4.429214337711765s"
+-                                     animation-delay: "3.922543s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "65.73150735391192%"
+-                                     left: "27.332452%"
++                                     animationDelay: "2.9294935572715075s"
+-                                     animation-delay: "2.29238s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "50.64921582222127%"
+-                                     left: "18.332924%"
++                                     animationDelay: "0.7881519219982314s"
+-                                     animation-delay: "4.845391s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "72.4392273173888%"
+-                                     left: "52.718464%"
++                                     animationDelay: "0.38018256028440833s"
+-                                     animation-delay: "0.944693s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "15.161093179231777%"
+-                                     left: "25.82879%"
++                                     animationDelay: "2.9176064091665266s"
+-                                     animation-delay: "4.898196s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "15.753788639873312%"
+-                                     left: "67.570307%"
++                                     animationDelay: "1.1774196360290745s"
+-                                     animation-delay: "2.015984s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "18.016064735712877%"
+-                                     left: "70.973176%"
++                                     animationDelay: "1.563661416140985s"
+-                                     animation-delay: "3.399324s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "53.13721215940337%"
+-                                     left: "25.384263%"
++                                     animationDelay: "4.231516847946923s"
+-                                     animation-delay: "2.9679s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "63.80388338587023%"
+-                                     left: "10.864434%"
++                                     animationDelay: "3.781837990973848s"
+-                                     animation-delay: "4.358673s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.77521736461741%"
+-                                     left: "5.411312%"
++                                     animationDelay: "1.1569037507783881s"
+-                                     animation-delay: "1.036839s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "38.78159708467663%"
+-                                     left: "69.151479%"
++                                     animationDelay: "4.079887593945579s"
+-                                     animation-delay: "2.145855s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "21.09566740058948%"
+-                                     left: "15.508842%"
++                                     animationDelay: "1.9008260768297547s"
+-                                     animation-delay: "1.330766s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "50.31374787113874%"
+-                                     left: "77.800222%"
++                                     animationDelay: "1.6638647731657037s"
+-                                     animation-delay: "3.170067s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "71.8582736363296%"
+-                                     left: "32.307866%"
++                                     animationDelay: "4.664569511881985s"
+-                                     animation-delay: "2.234163s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "85.67553955596307%"
+-                                     left: "67.5129%"
++                                     animationDelay: "4.499413540699731s"
+-                                     animation-delay: "2.203281s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "13.157047795080778%"
+-                                     left: "87.012613%"
++                                     animationDelay: "2.8131873002859424s"
+-                                     animation-delay: "4.794433s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "9.84969614069563%"
+-                                     left: "12.154176%"
++                                     animationDelay: "2.220675510937216s"
+-                                     animation-delay: "2.119324s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "76.1480581423759%"
+-                                     left: "69.467852%"
++                                     animationDelay: "0.5191369676912855s"
+-                                     animation-delay: "4.566484s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "72.17328163024858%"
+-                                     left: "34.543753%"
++                                     animationDelay: "0.03524366119670219s"
+-                                     animation-delay: "2.22079s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "57.35450599353909%"
+-                                     left: "54.623588%"
++                                     animationDelay: "3.0823325410681273s"
+-                                     animation-delay: "3.498383s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "5.920776407076255%"
+-                                     left: "63.475175%"
++                                     animationDelay: "0.7314765110251459s"
+-                                     animation-delay: "4.885489s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "31.19074169359626%"
+-                                     left: "32.610202%"
++                                     animationDelay: "3.533361965180615s"
+-                                     animation-delay: "4.10399s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "40.65714433804175%"
+-                                     left: "93.744474%"
++                                     animationDelay: "1.9352582109774796s"
+-                                     animation-delay: "4.54689s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "5.727670082901248%"
+-                                     left: "80.134938%"
++                                     animationDelay: "1.8594125600573101s"
+-                                     animation-delay: "4.370402s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "8.70109840104929%"
+-                                     left: "50.351698%"
++                                     animationDelay: "0.6530239516548353s"
+-                                     animation-delay: "4.561684s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                  ...
+
+[02:33:00.955] Server  LOG      ✓ Compiled in 69ms
+[02:36:21.099] Server  LOG      ✓ Compiled in 30ms
+[02:36:25.289] Server  LOG      ✓ Compiled in 39ms
+[02:54:49.658] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:54:49.667] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[02:54:49.775] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:55:00.522] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/Devs" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "28.87668065663641%"
+-                                     left: "46.304957%"
++                                     animationDelay: "4.10457531964717s"
+-                                     animation-delay: "3.910188s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "14.754697016159579%"
+-                                     left: "28.115308%"
++                                     animationDelay: "4.671496260839609s"
+-                                     animation-delay: "0.23809s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "35.39370162623361%"
+-                                     left: "10.711101%"
++                                     animationDelay: "1.004456353157811s"
+-                                     animation-delay: "2.882648s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "33.37978258256298%"
+-                                     left: "33.123384%"
++                                     animationDelay: "4.406705408926848s"
+-                                     animation-delay: "2.128876s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "37.39343694939882%"
+-                                     left: "19.123352%"
++                                     animationDelay: "4.968402709624397s"
+-                                     animation-delay: "3.232307s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "77.67095833188098%"
+-                                     left: "13.740012%"
++                                     animationDelay: "1.6502519277649608s"
+-                                     animation-delay: "2.583845s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "4.94472884598689%"
+-                                     left: "85.760802%"
++                                     animationDelay: "0.1990680277673934s"
+-                                     animation-delay: "1.065918s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "0.7720784236963985%"
+-                                     left: "14.40098%"
++                                     animationDelay: "3.849580711678879s"
+-                                     animation-delay: "2.832755s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "64.60959298870792%"
+-                                     left: "3.083404%"
++                                     animationDelay: "4.682954172418582s"
+-                                     animation-delay: "1.786615s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "74.74466358226644%"
+-                                     left: "5.325369%"
++                                     animationDelay: "3.4733762293546s"
+-                                     animation-delay: "1.544792s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "65.1446246145218%"
+-                                     left: "77.271051%"
++                                     animationDelay: "1.1207430916931944s"
+-                                     animation-delay: "3.431013s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "80.96491575892964%"
+-                                     left: "90.673119%"
++                                     animationDelay: "2.5660924598952684s"
+-                                     animation-delay: "4.663874s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "26.27825367609432%"
+-                                     left: "40.807038%"
++                                     animationDelay: "4.951163626809249s"
+-                                     animation-delay: "1.809794s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "41.197202700198254%"
+-                                     left: "61.48177%"
++                                     animationDelay: "1.2848334662318095s"
+-                                     animation-delay: "2.536118s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "19.52477972321711%"
+-                                     left: "41.002744%"
++                                     animationDelay: "0.2788106751459496s"
+-                                     animation-delay: "1.196394s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "13.516988020928999%"
+-                                     left: "5.515902%"
++                                     animationDelay: "2.5887814944122143s"
+-                                     animation-delay: "1.52824s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "67.83935605847775%"
+-                                     left: "11.464254%"
++                                     animationDelay: "1.899523395268972s"
+-                                     animation-delay: "0.279988s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "47.38148151964383%"
+-                                     left: "3.578247%"
++                                     animationDelay: "3.9464353561230374s"
+-                                     animation-delay: "0.065013s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "13.43677281765342%"
+-                                     left: "77.028988%"
++                                     animationDelay: "2.799155217502002s"
+-                                     animation-delay: "2.693103s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "59.538634076100024%"
+-                                     left: "49.704828%"
++                                     animationDelay: "4.806042514949569s"
+-                                     animation-delay: "2.40737s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "98.91982780547829%"
+-                                     left: "82.820974%"
++                                     animationDelay: "4.098932367303273s"
+-                                     animation-delay: "1.539745s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "67.26532714986165%"
+-                                     left: "78.188578%"
++                                     animationDelay: "1.1339969435606878s"
+-                                     animation-delay: "4.04167s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "13.135057691085839%"
+-                                     left: "14.851643%"
++                                     animationDelay: "4.345931556257553s"
+-                                     animation-delay: "0.223865s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "79.05710710942651%"
+-                                     left: "95.530985%"
++                                     animationDelay: "1.7924283238684464s"
+-                                     animation-delay: "2.632719s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "41.29518419871976%"
+-                                     left: "83.368214%"
++                                     animationDelay: "1.6529510093367294s"
+-                                     animation-delay: "0.522962s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                  ...
+
+[02:55:13.533] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[02:55:13.639] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:55:13.639] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[03:04:28.635] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[03:04:29.460] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "99.03108031009951%"
+-                                     left: "35.975462%"
++                                     animationDelay: "4.036815099407792s"
+-                                     animation-delay: "0.418727s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "44.34480780707185%"
+-                                     left: "60.136435%"
++                                     animationDelay: "4.808237368277632s"
+-                                     animation-delay: "2.558569s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "10.14808072010538%"
+-                                     left: "68.531033%"
++                                     animationDelay: "4.742496028026587s"
+-                                     animation-delay: "3.162903s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "15.058160980448532%"
+-                                     left: "68.240352%"
++                                     animationDelay: "0.8554148701429759s"
+-                                     animation-delay: "0.225962s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "4.628730545568183%"
+-                                     left: "17.543525%"
++                                     animationDelay: "4.166181299944933s"
+-                                     animation-delay: "2.018125s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "97.68071216546093%"
+-                                     left: "56.569122%"
++                                     animationDelay: "3.4401180020893123s"
+-                                     animation-delay: "1.230762s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "32.96295565751207%"
+-                                     left: "30.968021%"
++                                     animationDelay: "3.962587538099822s"
+-                                     animation-delay: "4.670337s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "20.770625589692827%"
+-                                     left: "77.253275%"
++                                     animationDelay: "1.6848444789305417s"
+-                                     animation-delay: "3.311414s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "76.15456838621341%"
+-                                     left: "16.100563%"
++                                     animationDelay: "4.802812072224429s"
+-                                     animation-delay: "1.711953s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "90.79964620277849%"
+-                                     left: "60.02165%"
++                                     animationDelay: "2.568615357948902s"
+-                                     animation-delay: "1.900888s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "55.55748575202949%"
+-                                     left: "36.36256%"
++                                     animationDelay: "2.2230192280308825s"
+-                                     animation-delay: "3.893978s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "78.96418936528706%"
+-                                     left: "24.191244%"
++                                     animationDelay: "4.184418932867203s"
+-                                     animation-delay: "4.601144s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "38.54966304065803%"
+-                                     left: "81.401694%"
++                                     animationDelay: "2.561836754678728s"
+-                                     animation-delay: "2.586148s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "85.50374988978201%"
+-                                     left: "6.449118%"
++                                     animationDelay: "1.8323509394540434s"
+-                                     animation-delay: "4.676125s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "85.42805424268131%"
+-                                     left: "78.383985%"
++                                     animationDelay: "2.93245989945143s"
+-                                     animation-delay: "0.986427s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "71.25652342486376%"
+-                                     left: "33.302566%"
++                                     animationDelay: "3.433373511683893s"
+-                                     animation-delay: "0.123157s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "86.86663895536387%"
+-                                     left: "79.196115%"
++                                     animationDelay: "0.5117127344418615s"
+-                                     animation-delay: "3.57562s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "44.386761922321824%"
+-                                     left: "79.190692%"
++                                     animationDelay: "4.057232330794138s"
+-                                     animation-delay: "0.989729s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "72.38030742228817%"
+-                                     left: "42.122347%"
++                                     animationDelay: "1.1246093130304935s"
+-                                     animation-delay: "2.117617s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "23.83296872932569%"
+-                                     left: "32.97017%"
++                                     animationDelay: "0.7029410043305767s"
+-                                     animation-delay: "0.413395s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "72.63230673428596%"
+-                                     left: "84.543986%"
++                                     animationDelay: "3.531539354878572s"
+-                                     animation-delay: "3.684371s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "79.69395359435042%"
+-                                     left: "12.297827%"
++                                     animationDelay: "0.8106194780930209s"
+-                                     animation-delay: "2.603297s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "24.929570971026017%"
+-                                     left: "44.194888%"
++                                     animationDelay: "0.5144415644711969s"
+-                                     animation-delay: "2.075597s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "80.01951888702867%"
+-                                     left: "58.588869%"
++                                     animationDelay: "2.4310722308923594s"
+-                                     animation-delay: "3.591563s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "88.61081814792307%"
+-                                     left: "25.000195%"
++                                     animationDelay: "4.688291765669334s"
+-                                     animation-delay: "0.340761s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                              <section id="home" className="relative m...">
+                                <div>
+                                <div className="absolute i...">
+                                  <div>
+                                  <div>
+                                  <div className="absolute i...">
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "64.57102904757853%"
+-                                       top: "61.328563%"
++                                       left: "74.87232544971022%"
+-                                       left: "24.245677%"
+                                      }}
+                                    >
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "63.07281336911975%"
+-                                       top: "64.75788%"
++                                       left: "25.833873794000773%"
+-                                       left: "21.341152%"
+                                      }}
+                                    >
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "64.99525141049236%"
+-                                       top: "70.664771%"
++                                       left: "73.7901643952882%"
+-                                       left: "33.371841%"
+                                      }}
+                                    >
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "33.57954175279515%"
+-                                       top: "79.842924%"
++                                       left: "56.486834176178014%"
+-                                       left: "21.904703%"
+                                      }}
+                                    >
+                                  <FloatingParticle img="/images/le..." size={40} delay={0}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "67.52495264641752%"
+-                                         left: "77.643588%"
++                                         top: "11.8520348731196%"
+-                                         top: "68.879247%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/le..." size={40} delay={0.7}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "72.52231788235454%"
+-                                         left: "60.910886%"
++                                         top: "93.8346225255396%"
+-                                         top: "90.951874%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/re..." size={28} delay={1.4}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "32.40237944980792%"
+-                                         left: "5.68649%"
++                                         top: "77.84744491561037%"
+-                                         top: "0.272497%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/le..." size={22} delay={2.0999999999999996}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "36.83335640234383%"
+-                                         left: "69.559959%"
++                                         top: "51.86587885198446%"
+-                                         top: "17.375248%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/le..." size={35} delay={2.8}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "13.253631132700484%"
+-                                         left: "21.353497%"
++                                         top: "15.730521014370913%"
+-                                         top: "9.320618%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                <motion.div initial={{opacity:0,y:40, ...}} animate={{opacity:1,y:0,scale:1}} ...>
+                                  <div className="relative z..." style={{opacity:0, ...}} ...>
+                                    <div
++                                     className={"\n            mx-auto max-w-4xl \n            bg-white/5 backdrop-b..."}
+-                                     className={" mx-auto max-w-4xl  bg-white/5 backdrop-blur-2xl border border-emer..."}
+                                    >
+                                    ...
+                  ...
+
+[03:04:29.460] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[03:04:34.567] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[03:04:35.047] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[03:04:35.333] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body className="geist_a715...">
+                            <Preloader>
+                              <div className="preloader">
+                                <div>
+                                <div className="particles">
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "28.33923141249678%"
+-                                     left: "15.322117%"
++                                     animationDelay: "4.801054357882156s"
+-                                     animation-delay: "4.975175s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "90.8930730836663%"
+-                                     left: "81.050302%"
++                                     animationDelay: "3.661811512500135s"
+-                                     animation-delay: "4.477242s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "66.5473928305316%"
+-                                     left: "79.52026%"
++                                     animationDelay: "4.639981733933642s"
+-                                     animation-delay: "1.134915s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "37.25578100701139%"
+-                                     left: "30.743441%"
++                                     animationDelay: "2.3451229759982857s"
+-                                     animation-delay: "2.416866s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "20.396601496543752%"
+-                                     left: "57.201083%"
++                                     animationDelay: "1.6342950168022012s"
+-                                     animation-delay: "3.575121s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "87.89364385888015%"
+-                                     left: "92.847953%"
++                                     animationDelay: "2.5206010897583275s"
+-                                     animation-delay: "2.897418s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "97.28656660586556%"
+-                                     left: "66.62911%"
++                                     animationDelay: "1.4133102267343371s"
+-                                     animation-delay: "2.730964s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "80.67984939301981%"
+-                                     left: "94.220457%"
++                                     animationDelay: "0.7443737995449051s"
+-                                     animation-delay: "4.900577s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "2.1516169330840995%"
+-                                     left: "59.086533%"
++                                     animationDelay: "2.598206418788158s"
+-                                     animation-delay: "1.941772s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "92.43765726285247%"
+-                                     left: "9.459352%"
++                                     animationDelay: "4.052780928655211s"
+-                                     animation-delay: "2.824796s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "10.150323953648833%"
+-                                     left: "62.366928%"
++                                     animationDelay: "2.9409586089434745s"
+-                                     animation-delay: "0.878401s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "87.4334825303843%"
+-                                     left: "52.459141%"
++                                     animationDelay: "1.7544628824107416s"
+-                                     animation-delay: "4.23881s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "98.10381839031965%"
+-                                     left: "94.196912%"
++                                     animationDelay: "1.1172966543896812s"
+-                                     animation-delay: "2.062519s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "48.656278473262404%"
+-                                     left: "71.131267%"
++                                     animationDelay: "4.9490886174169235s"
+-                                     animation-delay: "0.925512s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "86.73934839847395%"
+-                                     left: "13.627645%"
++                                     animationDelay: "3.7718966997716947s"
+-                                     animation-delay: "2.937438s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "64.87198809355445%"
+-                                     left: "61.869039%"
++                                     animationDelay: "1.1840483390218692s"
+-                                     animation-delay: "0.288605s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "36.95885151600944%"
+-                                     left: "84.566787%"
++                                     animationDelay: "1.4029782690832087s"
+-                                     animation-delay: "1.117436s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "2.3393235637535814%"
+-                                     left: "69.347636%"
++                                     animationDelay: "3.8118742823554914s"
+-                                     animation-delay: "1.648031s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "7.328854660364959%"
+-                                     left: "7.16592%"
++                                     animationDelay: "0.6761776754154691s"
+-                                     animation-delay: "2.201741s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "29.556093269727445%"
+-                                     left: "92.882759%"
++                                     animationDelay: "1.6097691209326852s"
+-                                     animation-delay: "2.758784s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "40.065716150513566%"
+-                                     left: "8.652967%"
++                                     animationDelay: "0.45664138950019917s"
+-                                     animation-delay: "2.385978s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "7.82350050228019%"
+-                                     left: "48.781217%"
++                                     animationDelay: "3.22857049444176s"
+-                                     animation-delay: "3.505394s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "35.55325299309845%"
+-                                     left: "99.396946%"
++                                     animationDelay: "3.8328356485968236s"
+-                                     animation-delay: "3.644423s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "42.97309390032036%"
+-                                     left: "61.515198%"
++                                     animationDelay: "1.558681639661264s"
+-                                     animation-delay: "0.709146s"
+                                    }}
+                                  >
+                                  <div
+                                    className="particle"
+                                    style={{
++                                     left: "36.944654039119975%"
+-                                     left: "94.428114%"
++                                     animationDelay: "2.300532872230558s"
+-                                     animation-delay: "0.055504s"
+                                    }}
+                                  >
+                                ...
+                            ...
+                              <section id="home" className="relative m...">
+                                <div>
+                                <div className="absolute i...">
+                                  <div>
+                                  <div>
+                                  <div className="absolute i...">
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "41.22340224861226%"
+-                                       top: "28.020433%"
++                                       left: "47.51801732088265%"
+-                                       left: "32.28112%"
+                                      }}
+                                    >
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "39.37338347165938%"
+-                                       top: "76.044106%"
++                                       left: "31.60205088497642%"
+-                                       left: "39.559094%"
+                                      }}
+                                    >
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "60.30191453402783%"
+-                                       top: "27.581107%"
++                                       left: "47.234525365367716%"
+-                                       left: "34.173539%"
+                                      }}
+                                    >
+                                    <div
+                                      className="absolute"
+                                      style={{
++                                       top: "49.40934751768116%"
+-                                       top: "21.764115%"
++                                       left: "35.147233411586555%"
+-                                       left: "26.535335%"
+                                      }}
+                                    >
+                                  <FloatingParticle img="/images/le..." size={40} delay={0}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "90.49496741277237%"
+-                                         left: "40.663662%"
++                                         top: "38.24038473828825%"
+-                                         top: "95.463679%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/le..." size={40} delay={0.7}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "93.4301002922714%"
+-                                         left: "44.138445%"
++                                         top: "11.624855449207082%"
+-                                         top: "8.710608%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/re..." size={28} delay={1.4}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "78.15028023384096%"
+-                                         left: "86.947364%"
++                                         top: "67.39925164237827%"
+-                                         top: "94.859462%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/le..." size={22} delay={2.0999999999999996}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "66.86156756486777%"
+-                                         left: "55.241086%"
++                                         top: "46.54209602648072%"
+-                                         top: "85.025252%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                  <FloatingParticle img="/images/le..." size={35} delay={2.8}>
+                                    <motion.div initial={{y:40,opacity:0}} animate={{y:[...], ...}} transition={{...}} ...>
+                                      <div
+                                        className="absolute"
+                                        style={{
++                                         left: "19.558146381786045%"
+-                                         left: "29.485502%"
++                                         top: "85.04974346653322%"
+-                                         top: "40.860923%"
++                                         opacity: 0
+-                                         opacity: "0"
++                                         transform: "translateY(40px)"
+-                                         transform: "translateY(40px)"
+                                        }}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+                                <motion.div initial={{opacity:0,y:40, ...}} animate={{opacity:1,y:0,scale:1}} ...>
+                                  <div className="relative z..." style={{opacity:0, ...}} ...>
+                                    <div
++                                     className={"\n            mx-auto max-w-4xl \n            bg-white/5 backdrop-b..."}
+-                                     className={" mx-auto max-w-4xl  bg-white/5 backdrop-blur-2xl border border-emer..."}
+                                    >
+                                    ...
+                  ...
+
+[03:04:35.333] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

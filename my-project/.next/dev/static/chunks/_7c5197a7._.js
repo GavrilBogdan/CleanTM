@@ -785,11 +785,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx_
 ;
 const AboutUsPage = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "5a4bd991d8cb5c15664379f8a40fb9440ecd366cebc8deb10557f3c0a13d1cd2") {
+    if ($[0] !== "ae6920069901d2a02270fdbe9e36b7a1be3aa7192887c747b1e16b84833835d3") {
         for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "5a4bd991d8cb5c15664379f8a40fb9440ecd366cebc8deb10557f3c0a13d1cd2";
+        $[0] = "ae6920069901d2a02270fdbe9e36b7a1be3aa7192887c747b1e16b84833835d3";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -878,7 +878,7 @@ const AboutUsPage = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: _temp3,
                         className: "\n                px-10 py-3.5 rounded-full\n                bg-gradient-to-r from-emerald-500 to-green-400\n                text-slate-900 font-bold text-base md:text-lg\n                shadow-lg shadow-emerald-500/40\n                hover:shadow-emerald-400/70\n                hover:scale-105\n                transition-all duration-300\n              ",
-                        children: "Explore Rewards"
+                        children: "Dev Team"
                     }, void 0, false, {
                         fileName: "[project]/app/AboutUs/page.tsx",
                         lineNumber: 42,
@@ -1201,7 +1201,7 @@ function _temp2(__0, i_0) {
     }, this);
 }
 function _temp3() {
-    return window.location.href = "/shop";
+    return window.location.href = "/Devs";
 }
 function _temp4() {
     return window.location.href = "/task";

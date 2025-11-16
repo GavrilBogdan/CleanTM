@@ -74,7 +74,7 @@ const AboutUsPage = () => {
             </p>
 
             <button
-              onClick={() => (window.location.href = "/shop")}
+              onClick={() => (window.location.href = "/Devs")}
               className="
                 px-10 py-3.5 rounded-full
                 bg-gradient-to-r from-emerald-500 to-green-400
@@ -85,7 +85,7 @@ const AboutUsPage = () => {
                 transition-all duration-300
               "
             >
-              Explore Rewards
+              Dev Team
             </button>
           </div>
         </section>
