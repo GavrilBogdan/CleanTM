@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import confetti from "canvas-confetti";
 
 interface ShopItemCardProps {
   item: {
@@ -10,7 +11,7 @@ interface ShopItemCardProps {
     price: number;
   };
   userPoints: number;
-  onBuy: (itemId: number) => void;
+  onBuy: (itemId: number) => Promise<boolean>; // return success flag
 }
 
 const ShopItemCard: React.FC<ShopItemCardProps> = ({
@@ -19,6 +20,24 @@ const ShopItemCard: React.FC<ShopItemCardProps> = ({
   onBuy,
 }) => {
   const canBuy = userPoints >= item.price;
+  const [isBuying, setIsBuying] = useState(false);
+
+  const handleBuy = async () => {
+    if (!canBuy || isBuying) return;
+
+    setIsBuying(true);
+    const success = await onBuy(item.id); // expects a boolean
+    setIsBuying(false);
+
+    if (success) {
+      // Trigger confetti
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+    }
+  };
 
   return (
     <div className="relative flex flex-col items-center bg-white/30 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
@@ -32,7 +51,8 @@ const ShopItemCard: React.FC<ShopItemCardProps> = ({
       <p className="text-green-900 font-extrabold mb-4">💎 {item.price}</p>
 
       <button
-        onClick={() => canBuy && onBuy(item.id)}
+        onClick={handleBuy}
+        disabled={!canBuy || isBuying}
         className={`w-full py-2 rounded-full font-bold text-white shadow-md transition-all duration-300
           ${
             canBuy
@@ -40,7 +60,7 @@ const ShopItemCard: React.FC<ShopItemCardProps> = ({
               : "bg-gray-400 cursor-not-allowed"
           }`}
       >
-        {canBuy ? "Buy" : "Not enough points"}
+        {isBuying ? "Buying..." : canBuy ? "Buy" : "Not enough points"}
       </button>
     </div>
   );

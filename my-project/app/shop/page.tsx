@@ -25,19 +25,22 @@ export default function ShopPage() {
       const res = await fetch("/api/shop/buyItem", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ itemId }), // no hardcoded userId
+        body: JSON.stringify({ itemId }),
       });
 
       const data = await res.json();
 
       if (data.success) {
-        setUserPoints(data.pointsLeft); // update points after purchase
+        setUserPoints(data.pointsLeft);
+        return true; // signal success for confetti
       } else {
         alert(data.error);
+        return false;
       }
     } catch (err) {
       console.error("Error buying item:", err);
       alert("Something went wrong.");
+      return false;
     }
   };
 

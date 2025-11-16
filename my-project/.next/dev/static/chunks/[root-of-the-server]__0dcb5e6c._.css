@@ -874,7 +874,6 @@
     --color-emerald-800: #005f46;
     --color-emerald-900: #004e3b;
     --color-blue-600: #155dfc;
-    --color-purple-50: #faf5ff;
     --color-purple-400: #c07eff;
     --color-purple-500: #ac4bff;
     --color-slate-50: #f8fafc;
@@ -968,7 +967,6 @@
       --color-emerald-800: lab(35.3675% -33.1188 8.04002);
       --color-emerald-900: lab(28.8637% -26.9249 5.45986);
       --color-blue-600: lab(44.0605% 29.0279 -86.0352);
-      --color-purple-50: lab(97.1627% 2.99937 -4.13398);
       --color-purple-400: lab(63.6946% 47.6127 -59.2066);
       --color-purple-500: lab(52.0183% 66.11 -78.2316);
       --color-slate-50: lab(98.1434% -.369519 -1.05966);
@@ -2141,11 +2139,6 @@
 
   .to-neutral-300 {
     --tw-gradient-to: var(--color-neutral-300);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  .to-purple-50 {
-    --tw-gradient-to: var(--color-purple-50);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
