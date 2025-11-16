@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -57,25 +57,132 @@ const IMPACT_TIMELINE = {
   bags: [3, 6, 2, 5, 4, 7, 6],
 };
 
+type ProfileApiUser = {
+  id: number;
+  email: string;
+  points: number;
+  username?: string | null;
+  avatarUrl?: string | null;
+};
+
 export default function ProfileDashboardPage() {
   const router = useRouter();
 
-  const user = {
-    name: "Andrei Popescu",
-    username: "@andrei.clean",
-    avatar: "/images/rafa.jpg",
-    level: 7,
-    rank: 12,
-    diamonds: 420,
-    totalCleanups: 34,
-    totalBags: 96,
-    totalHours: 52,
+  const [profile, setProfile] = useState<ProfileApiUser | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  // local editable fields
+  const [editUsername, setEditUsername] = useState("");
+  const [editAvatarUrl, setEditAvatarUrl] = useState("");
+
+  // ------------------------------------------------------------------
+  // FETCH PROFILE FROM /api/profile
+  // ------------------------------------------------------------------
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const res = await fetch("/api/profile");
+        const data = await res.json();
+        if (data.user) {
+          setProfile(data.user);
+          setEditUsername(data.user.username || "");
+          setEditAvatarUrl(data.user.avatarUrl || "");
+        }
+      } catch (err) {
+        console.error("Error loading profile:", err);
+        setError("Failed to load profile.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProfile();
+  }, []);
+
+  const handleSaveProfile = async () => {
+    if (!profile) return;
+    setSaving(true);
+    setError(null);
+    setSuccess(null);
+
+    try {
+      const res = await fetch("/api/profile", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: editUsername.trim() || null,
+          avatarUrl: editAvatarUrl.trim() || null,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Failed to save profile.");
+      } else if (data.user) {
+        setProfile(data.user);
+        setSuccess("Profile saved successfully.");
+      }
+    } catch (err) {
+      console.error("Error saving profile:", err);
+      setError("Something went wrong while saving.");
+    } finally {
+      setSaving(false);
+      setTimeout(() => setSuccess(null), 2500);
+    }
   };
+
+  // DERIVED VALUES FOR UI (fallbacks)
+  const displayName =
+    profile?.username || profile?.email?.split("@")[0] || "Eco Explorer";
+
+  const usernameHandle = profile?.username
+    ? `@${profile.username}`
+    : profile?.email
+    ? `@${profile.email.split("@")[0]}`
+    : "@eco.explorer";
+
+  const avatarSrc =
+    profile?.avatarUrl && profile.avatarUrl.length > 0
+      ? profile.avatarUrl
+      : "/images/rafa.jpg";
+
+  const diamonds = profile?.points ?? 0;
+
+  // demo stats (can be wired later to DB)
+  const totalCleanups = 34;
+  const totalBags = 96;
+  const totalHours = 52;
+  const level = 7;
+  const rank = 12;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#020617] text-white flex items-center justify-center">
+        <p className="text-sm text-gray-300">Loading profile…</p>
+      </div>
+    );
+  }
+
+  if (!profile) {
+    return (
+      <div className="min-h-screen bg-[#020617] text-white flex items-center justify-center">
+        <div className="text-center space-y-2">
+          <p className="text-lg font-semibold">You’re not logged in.</p>
+          <p className="text-sm text-gray-400">
+            Please log in to view your dashboard.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#020617] text-white px-6 py-8">
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* HEADER */}
+        {/* HEADER + BACK BUTTON */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Profile</h1>
@@ -84,19 +191,26 @@ export default function ProfileDashboardPage() {
             </p>
           </div>
 
-          {/* Back button */}
           <button
             onClick={() => router.back()}
-            className="self-start sm:self-auto inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-500/20 hover:border-emerald-400 transition-all"
+            className="
+              self-start sm:self-auto
+              inline-flex items-center gap-2
+              px-4 py-2 rounded-full text-xs font-semibold
+              bg-[#020617] border border-emerald-500/50
+              text-emerald-200
+              hover:bg-emerald-600/10 hover:border-emerald-400
+              transition
+            "
           >
-            <span className="text-base">←</span>
-            <span>Back to last page</span>
+            <span className="text-sm">←</span>
+            Back to last page
           </button>
         </div>
 
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* LEFT COLUMN: PROFILE + STATS + BADGES */}
+          {/* LEFT COLUMN: PROFILE + STATS + SETTINGS + BADGES */}
           <div className="space-y-6 lg:col-span-1">
             {/* PROFILE CARD */}
             <div className="bg-[#020617] border border-[#1e293b] rounded-2xl p-5 shadow-xl">
@@ -104,24 +218,22 @@ export default function ProfileDashboardPage() {
                 <div className="relative">
                   <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.65)]">
                     <img
-                      src={user.avatar}
-                      alt={user.name}
+                      src={avatarSrc}
+                      alt={displayName}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full bg-emerald-500 text-[11px] font-semibold">
-                    Lv. {user.level}
+                    Lv. {level}
                   </div>
                 </div>
 
                 <div>
-                  <p className="text-lg font-semibold">{user.name}</p>
-                  <p className="text-xs text-gray-400">{user.username}</p>
+                  <p className="text-lg font-semibold">{displayName}</p>
+                  <p className="text-xs text-gray-400">{usernameHandle}</p>
                   <p className="mt-2 text-xs text-emerald-400 flex items-center gap-1">
                     <span className="text-base">💎</span>
-                    <span className="font-semibold">
-                      {user.diamonds} eco points
-                    </span>
+                    <span className="font-semibold">{diamonds} eco points</span>
                   </p>
                 </div>
               </div>
@@ -129,18 +241,18 @@ export default function ProfileDashboardPage() {
               <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs">
                 <div className="bg-[#020617] border border-[#1e293b] rounded-xl py-3">
                   <p className="text-gray-400 mb-1">Global rank</p>
-                  <p className="text-lg font-bold text-white">#{user.rank}</p>
+                  <p className="text-lg font-bold text-white">#{rank}</p>
                 </div>
                 <div className="bg-[#020617] border border-[#1e293b] rounded-xl py-3">
                   <p className="text-gray-400 mb-1">Cleanups</p>
                   <p className="text-lg font-bold text-emerald-400">
-                    {user.totalCleanups}
+                    {totalCleanups}
                   </p>
                 </div>
                 <div className="bg-[#020617] border border-[#1e293b] rounded-xl py-3">
                   <p className="text-gray-400 mb-1">Hours</p>
                   <p className="text-lg font-bold text-emerald-400">
-                    {user.totalHours}
+                    {totalHours}
                   </p>
                 </div>
               </div>
@@ -156,21 +268,21 @@ export default function ProfileDashboardPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-gray-400">Total bags collected</span>
                   <span className="font-semibold text-emerald-400">
-                    {user.totalBags}
+                    {totalBags}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <span className="text-gray-400">Average bags / cleanup</span>
                   <span className="font-semibold">
-                    {(user.totalBags / user.totalCleanups).toFixed(1)}
+                    {(totalBags / totalCleanups).toFixed(1)}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <span className="text-gray-400">Average duration</span>
                   <span className="font-semibold">
-                    {(user.totalHours / user.totalCleanups).toFixed(1)} h
+                    {(totalHours / totalCleanups).toFixed(1)} h
                   </span>
                 </div>
               </div>
@@ -185,6 +297,65 @@ export default function ProfileDashboardPage() {
                     style={{ width: "68%" }}
                   />
                 </div>
+              </div>
+            </div>
+
+            {/* PROFILE SETTINGS (EDITABLE) */}
+            <div className="bg-[#020617] border border-[#1e293b] rounded-2xl p-5 shadow-xl">
+              <h2 className="text-sm font-semibold mb-3 text-gray-100">
+                Profile settings
+              </h2>
+
+              <div className="space-y-3 text-xs">
+                <div>
+                  <label className="block text-gray-400 mb-1">
+                    Username (public)
+                  </label>
+                  <input
+                    type="text"
+                    value={editUsername}
+                    onChange={(e) => setEditUsername(e.target.value)}
+                    placeholder="Your public username"
+                    className="w-full bg-[#020617] border border-[#1e293b] rounded-lg px-3 py-2 outline-none text-sm text-gray-100 placeholder:text-gray-500"
+                  />
+                  <p className="mt-1 text-[11px] text-gray-500">
+                    This will be shown on leaderboards and quests.
+                  </p>
+                </div>
+
+                <div>
+                  <label className="block text-gray-400 mb-1">
+                    Avatar image URL
+                  </label>
+                  <input
+                    type="text"
+                    value={editAvatarUrl}
+                    onChange={(e) => setEditAvatarUrl(e.target.value)}
+                    placeholder="https://your-avatar-url.jpg"
+                    className="w-full bg-[#020617] border border-[#1e293b] rounded-lg px-3 py-2 outline-none text-sm text-gray-100 placeholder:text-gray-500"
+                  />
+                  <p className="mt-1 text-[11px] text-gray-500">
+                    For now, paste a direct image URL. (Later you can add
+                    upload.)
+                  </p>
+                </div>
+
+                {error && (
+                  <p className="text-[11px] text-red-400 mt-1">{error}</p>
+                )}
+                {success && (
+                  <p className="text-[11px] text-emerald-400 mt-1">{success}</p>
+                )}
+
+                <button
+                  onClick={handleSaveProfile}
+                  disabled={saving}
+                  className={`mt-2 w-full text-center py-2.5 rounded-full text-sm font-semibold 
+                    bg-emerald-600 hover:bg-emerald-500 transition 
+                    disabled:opacity-50 disabled:cursor-not-allowed`}
+                >
+                  {saving ? "Saving…" : "Save changes"}
+                </button>
               </div>
             </div>
 
@@ -311,7 +482,7 @@ function MiniCleanupMap({ cleanups }: { cleanups: CleanupLocation[] }) {
 
     markersRef.current.clearLayers();
 
-    const points: [number, number][] = [];
+    const points: L.LatLngExpression[] = [];
 
     cleanups.forEach((c) => {
       const marker = L.circleMarker([c.pos.lat, c.pos.lng], {
@@ -428,7 +599,6 @@ function ImpactTimelineMiniChart({
           </linearGradient>
         </defs>
 
-        {/* area under line */}
         <path
           d={areaD}
           fill="url(#impactGradient)"
@@ -436,7 +606,6 @@ function ImpactTimelineMiniChart({
           opacity={0.6}
         />
 
-        {/* main line */}
         <path
           d={pathD}
           fill="none"
@@ -446,7 +615,6 @@ function ImpactTimelineMiniChart({
           strokeLinejoin="round"
         />
 
-        {/* points */}
         {points.map((p, i) => (
           <circle
             key={i}

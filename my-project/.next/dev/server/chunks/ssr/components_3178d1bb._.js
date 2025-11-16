@@ -279,302 +279,255 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 "use client";
 ;
 ;
+const FALLBACK_AVATAR = "/images/rafa.jpg";
+const rewards = [
+    {
+        place: "1st",
+        amount: 250
+    },
+    {
+        place: "2nd",
+        amount: 200
+    },
+    {
+        place: "3rd",
+        amount: 150
+    },
+    {
+        place: "4th",
+        amount: 100
+    },
+    {
+        place: "5th",
+        amount: 75
+    },
+    {
+        place: "6th",
+        amount: 60
+    },
+    {
+        place: "7th",
+        amount: 50
+    },
+    {
+        place: "8th",
+        amount: 40
+    },
+    {
+        place: "9th",
+        amount: 30
+    },
+    {
+        place: "10th",
+        amount: 25
+    }
+];
 function LeaderboardPage() {
-    const leaderboard = [
-        {
-            name: "Andrei Popescu",
-            score: 420,
-            battles: "69 / 88",
-            avatar: "/images/rafa.jpg"
-        },
-        {
-            name: "Mihai Ionescu",
-            score: 415,
-            battles: "73 / 100",
-            avatar: "/images/salam.jpg"
-        },
-        {
-            name: "Robert Vadean",
-            score: 390,
-            battles: "63 / 89",
-            avatar: "/images/guta.jpg"
-        },
-        {
-            name: "Godja Flavius",
-            score: 385,
-            battles: "59 / 90",
-            avatar: "/images/romanes.jpg"
-        },
-        {
-            name: "Costel Marinescu",
-            score: 360,
-            battles: "53 / 112",
-            avatar: "/images/tzanca.jpg"
-        },
-        {
-            name: "Daniel Boloaga",
-            score: 324,
-            battles: "24 / 76",
-            avatar: "/images/minune.jpg"
-        },
-        {
-            name: "Bogdan Georgescu",
-            score: 290,
-            battles: "32 / 97",
-            avatar: "/images/ciorba.jpg"
-        }
-    ];
-    const rewards = [
-        {
-            place: "1st",
-            amount: 250
-        },
-        {
-            place: "2nd",
-            amount: 200
-        },
-        {
-            place: "3rd",
-            amount: 150
-        },
-        {
-            place: "4th",
-            amount: 100
-        },
-        {
-            place: "5th",
-            amount: 75
-        },
-        {
-            place: "6th",
-            amount: 60
-        },
-        {
-            place: "7th",
-            amount: 50
-        },
-        {
-            place: "8th",
-            amount: 40
-        },
-        {
-            place: "9th",
-            amount: 30
-        },
-        {
-            place: "10th",
-            amount: 25
-        }
-    ];
-    // ------------ STATE PENTRU SEARCH + FILTRE + SORTARE ------------
+    const [players, setPlayers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    // filters
     const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [minScore, setMinScore] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [maxScore, setMaxScore] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
-    const [minBattles, setMinBattles] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [minWins, setMinWins] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [sortBy, setSortBy] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("score");
-    // aplica filtrele peste leaderboard
-    const filteredLeaderboard = [
-        ...leaderboard
-    ].filter((p)=>{
-        // search dupa nume
-        if (search.trim().length > 0) {
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const fetchLeaderboard = async ()=>{
+            try {
+                const res = await fetch("/api/leaderboard");
+                const data = await res.json();
+                if (!Array.isArray(data.users)) {
+                    console.error("Invalid leaderboard response:", data);
+                    setPlayers([]);
+                    return;
+                }
+                const mapped = data.users.map((u)=>({
+                        id: u.id,
+                        name: u.username || u.email.split("@")[0],
+                        score: u.points,
+                        questsCompleted: 0,
+                        avatar: u.avatarUrl && u.avatarUrl.trim().length > 0 ? u.avatarUrl : FALLBACK_AVATAR
+                    }));
+                setPlayers(mapped.sort((a, b)=>b.score - a.score));
+            } catch (err) {
+                console.error("Error loading leaderboard:", err);
+                setPlayers([]);
+            } finally{
+                setLoading(false);
+            }
+        };
+        fetchLeaderboard();
+    }, []);
+    // apply filters
+    const filteredLeaderboard = players.filter((p)=>{
+        if (search.trim()) {
             const term = search.toLowerCase();
             if (!p.name.toLowerCase().includes(term)) return false;
         }
-        // scor minim / maxim
         if (minScore !== "" && p.score < Number(minScore)) return false;
         if (maxScore !== "" && p.score > Number(maxScore)) return false;
-        // battles castigate minime (prima cifra din "69 / 88")
-        if (minBattles !== "") {
-            const wins = parseInt(p.battles.split("/")[0].trim(), 10);
-            if (wins < Number(minBattles)) return false;
-        }
+        // here “wins” is questsCompleted (can be changed later)
+        if (minWins !== "" && p.questsCompleted < Number(minWins)) return false;
         return true;
     }).sort((a, b)=>{
-        if (sortBy === "score") {
-            return b.score - a.score; // scor desc
-        }
-        // sortare alfabetica
+        if (sortBy === "score") return b.score - a.score;
         return a.name.localeCompare(b.name);
     });
+    const podiumSource = filteredLeaderboard.length >= 3 ? filteredLeaderboard : players;
+    if (loading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-screen bg-[#020617] text-white flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm text-gray-300",
+                children: "Loading leaderboard…"
+            }, void 0, false, {
+                fileName: "[project]/components/Leaderboard.tsx",
+                lineNumber: 126,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/components/Leaderboard.tsx",
+            lineNumber: 125,
+            columnNumber: 7
+        }, this);
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900 text-white px-4 sm:px-6 py-10 pt-[8rem] pb-[5rem]",
+        className: "min-h-screen bg-[#020617] text-white px-6 pt-28 pb-24",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
                 children: globalStyles
             }, void 0, false, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 127,
+                lineNumber: 133,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-7xl mx-auto",
+                className: "max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-3 gap-10",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-                        className: "mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "xl:col-span-2",
                         children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: "text-3xl md:text-4xl font-bold mb-8",
+                                children: "Leaderboard"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Leaderboard.tsx",
+                                lineNumber: 138,
+                                columnNumber: 11
+                            }, this),
+                            podiumSource.length >= 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PodiumSection, {
+                                leaderboard: podiumSource
+                            }, void 0, false, {
+                                fileName: "[project]/components/Leaderboard.tsx",
+                                lineNumber: 141,
+                                columnNumber: 13
+                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-[#020819] border border-[#111827] rounded-2xl p-4 shadow-xl",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-400/40 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-200",
+                                        className: "flex flex-col gap-3 md:flex-row md:items-center md:justify-between px-2 pb-4 border-b border-[#111827]",
                                         children: [
-                                            "CleanTM • Season 1",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "h-1 w-1 rounded-full bg-emerald-300"
-                                            }, void 0, false, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                        className: "text-lg font-semibold",
+                                                        children: "Monthly Leaderboard"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 149,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-xs text-gray-400 mt-1",
+                                                        children: [
+                                                            filteredLeaderboard.length,
+                                                            " Users found • ",
+                                                            players.length,
+                                                            " ",
+                                                            "total"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 150,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/components/Leaderboard.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 148,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex gap-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: "px-3 py-1 bg-emerald-600 rounded-lg text-sm",
+                                                        children: "Monthly"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 157,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: "px-3 py-1 bg-[#0b1220] rounded-lg text-sm",
+                                                        children: "All Time"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 160,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                lineNumber: 156,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 133,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-b from-emerald-100 via-white to-emerald-200 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(16,185,129,0.7)]",
-                                        children: "Leaderboard"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 137,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-2 text-sm md:text-base text-emerald-100/80 max-w-xl",
-                                        children: "Track the most active eco-heroes in CleanTM. Complete quests, earn 💎 and climb the rankings every month."
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 140,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 132,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "rounded-2xl bg-slate-900/70 border border-emerald-500/30 px-5 py-3 shadow-[0_0_30px_rgba(16,185,129,0.6)] text-right",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-[11px] uppercase tracking-[0.18em] text-emerald-200",
-                                        children: "Total users"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
                                         lineNumber: 147,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-2xl font-bold text-emerald-300",
-                                        children: leaderboard.length
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 150,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-[11px] text-emerald-100/70",
-                                        children: [
-                                            filteredLeaderboard.length,
-                                            " currently visible"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 153,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 146,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 131,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-1 xl:grid-cols-3 gap-10",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "xl:col-span-2 space-y-8",
-                                children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "rounded-3xl bg-slate-950/60 border border-emerald-500/25 shadow-[0_0_40px_rgba(15,23,42,0.9)] backdrop-blur-2xl px-4 sm:px-6 py-6",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PodiumSection, {
-                                            leaderboard: leaderboard
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/Leaderboard.tsx",
-                                            lineNumber: 163,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 162,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "bg-slate-950/70 border border-emerald-500/25 rounded-3xl p-4 sm:p-6 shadow-[0_0_40px_rgba(15,23,42,0.9)] backdrop-blur-2xl",
+                                        className: "mt-4 mb-3 grid grid-cols-1 md:grid-cols-4 gap-3 text-sm",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex flex-col gap-3 md:flex-row md:items-center md:justify-between pb-4 border-b border-[#1e293b]",
+                                                className: "md:col-span-2",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-lg font-semibold",
-                                                                children: "Monthly Leaderboard"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 171,
-                                                                columnNumber: 19
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-xs text-emerald-100/70 mt-1",
-                                                                children: [
-                                                                    filteredLeaderboard.length,
-                                                                    " users found •",
-                                                                    " ",
-                                                                    leaderboard.length,
-                                                                    " total"
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 172,
-                                                                columnNumber: 19
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "text-gray-400 text-xs uppercase tracking-wide",
+                                                        children: "Search player"
+                                                    }, void 0, false, {
                                                         fileName: "[project]/components/Leaderboard.tsx",
                                                         lineNumber: 170,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "inline-flex rounded-full bg-slate-900/80 border border-slate-700/60 p-1 text-xs",
+                                                        className: "mt-1 flex items-center gap-2 bg-[#020617] border border-[#111827] rounded-lg px-2 py-1.5",
                                                         children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                className: "px-3 py-1 rounded-full bg-emerald-500 text-slate-900 font-semibold shadow-[0_0_18px_rgba(16,185,129,0.7)]",
-                                                                children: "Monthly"
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "text-gray-500 text-sm",
+                                                                children: "🔍"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 179,
+                                                                lineNumber: 174,
                                                                 columnNumber: 19
                                                             }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                className: "px-3 py-1 rounded-full text-slate-200 hover:bg-slate-800/80 transition",
-                                                                children: "All Time"
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                value: search,
+                                                                onChange: (e)=>setSearch(e.target.value),
+                                                                placeholder: "Type a name…",
+                                                                className: "bg-transparent flex-1 outline-none text-sm text-gray-100 placeholder:text-gray-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 182,
+                                                                lineNumber: 175,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 178,
+                                                        lineNumber: 173,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
@@ -584,280 +537,138 @@ function LeaderboardPage() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mt-4 mb-3 grid grid-cols-1 md:grid-cols-4 gap-3 text-sm",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "md:col-span-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                className: "text-gray-300 text-xs uppercase tracking-wide",
-                                                                children: "Search user"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 192,
-                                                                columnNumber: 19
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "mt-1 flex items-center gap-2 bg-slate-950/80 border border-slate-700/70 rounded-xl px-3 py-1.5 shadow-inner shadow-black/40",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-gray-500 text-sm",
-                                                                        children: "🔍"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 196,
-                                                                        columnNumber: 21
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                        value: search,
-                                                                        onChange: (e)=>setSearch(e.target.value),
-                                                                        placeholder: "Type a name…",
-                                                                        className: "bg-transparent flex-1 outline-none text-sm text-gray-100 placeholder:text-gray-500"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 197,
-                                                                        columnNumber: 21
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 195,
-                                                                columnNumber: 19
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 191,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                className: "text-gray-300 text-xs uppercase tracking-wide",
-                                                                children: "Min score"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 208,
-                                                                columnNumber: 19
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                type: "number",
-                                                                value: minScore,
-                                                                onChange: (e)=>setMinScore(e.target.value),
-                                                                placeholder: "300",
-                                                                className: "mt-1 w-full bg-slate-950/80 border border-slate-700/70 rounded-xl px-3 py-1.5 outline-none text-sm text-gray-100 placeholder:text-gray-600"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 211,
-                                                                columnNumber: 19
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 207,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                className: "text-gray-300 text-xs uppercase tracking-wide",
-                                                                children: "Min quests"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 222,
-                                                                columnNumber: 19
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                type: "number",
-                                                                value: minBattles,
-                                                                onChange: (e)=>setMinBattles(e.target.value),
-                                                                placeholder: "50",
-                                                                className: "mt-1 w-full bg-slate-950/80 border border-slate-700/70 rounded-xl px-3 py-1.5 outline-none text-sm text-gray-100 placeholder:text-gray-600"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 225,
-                                                                columnNumber: 19
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 221,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "md:col-span-2 flex flex-col md:flex-row gap-3",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "flex-1",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                        className: "text-gray-300 text-xs uppercase tracking-wide",
-                                                                        children: "Max quests"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 237,
-                                                                        columnNumber: 21
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                        type: "number",
-                                                                        value: maxScore,
-                                                                        onChange: (e)=>setMaxScore(e.target.value),
-                                                                        placeholder: "450",
-                                                                        className: "mt-1 w-full bg-slate-950/80 border border-slate-700/70 rounded-xl px-3 py-1.5 outline-none text-sm text-gray-100 placeholder:text-gray-600"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 240,
-                                                                        columnNumber: 21
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 236,
-                                                                columnNumber: 19
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "flex-1",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                        className: "text-gray-300 text-xs uppercase tracking-wide",
-                                                                        children: "Sort by"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 250,
-                                                                        columnNumber: 21
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "mt-1 flex bg-slate-950/80 border border-slate-700/70 rounded-xl overflow-hidden",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                                onClick: ()=>setSortBy("score"),
-                                                                                className: `flex-1 px-2 py-1.5 text-xs font-medium transition ${sortBy === "score" ? "bg-emerald-500 text-slate-950" : "text-gray-300 hover:bg-slate-800/80"}`,
-                                                                                children: "Score"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                                lineNumber: 254,
-                                                                                columnNumber: 23
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                                onClick: ()=>setSortBy("name"),
-                                                                                className: `flex-1 px-2 py-1.5 text-xs font-medium transition ${sortBy === "name" ? "bg-emerald-500 text-slate-950" : "text-gray-300 hover:bg-slate-800/80"}`,
-                                                                                children: "Name"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                                lineNumber: 264,
-                                                                                columnNumber: 23
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 253,
-                                                                        columnNumber: 21
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 249,
-                                                                columnNumber: 19
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 235,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                lineNumber: 189,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                className: "mt-2 space-y-3",
-                                                children: [
-                                                    filteredLeaderboard.map((p, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "flex items-center justify-between bg-slate-900/80 border border-slate-800 rounded-2xl px-4 py-3 hover:bg-slate-800/90 transition shadow-[0_0_18px_rgba(15,23,42,0.9)]",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "flex items-center gap-3",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                            className: "w-12 h-12 bg-[#0f172a] rounded-full flex items-center justify-center text-2xl overflow-hidden border border-emerald-500/40",
-                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                                src: p.avatar,
-                                                                                alt: p.name,
-                                                                                className: "w-full h-full object-cover"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                                lineNumber: 288,
-                                                                                columnNumber: 25
-                                                                            }, this)
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/components/Leaderboard.tsx",
-                                                                            lineNumber: 287,
-                                                                            columnNumber: 23
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                    className: "font-medium text-emerald-50",
-                                                                                    children: p.name
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/Leaderboard.tsx",
-                                                                                    lineNumber: 295,
-                                                                                    columnNumber: 25
-                                                                                }, this),
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                    className: "text-xs text-emerald-300/90",
-                                                                                    children: [
-                                                                                        "Quests completed: ",
-                                                                                        p.battles
-                                                                                    ]
-                                                                                }, void 0, true, {
-                                                                                    fileName: "[project]/components/Leaderboard.tsx",
-                                                                                    lineNumber: 296,
-                                                                                    columnNumber: 25
-                                                                                }, this)
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/Leaderboard.tsx",
-                                                                            lineNumber: 294,
-                                                                            columnNumber: 23
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/components/Leaderboard.tsx",
-                                                                    lineNumber: 286,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "text-lg font-semibold text-emerald-400 drop-shadow-[0_0_12px_rgba(16,185,129,0.7)]",
-                                                                    children: [
-                                                                        "💎",
-                                                                        p.score
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/components/Leaderboard.tsx",
-                                                                    lineNumber: 302,
-                                                                    columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, i, true, {
-                                                            fileName: "[project]/components/Leaderboard.tsx",
-                                                            lineNumber: 282,
-                                                            columnNumber: 19
-                                                        }, this)),
-                                                    filteredLeaderboard.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                        className: "text-center text-sm text-gray-500 py-6",
-                                                        children: "No users found matching the criteria."
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "text-gray-400 text-xs uppercase tracking-wide",
+                                                        children: "Min score"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 309,
-                                                        columnNumber: 19
+                                                        lineNumber: 186,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "number",
+                                                        value: minScore,
+                                                        onChange: (e)=>setMinScore(e.target.value),
+                                                        placeholder: "300",
+                                                        className: "mt-1 w-full bg-[#020617] border border-[#111827] rounded-lg px-2 py-1.5 outline-none text-sm"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 189,
+                                                        columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Leaderboard.tsx",
-                                                lineNumber: 280,
+                                                lineNumber: 185,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "text-gray-400 text-xs uppercase tracking-wide",
+                                                        children: "Min quests"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 200,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "number",
+                                                        value: minWins,
+                                                        onChange: (e)=>setMinWins(e.target.value),
+                                                        placeholder: "0",
+                                                        className: "mt-1 w-full bg-[#020617] border border-[#111827] rounded-lg px-2 py-1.5 outline-none text-sm"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 203,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                lineNumber: 199,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "md:col-span-2 flex flex-col md:flex-row gap-3",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                className: "text-gray-400 text-xs uppercase tracking-wide",
+                                                                children: "Max score"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                                lineNumber: 215,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                type: "number",
+                                                                value: maxScore,
+                                                                onChange: (e)=>setMaxScore(e.target.value),
+                                                                placeholder: "10000",
+                                                                className: "mt-1 w-full bg-[#020617] border border-[#111827] rounded-lg px-2 py-1.5 outline-none text-sm"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                                lineNumber: 218,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 214,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                className: "text-gray-400 text-xs uppercase tracking-wide",
+                                                                children: "Sort by"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                                lineNumber: 228,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "mt-1 flex bg-[#020617] border border-[#111827] rounded-lg overflow-hidden",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        onClick: ()=>setSortBy("score"),
+                                                                        className: `flex-1 px-2 py-1.5 text-xs font-medium ${sortBy === "score" ? "bg-emerald-600 text-white" : "text-gray-300"}`,
+                                                                        children: "Score"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                                        lineNumber: 232,
+                                                                        columnNumber: 21
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        onClick: ()=>setSortBy("name"),
+                                                                        className: `flex-1 px-2 py-1.5 text-xs font-medium ${sortBy === "name" ? "bg-emerald-600 text-white" : "text-gray-300"}`,
+                                                                        children: "Name"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                                        lineNumber: 242,
+                                                                        columnNumber: 21
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                                lineNumber: 231,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 227,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                lineNumber: 213,
                                                 columnNumber: 15
                                             }, this)
                                         ]
@@ -865,143 +676,232 @@ function LeaderboardPage() {
                                         fileName: "[project]/components/Leaderboard.tsx",
                                         lineNumber: 167,
                                         columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 161,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-6",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "bg-slate-950/70 border border-emerald-500/25 rounded-3xl p-5 shadow-[0_0_35px_rgba(15,23,42,0.9)] backdrop-blur-2xl",
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                        className: "mt-2 space-y-3",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                className: "text-2xl font-bold mb-2 flex items-center gap-2",
-                                                children: "🏆 Monthly Rewards"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                lineNumber: 320,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-sm text-emerald-100/80 mb-5",
-                                                children: "Top 10 receive monthly 💎 bonus based on their final position. Stay active to keep your spot."
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                lineNumber: 324,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "space-y-3",
-                                                children: rewards.map((r, i)=>{
-                                                    const isTop3 = i < 3;
-                                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: `flex items-center justify-between px-4 py-3 rounded-2xl border shadow relative overflow-hidden ${isTop3 ? "bg-slate-900/80 border-emerald-400/60" : "bg-slate-950/80 border-slate-700/80 hover:bg-slate-900/90"} transition`,
-                                                        style: isTop3 ? {
-                                                            backgroundImage: "linear-gradient(135deg, rgba(45,212,191,0.18), rgba(15,23,42,0.9))"
-                                                        } : {},
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "flex items-baseline gap-1",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: `text-lg font-bold ${isTop3 ? "text-emerald-50" : "text-gray-200"}`,
-                                                                        children: r.place
+                                            filteredLeaderboard.map((p)=>{
+                                                const avatarSrc = p.avatar && p.avatar.trim().length > 0 ? p.avatar : FALLBACK_AVATAR;
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    className: "flex items-center justify-between bg-[#06101f] px-4 py-3 rounded-xl hover:bg-[#0b1728] transition",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "flex items-center gap-3",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "w-12 h-12 bg-black rounded-2xl flex items-center justify-center overflow-hidden border border-emerald-400/60",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: avatarSrc,
+                                                                        alt: p.name,
+                                                                        className: "w-full h-full object-cover",
+                                                                        onError: (e)=>{
+                                                                            e.currentTarget.src = FALLBACK_AVATAR;
+                                                                        }
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 350,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-gray-400 text-xs",
-                                                                        children: "place"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                                        lineNumber: 357,
+                                                                        lineNumber: 272,
                                                                         columnNumber: 25
                                                                     }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 349,
-                                                                columnNumber: 23
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: `text-xl font-extrabold ${isTop3 ? "text-emerald-100" : "text-emerald-400"}`,
-                                                                children: [
-                                                                    "💎",
-                                                                    r.amount
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Leaderboard.tsx",
-                                                                lineNumber: 360,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        ]
-                                                    }, i, true, {
-                                                        fileName: "[project]/components/Leaderboard.tsx",
-                                                        lineNumber: 333,
-                                                        columnNumber: 21
-                                                    }, this);
-                                                })
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/Leaderboard.tsx",
+                                                                    lineNumber: 271,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "font-medium",
+                                                                            children: p.name
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/components/Leaderboard.tsx",
+                                                                            lineNumber: 282,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "text-sm text-emerald-400",
+                                                                            children: [
+                                                                                "Quests completed: ",
+                                                                                p.questsCompleted,
+                                                                                " / 0"
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/Leaderboard.tsx",
+                                                                            lineNumber: 283,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/components/Leaderboard.tsx",
+                                                                    lineNumber: 281,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/components/Leaderboard.tsx",
+                                                            lineNumber: 270,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-lg font-semibold text-emerald-400",
+                                                            children: [
+                                                                "💎",
+                                                                p.score
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/components/Leaderboard.tsx",
+                                                            lineNumber: 289,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, p.id, true, {
+                                                    fileName: "[project]/components/Leaderboard.tsx",
+                                                    lineNumber: 266,
+                                                    columnNumber: 19
+                                                }, this);
+                                            }),
+                                            filteredLeaderboard.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                className: "text-center text-sm text-gray-500 py-6",
+                                                children: "No players found matching the criteria."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Leaderboard.tsx",
-                                                lineNumber: 329,
-                                                columnNumber: 15
+                                                lineNumber: 297,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 319,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MVPCard, {
-                                        player: leaderboard[0]
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Leaderboard.tsx",
-                                        lineNumber: 374,
+                                        lineNumber: 258,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 318,
+                                lineNumber: 145,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 159,
+                        lineNumber: 137,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-2xl font-bold mb-4 flex items-center gap-2",
+                                children: "🏆 Monthly Rewards"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Leaderboard.tsx",
+                                lineNumber: 307,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-gray-400 mb-6",
+                                children: "Top 10 receive monthly points rewards based on their position."
+                            }, void 0, false, {
+                                fileName: "[project]/components/Leaderboard.tsx",
+                                lineNumber: 311,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-4",
+                                children: rewards.map((r, i)=>{
+                                    const isTop3 = i < 3;
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: `
+                    flex items-center justify-between px-5 py-4 rounded-2xl border shadow
+                    transition relative overflow-hidden
+                    ${isTop3 ? "bg-[#111827] border-[#1f2937]" : "bg-[#020819] border-[#111827] hover:bg-[#0b1728]"}
+                  `,
+                                        style: isTop3 ? {
+                                            backgroundImage: "linear-gradient(135deg, rgba(148,163,184,0.25), rgba(15,23,42,0.9))"
+                                        } : {},
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-baseline gap-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: `text-lg font-bold ${isTop3 ? "text-white" : "text-gray-200"}`,
+                                                        children: r.place
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 340,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-gray-400 text-sm",
+                                                        children: "place"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Leaderboard.tsx",
+                                                        lineNumber: 347,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                lineNumber: 339,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: `text-xl font-extrabold ${isTop3 ? "text-white" : "text-emerald-400"}`,
+                                                children: [
+                                                    "💎",
+                                                    r.amount
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Leaderboard.tsx",
+                                                lineNumber: 350,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, i, true, {
+                                        fileName: "[project]/components/Leaderboard.tsx",
+                                        lineNumber: 319,
+                                        columnNumber: 17
+                                    }, this);
+                                })
+                            }, void 0, false, {
+                                fileName: "[project]/components/Leaderboard.tsx",
+                                lineNumber: 315,
+                                columnNumber: 11
+                            }, this),
+                            players[0] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MVPCard, {
+                                player: players[0]
+                            }, void 0, false, {
+                                fileName: "[project]/components/Leaderboard.tsx",
+                                lineNumber: 363,
+                                columnNumber: 26
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Leaderboard.tsx",
+                        lineNumber: 306,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 129,
+                lineNumber: 135,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Leaderboard.tsx",
-        lineNumber: 126,
+        lineNumber: 132,
         columnNumber: 5
     }, this);
 }
-/* =======================================================================================
-   MVP CARD
-================================================================================================ */ function MVPCard({ player }) {
+/* ====================== MVP CARD ====================== */ function MVPCard({ player }) {
+    const avatarSrc = player.avatar && player.avatar.trim().length > 0 ? player.avatar : FALLBACK_AVATAR;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-slate-950/70 border border-emerald-500/25 rounded-3xl p-6 shadow-[0_0_35px_rgba(15,23,42,0.9)] backdrop-blur-2xl animate-fade-in",
+        className: "mt-10 bg-[#020819] border border-[#111827] rounded-2xl p-6 shadow-xl animate-fade-in",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                 className: "text-xl font-bold mb-4 flex items-center gap-2",
-                children: "⭐ User of the Week"
+                children: "⭐ Player of the Week"
             }, void 0, false, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 388,
+                lineNumber: 379,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1011,19 +911,22 @@ function LeaderboardPage() {
                         className: "relative",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: " w-28 h-28 rounded-2xl bg-[#0b0c0d] border-4 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.55)]  animate-pulse-border flex items-center justify-center overflow-hidden ",
+                                className: "w-28 h-28 rounded-2xl bg-black border-4 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.55)] animate-pulse-border flex items-center justify-center overflow-hidden",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrgkEw396ELf_HEc1iX9eAXjAazTMCOpDBA&s",
+                                    src: avatarSrc,
                                     alt: player.name,
-                                    className: "w-full h-full object-cover"
+                                    className: "w-full h-full object-cover",
+                                    onError: (e)=>{
+                                        e.currentTarget.src = FALLBACK_AVATAR;
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/components/Leaderboard.tsx",
-                                    lineNumber: 403,
+                                    lineNumber: 386,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 395,
+                                lineNumber: 385,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1031,39 +934,39 @@ function LeaderboardPage() {
                                 children: "👑"
                             }, void 0, false, {
                                 fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 411,
+                                lineNumber: 396,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 394,
+                        lineNumber: 384,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-3 text-lg font-semibold text-emerald-50",
+                        className: "mt-3 text-lg font-semibold text-white",
                         children: player.name
                     }, void 0, false, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 417,
+                        lineNumber: 401,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: " mt-2 px-5 py-2 rounded-full bg-[#1e293b] text-emerald-300 font-bold text-lg shadow-lg relative overflow-hidden ",
+                        className: "mt-2 px-5 py-2 rounded-full bg-[#111827] text-emerald-300 font-bold text-lg shadow-lg relative overflow-hidden",
                         children: [
                             "💎",
                             player.score,
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: " absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent translate-x-[-120%] animate-shimmer "
+                                className: "absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent translate-x-[-120%] animate-shimmer"
                             }, void 0, false, {
                                 fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 430,
+                                lineNumber: 405,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 422,
+                        lineNumber: 403,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1074,11 +977,11 @@ function LeaderboardPage() {
                                 children: "Weekly Progress"
                             }, void 0, false, {
                                 fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 440,
+                                lineNumber: 409,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-full h-3 bg-[#1e293b] rounded-full overflow-hidden",
+                                className: "w-full h-3 bg-[#111827] rounded-full overflow-hidden",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "h-full bg-emerald-500 rounded-full animate-grow-bar",
                                     style: {
@@ -1086,61 +989,60 @@ function LeaderboardPage() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/Leaderboard.tsx",
-                                    lineNumber: 445,
+                                    lineNumber: 414,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Leaderboard.tsx",
-                                lineNumber: 444,
+                                lineNumber: 413,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 439,
+                        lineNumber: 408,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 392,
+                lineNumber: 383,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Leaderboard.tsx",
-        lineNumber: 387,
+        lineNumber: 378,
         columnNumber: 5
     }, this);
 }
-/* =======================================================================================
-   PODIUM + BLOCKS
-================================================================================================ */ function PodiumSection({ leaderboard }) {
+/* ====================== PODIUM ====================== */ function PodiumSection({ leaderboard }) {
     const first = leaderboard[0];
     const second = leaderboard[1];
     const third = leaderboard[2];
+    if (!first || !second || !third) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full flex flex-col items-center mb-4 select-none",
+        className: "w-full flex flex-col items-center mb-20 select-none",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex gap-10 md:gap-16 items-end justify-center",
+            className: "flex gap-16 items-end justify-center",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "animate-bounce-in opacity-0 delay-[0.15s]",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PodiumBlock, {
                         place: 2,
                         user: second,
-                        height: "h-40 md:h-48",
+                        height: "h-48",
                         gradient: "from-emerald-700 via-emerald-500 to-emerald-400",
                         border: "border-emerald-400",
                         scoreColor: "text-emerald-300"
                     }, void 0, false, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 469,
+                        lineNumber: 437,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Leaderboard.tsx",
-                    lineNumber: 468,
+                    lineNumber: 436,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1148,19 +1050,19 @@ function LeaderboardPage() {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PodiumBlock, {
                         place: 1,
                         user: first,
-                        height: "h-52 md:h-64",
+                        height: "h-64",
                         gradient: "from-emerald-500 via-emerald-400 to-emerald-300",
                         border: "border-yellow-400",
                         crown: true,
                         scoreColor: "text-yellow-300"
                     }, void 0, false, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 481,
+                        lineNumber: 448,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Leaderboard.tsx",
-                    lineNumber: 480,
+                    lineNumber: 447,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1168,47 +1070,51 @@ function LeaderboardPage() {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PodiumBlock, {
                         place: 3,
                         user: third,
-                        height: "h-32 md:h-40",
+                        height: "h-40",
                         gradient: "from-emerald-900 via-emerald-700 to-emerald-500",
                         border: "border-emerald-700",
                         scoreColor: "text-orange-300"
                     }, void 0, false, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 494,
+                        lineNumber: 460,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Leaderboard.tsx",
-                    lineNumber: 493,
+                    lineNumber: 459,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Leaderboard.tsx",
-            lineNumber: 466,
+            lineNumber: 435,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Leaderboard.tsx",
-        lineNumber: 465,
+        lineNumber: 434,
         columnNumber: 5
     }, this);
 }
 function PodiumBlock({ place, user, height, gradient, border, scoreColor, crown = false }) {
+    const avatarSrc = user.avatar && user.avatar.trim().length > 0 ? user.avatar : FALLBACK_AVATAR;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex flex-col items-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `relative w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#0f172a] border-4 ${border}
+                className: `relative w-24 h-24 rounded-2xl bg-black border-4 ${border}
         shadow-[0_0_30px_rgba(34,197,94,0.25)] flex items-center justify-center overflow-hidden`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                        src: user.avatar,
+                        src: avatarSrc,
                         alt: user.name,
-                        className: "w-full h-full object-cover"
+                        className: "w-full h-full object-cover",
+                        onError: (e)=>{
+                            e.currentTarget.src = FALLBACK_AVATAR;
+                        }
                     }, void 0, false, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 524,
+                        lineNumber: 494,
                         columnNumber: 9
                     }, this),
                     crown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1216,68 +1122,66 @@ function PodiumBlock({ place, user, height, gradient, border, scoreColor, crown 
                         children: "👑"
                     }, void 0, false, {
                         fileName: "[project]/components/Leaderboard.tsx",
-                        lineNumber: 531,
+                        lineNumber: 504,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 520,
+                lineNumber: 490,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "mt-2 text-gray-200 text-sm md:text-base",
+                className: "mt-2 text-gray-300",
                 children: user.name
             }, void 0, false, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 537,
+                lineNumber: 510,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-1 px-4 py-1 rounded-full bg-[#1e293b] relative overflow-hidden shadow-lg",
+                className: "mt-1 px-4 py-1 rounded-full bg-[#111827] relative overflow-hidden shadow-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: `font-semibold ${scoreColor} text-sm md:text-base`,
+                    className: `font-semibold ${scoreColor}`,
                     children: [
                         "💎",
                         user.score
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Leaderboard.tsx",
-                    lineNumber: 540,
+                    lineNumber: 513,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 539,
+                lineNumber: 512,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `${height} w-28 md:w-40 rounded-t-3xl mt-4 flex items-end justify-center pb-4 md:pb-5 border border-[#1e293b]
+                className: `${height} w-40 rounded-t-3xl mt-4 flex items-end justify-center pb-5 border border-[#111827]
         bg-gradient-to-b ${gradient}
-        shadow-[0_30px_50px_rgba(15,23,42,0.85)]`,
+        shadow-[0_30px_50px_rgba(16,185,129,0.45)]`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "text-3xl md:text-5xl text-white font-extrabold opacity-95 drop-shadow-xl",
+                    className: "text-5xl text-white font-extrabold opacity-95 drop-shadow-xl",
                     children: place
                 }, void 0, false, {
                     fileName: "[project]/components/Leaderboard.tsx",
-                    lineNumber: 550,
+                    lineNumber: 521,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Leaderboard.tsx",
-                lineNumber: 545,
+                lineNumber: 516,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Leaderboard.tsx",
-        lineNumber: 518,
+        lineNumber: 489,
         columnNumber: 5
     }, this);
 }
-/* =======================================================================================
-   CSS (Animations)
-================================================================================================ */ const globalStyles = `
+/* ====================== ANIMATIONS CSS ====================== */ const globalStyles = `
 @keyframes bounceIn {
   0% { opacity: 0; transform: translateY(60px) scale(0.9); }
   60% { opacity: 1; transform: translateY(-10px) scale(1.05); }
@@ -1288,7 +1192,6 @@ function PodiumBlock({ place, user, height, gradient, border, scoreColor, crown 
   animation: bounceIn 0.9s forwards ease-out;
 }
 
-/* MVP Card Animations */
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(20px) scale(0.95); }
   100% { opacity: 1; transform: translateY(0) scale(1); }

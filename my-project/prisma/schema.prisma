@@ -12,7 +12,13 @@ model User {
   email     String     @unique
   password  String
   points    Int        @default(0)
+
+  // NEW:
+  username  String?    @unique
+  avatarUrl String?
+
   purchases Purchase[]
+  cleanups  Cleanup[]  // relation
 }
 
 model Item {
@@ -31,4 +37,19 @@ model Purchase {
   item      Item     @relation(fields: [itemId], references: [id])
   itemId    Int
   createdAt DateTime @default(now())
+}
+
+// NEW:
+model Cleanup {
+  id            Int      @id @default(autoincrement())
+  user          User     @relation(fields: [userId], references: [id])
+  userId        Int
+
+  title         String
+  description   String?
+  date          DateTime @default(now())
+  bags          Int
+  lat           Float
+  lng           Float
+  durationHours Float?   // optional, for stats
 }
