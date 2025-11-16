@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -7,7 +8,7 @@ import Footer from "@/components/Footer";
 const initialTasks: any[] = [
   {
     id: 1,
-    title: "Collect 25 trash from Calea Aradului",
+    title: "Collect 250 trash from Calea Aradului",
     difficulty: 1,
     basePoints: 10,
     points: 10,
@@ -17,7 +18,7 @@ const initialTasks: any[] = [
   },
   {
     id: 2,
-    title: "Collect 25 trash from Calea Aradului",
+    title: "Collect 1000 trash from Zona Soarelui",
     difficulty: 2,
     basePoints: 10,
     points: 20,
@@ -27,7 +28,7 @@ const initialTasks: any[] = [
   },
   {
     id: 3,
-    title: "Collect 25 trash from Calea Aradului",
+    title: "Clean the Steaua Park and collect 300 nearby trash.",
     difficulty: 3,
     basePoints: 10,
     points: 30,
@@ -43,7 +44,14 @@ export default function TasksPage() {
   const [userPoints, setUserPoints] = useState<number>(0);
   const [timeLeft, setTimeLeft] = useState<number>(0);
 
-  // Fetch user points when page loads
+  // Restore your file upload system EXACTLY
+  const handleImageUpload = (taskId: any, file: any) => {
+    setTasks((prev) =>
+      prev.map((t) => (t.id === taskId ? { ...t, uploadedImage: file } : t))
+    );
+  };
+
+  // Fetch user points
   useEffect(() => {
     fetch("/api/auth/me")
       .then((res) => res.json())
@@ -72,10 +80,11 @@ export default function TasksPage() {
       );
 
       setActiveTaskId(taskId);
-      setTimeLeft(3 * 60 * 60); // 3 hours in seconds
+      setTimeLeft(3 * 60 * 60); // 3 hours
     }
   };
 
+  // Timer
   useEffect(() => {
     if (!activeTaskId) return;
 
@@ -92,12 +101,12 @@ export default function TasksPage() {
     return () => clearInterval(interval);
   }, [activeTaskId]);
 
+  // Finish Task
   const finishTask = async (taskId: any) => {
     const task = tasks.find((t) => t.id === taskId);
     if (!task) return;
 
     try {
-      // Update points in database
       const res = await fetch("/api/tasks/addPoints", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -107,10 +116,10 @@ export default function TasksPage() {
       const data = await res.json();
 
       if (data.user && typeof data.user.points === "number") {
-        setUserPoints(data.user.points); // update state from backend
+        setUserPoints(data.user.points);
       }
 
-      // Reset task
+      // Reset task after finishing
       setTasks((prev) =>
         prev.map((t) =>
           t.id === taskId
@@ -131,12 +140,7 @@ export default function TasksPage() {
     }
   };
 
-  const handleImageUpload = (taskId: any, file: any) => {
-    setTasks((prev) =>
-      prev.map((t) => (t.id === taskId ? { ...t, uploadedImage: file } : t))
-    );
-  };
-
+  // Format Time
   const formatTime = (seconds: number) => {
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
@@ -146,57 +150,84 @@ export default function TasksPage() {
 
   return (
     <>
-      <Navbar className="cursor-pointer" />
-      <div className="min-h-screen pt-24 px-12 md:px-10 md:p-10 flex flex-col items-center justify-center">
-        <h1 className="text-4xl text-center shadow-[0_0_16px_5px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer md:text-4xl font-bold text-white p-5 bg-white/50 backdrop-blur-md px-6 py-3 rounded-full drop-shadow-md mb-12">
-          Daily Tasks
+      <Navbar />
+      <div className="min-h-screen pt-28 px-6 md:px-12 flex flex-col items-center">
+        {/* luxurious header */}
+        <h1
+          className="text-5xl md:text-6xl font-extrabold text-center 
+          bg-gradient-to-b from-white to-neutral-300 text-transparent bg-clip-text
+          tracking-wide drop-shadow-2xl mb-6"
+        >
+          Weekly Quests
         </h1>
 
-        <div className="relative my-5 bg-white backdrop-blur-md px-4 py-2 rounded-full shadow-md text-green-700 font-bold text-center">
+        {/* points */}
+        <div
+          className="relative mb-16 bg-white/40 backdrop-blur-xl px-10 py-4 
+        rounded-full shadow-xl border border-white/40
+        text-green-900 font-bold text-center"
+        >
           Your Points <br />
-          <span className="text-2xl font-extrabold drop-shadow-[0_0_5px_#00ff91]">
-            {userPoints}
-          </span>
+          <span className="text-3xl font-extrabold">{userPoints}</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
+        {/* TASK CARDS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl pb-20">
           {tasks.map((task, idx) => (
             <div
               key={task.id}
-              className="flex flex-col items-center p-6 bg-white/50 shadow-[0_0_16px_5px_rgba(0,255,0,0.2)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] transition-shadow duration-700 cursor-pointer backdrop-blur-md rounded-2xl relative"
+              className="group flex flex-col items-center justify-between 
+              p-8 rounded-3xl bg-gradient-to-br from-white/70 to-white/30 
+              backdrop-blur-xl border border-white/40 shadow-2xl
+              hover:scale-[1.03] transition-all duration-500"
             >
-              <h2 className="text-xl font-bold text-green-700 mb-2 px-4 py-2 bg-white/30 rounded-full drop-shadow-md">
+              {/* Title */}
+              <h2
+                className="text-2xl font-bold bg-white/40 px-6 py-2 rounded-full mb-4 
+              shadow-md text-green-800"
+              >
                 Task {idx + 1}
               </h2>
 
+              {/* Difficulty */}
               <div className="flex flex-col items-center mb-4">
-                <span className="text-green-500 font-semibold text-xl mb-1">
+                <span className="text-green-600 font-semibold text-lg mb-1">
                   Difficulty
                 </span>
                 <div className="flex items-center gap-1">
                   {[...Array(task.difficulty)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-yellow-400 font-bold"
-                    />
+                    <Star key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-green-700 font-semibold mt-1">
+                <p className="text-green-700 font-semibold mt-2">
                   {task.points} points
                 </p>
               </div>
 
-              <p className="text-center font-semibold mb-6">{task.title}</p>
+              {/* Task Text */}
+              <p className="text-center font-semibold text-black/90 mb-6 min-h-[60px]">
+                {task.title}
+              </p>
 
+              {/* Timer */}
               {activeTaskId === task.id && (
                 <p className="text-green-700 font-medium mb-4">
                   Time Left: {formatTime(timeLeft)}
                 </p>
               )}
 
+              {/* ----------------------- UPLOAD BUTTON ----------------------- */}
               {activeTaskId === task.id && (
-                <label className="mb-4 w-fit cursor-pointer relative overflow-hidden bg-green-500 text-white font-bold px-5 py-2 rounded-full shadow-lg hover:bg-green-600 hover:shadow-xl transition-all duration-300 flex items-center gap-2">
-                  {task.uploadedImage ? "✅ File Uploaded" : "Upload Image"}
+                <label
+                  className="relative mt-4 mb-4 inline-flex items-center justify-center
+                  px-6 py-2 rounded-full font-semibold
+                  bg-gradient-to-r from-emerald-500 to-green-600
+                  text-white shadow-lg shadow-emerald-800/30
+                  hover:shadow-emerald-600/40 hover:scale-105
+                  transition-all cursor-pointer"
+                >
+                  {task.uploadedImage ? "📁 File Selected" : "⬆ Upload Proof"}
+
                   <input
                     type="file"
                     accept="image/*"
@@ -204,29 +235,33 @@ export default function TasksPage() {
                       e.target.files &&
                       handleImageUpload(task.id, e.target.files[0])
                     }
-                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    className="absolute inset-0 opacity-0 cursor-pointer"
                   />
                 </label>
               )}
 
+              {/* Start Button */}
               {!activeTaskId && (
                 <button
                   onClick={() => startTask(task.id)}
-                  className="border-green-400 shadow-[0_0_16px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_8px_rgba(0,255,0,0.5)] border-2 text-white px-6 py-2 rounded-full font-bold hover:bg-green-600 transition duration-300 cursor-pointer"
+                  className="mt-2 w-full text-center bg-gradient-to-r 
+                  from-green-500 to-emerald-600 text-white py-3 rounded-full 
+                  font-bold shadow-lg hover:scale-105 transition-all"
                 >
                   Start Task
                 </button>
               )}
 
+              {/* Finish Button */}
               {activeTaskId === task.id && (
                 <button
                   onClick={() => finishTask(task.id)}
                   disabled={!task.uploadedImage}
-                  className={`${
+                  className={`mt-2 w-full text-center py-3 rounded-full font-bold transition-all ${
                     task.uploadedImage
-                      ? "border-green-400 border-2 hover:bg-green-600 cursor-pointer"
-                      : "bg-gray-400 cursor-not-allowed"
-                  } text-white px-6 py-2 rounded-full font-bold shadow-md transition`}
+                      ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:scale-105"
+                      : "bg-gray-400 text-white cursor-not-allowed"
+                  }`}
                 >
                   Finish Task
                 </button>

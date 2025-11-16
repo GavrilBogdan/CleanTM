@@ -2,9 +2,15 @@
 import React from "react";
 
 interface ShopItemCardProps {
-  item: any;
+  item: {
+    id: number;
+    name: string;
+    description: string;
+    imageUrl: string;
+    price: number;
+  };
   userPoints: number;
-  onBuy: (id: number) => void;
+  onBuy: (itemId: number) => void;
 }
 
 const ShopItemCard: React.FC<ShopItemCardProps> = ({
@@ -12,32 +18,29 @@ const ShopItemCard: React.FC<ShopItemCardProps> = ({
   userPoints,
   onBuy,
 }) => {
-  const affordable = userPoints >= item.cost;
+  const canBuy = userPoints >= item.price;
 
   return (
-    <div className="flex flex-col items-center p-4 rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer w-64">
-      <div className="w-32 h-32 flex items-center justify-center bg-gray-100 rounded-xl mb-3 overflow-hidden">
-        <img
-          src={item.imageUrl}
-          alt={item.name}
-          className="max-w-full max-h-full object-contain"
-        />
-      </div>
-      <h3 className="font-bold text-lg text-green-800 mb-1">{item.name}</h3>
-      <p className="text-sm text-green-700 mb-2 text-center">
-        {item.description}
-      </p>
-      <p className="text-yellow-500 font-bold text-xl mb-2">💎 {item.cost}</p>
+    <div className="relative flex flex-col items-center bg-white/30 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+      <img
+        src={item.imageUrl}
+        alt={item.name}
+        className="w-32 h-32 object-contain mb-4"
+      />
+      <h3 className="text-xl font-bold text-green-800 mb-2">{item.name}</h3>
+      <p className="text-green-700 text-center mb-4">{item.description}</p>
+      <p className="text-green-900 font-extrabold mb-4">💎 {item.price}</p>
+
       <button
-        disabled={!affordable}
-        onClick={() => onBuy(item.id)}
-        className={`w-full py-2 rounded-full font-bold text-white transition ${
-          affordable
-            ? "bg-green-500 hover:bg-green-600"
-            : "bg-gray-400 cursor-not-allowed"
-        }`}
+        onClick={() => canBuy && onBuy(item.id)}
+        className={`w-full py-2 rounded-full font-bold text-white shadow-md transition-all duration-300
+          ${
+            canBuy
+              ? "bg-green-600 hover:bg-green-700 cursor-pointer"
+              : "bg-gray-400 cursor-not-allowed"
+          }`}
       >
-        {affordable ? "Buy 🛒" : "Not enough points"}
+        {canBuy ? "Buy" : "Not enough points"}
       </button>
     </div>
   );

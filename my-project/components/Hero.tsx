@@ -117,7 +117,7 @@ const Hero = () => {
 
         {/* BUTTONS */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-          <Link href="#">
+          <Link href="/AboutUs">
             <Button
               text="About us"
               className="text-lg font-semibold px-8 py-4 shadow-xl hover:scale-105 transition"

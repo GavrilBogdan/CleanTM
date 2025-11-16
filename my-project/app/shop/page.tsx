@@ -8,8 +8,7 @@ export default function ShopPage() {
   const [items, setItems] = useState<any[]>([]);
   const [userPoints, setUserPoints] = useState<number>(0);
 
-  const userId = 1; // Replace with context user ID
-
+  // Fetch items and current user points
   useEffect(() => {
     fetch("/api/shop/getItems")
       .then((res) => res.json())
@@ -20,23 +19,33 @@ export default function ShopPage() {
       .then((data) => setUserPoints(data.user?.points || 0));
   }, []);
 
+  // Handle purchase
   const handleBuy = async (itemId: number) => {
-    const res = await fetch("/api/shop/buyItem", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ itemId, userId }),
-    });
-    const data = await res.json();
+    try {
+      const res = await fetch("/api/shop/buyItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ itemId }), // no hardcoded userId
+      });
 
-    if (data.success) setUserPoints(data.pointsLeft);
-    else alert(data.error);
+      const data = await res.json();
+
+      if (data.success) {
+        setUserPoints(data.pointsLeft); // update points after purchase
+      } else {
+        alert(data.error);
+      }
+    } catch (err) {
+      console.error("Error buying item:", err);
+      alert("Something went wrong.");
+    }
   };
 
   return (
     <>
       <Navbar />
-      <div className="min-h-screen px-12 py-10 flex flex-col items-center bg-gradient-to-b from-purple-50 to-green-50">
-        <h1 className="text-4xl font-bold text-green-800 mb-8">
+      <div className="min-h-screen px-12 py-10 flex flex-col items-center mt-[7rem]">
+        <h1 className="text-4xl font-bold text-green-800 mb-8 text-center">
           🎁 Rewards Shop
         </h1>
         <p className="text-green-700 font-semibold mb-5">

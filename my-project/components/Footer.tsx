@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Github } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-gray-900 text-gray-300 pt-16 pb-15 sm:pb-10 mt-20">
+    <footer className="relative overflow-hidden bg-gray-900 text-gray-300 pt-16 pb-15 sm:pb-10 ">
       {/* GLOW EFFECT */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full"></div>
 
