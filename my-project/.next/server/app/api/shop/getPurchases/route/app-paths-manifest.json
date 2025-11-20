@@ -1,0 +1,3 @@
+{
+  "/api/shop/getPurchases/route": "app/api/shop/getPurchases/route.js"
+}

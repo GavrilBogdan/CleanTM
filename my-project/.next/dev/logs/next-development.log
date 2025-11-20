@@ -1,6 +1,7 @@
-[00:00:00.673] Server  LOG      ✓ Ready in 505ms
-[00:00:05.779] Server  LOG      ○ Compiling / ...
-[00:00:08.562] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.470] Server  LOG      ✓ Ready in 347ms
+[00:00:07.003] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[00:00:07.334] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
+[00:00:07.496] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -39,226 +40,226 @@ It can also happen if the client has a browser extension installed which messes 
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "45.46116600848088%"
--                                     left: "71.365501%"
-+                                     animationDelay: "4.280677406664892s"
--                                     animation-delay: "1.437301s"
++                                     left: "48.021162746776355%"
+-                                     left: "95.045647%"
++                                     animationDelay: "2.5356443384805583s"
+-                                     animation-delay: "2.308469s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "40.1491727961296%"
--                                     left: "71.771601%"
-+                                     animationDelay: "2.984511318231533s"
--                                     animation-delay: "3.623919s"
++                                     left: "11.444838252994105%"
+-                                     left: "81.783358%"
++                                     animationDelay: "2.67170897464161s"
+-                                     animation-delay: "4.19774s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "99.19946127153668%"
--                                     left: "1.289392%"
-+                                     animationDelay: "4.8232417727761785s"
--                                     animation-delay: "4.195645s"
++                                     left: "90.62664757922859%"
+-                                     left: "63.853832%"
++                                     animationDelay: "2.8260036976030136s"
+-                                     animation-delay: "0.776754s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "25.85927012162067%"
--                                     left: "38.49928%"
-+                                     animationDelay: "0.6430249035493568s"
--                                     animation-delay: "1.612613s"
++                                     left: "7.821080432115468%"
+-                                     left: "42.448067%"
++                                     animationDelay: "0.37088695208992106s"
+-                                     animation-delay: "4.111594s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "9.273013900823823%"
--                                     left: "61.032077%"
-+                                     animationDelay: "0.1988407589074337s"
--                                     animation-delay: "4.086713s"
++                                     left: "66.01340921625984%"
+-                                     left: "22.228021%"
++                                     animationDelay: "3.49232310823536s"
+-                                     animation-delay: "0.073379s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "10.96321675326336%"
--                                     left: "9.301178%"
-+                                     animationDelay: "2.5034506452112213s"
--                                     animation-delay: "1.48122s"
++                                     left: "43.585313544548356%"
+-                                     left: "63.692124%"
++                                     animationDelay: "0.41077510087646263s"
+-                                     animation-delay: "1.351399s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "92.3980861707795%"
--                                     left: "2.027075%"
-+                                     animationDelay: "4.594599579178521s"
--                                     animation-delay: "4.896634s"
++                                     left: "52.98567938724298%"
+-                                     left: "94.852806%"
++                                     animationDelay: "3.2796544249721347s"
+-                                     animation-delay: "4.135314s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "23.159787762084505%"
--                                     left: "98.376%"
-+                                     animationDelay: "1.148564192096046s"
--                                     animation-delay: "4.669656s"
++                                     left: "44.5537692586508%"
+-                                     left: "61.176428%"
++                                     animationDelay: "3.6158754556657335s"
+-                                     animation-delay: "0.145231s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "27.414631265351264%"
--                                     left: "54.371364%"
-+                                     animationDelay: "2.525527090947995s"
--                                     animation-delay: "0.156757s"
++                                     left: "98.91142926129322%"
+-                                     left: "11.388237%"
++                                     animationDelay: "0.7956458723549709s"
+-                                     animation-delay: "0.328032s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "76.65205409504836%"
--                                     left: "48.424256%"
-+                                     animationDelay: "1.8550202092332353s"
--                                     animation-delay: "0.993437s"
++                                     left: "29.557157011214297%"
+-                                     left: "24.974432%"
++                                     animationDelay: "1.8304490222268606s"
+-                                     animation-delay: "1.119101s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "76.18721674752798%"
--                                     left: "86.481495%"
-+                                     animationDelay: "4.397918981264503s"
--                                     animation-delay: "2.891284s"
++                                     left: "3.2413177780866276%"
+-                                     left: "18.614223%"
++                                     animationDelay: "1.7436933451316816s"
+-                                     animation-delay: "2.571577s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "89.13720213338749%"
--                                     left: "39.836707%"
-+                                     animationDelay: "2.776233242751976s"
--                                     animation-delay: "4.98412s"
++                                     left: "29.549913432261967%"
+-                                     left: "74.114931%"
++                                     animationDelay: "4.625560168144442s"
+-                                     animation-delay: "0.8718s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "62.558013940807946%"
--                                     left: "20.388504%"
-+                                     animationDelay: "2.7631903124348263s"
--                                     animation-delay: "0.486479s"
++                                     left: "22.666253634722022%"
+-                                     left: "60.362673%"
++                                     animationDelay: "3.1200402178271576s"
+-                                     animation-delay: "1.114146s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "35.87207172462759%"
--                                     left: "94.684575%"
-+                                     animationDelay: "4.38988864108905s"
--                                     animation-delay: "3.797506s"
++                                     left: "97.9476854144564%"
+-                                     left: "95.761339%"
++                                     animationDelay: "0.6918286629928472s"
+-                                     animation-delay: "1.440546s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "97.94623826049407%"
--                                     left: "37.397652%"
-+                                     animationDelay: "0.6210285890610279s"
--                                     animation-delay: "2.416165s"
++                                     left: "89.96175813069314%"
+-                                     left: "68.829764%"
++                                     animationDelay: "2.340859239760293s"
+-                                     animation-delay: "1.432414s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "13.086039605927002%"
--                                     left: "33.544093%"
-+                                     animationDelay: "1.680814537752765s"
--                                     animation-delay: "3.333828s"
++                                     left: "95.21405912883203%"
+-                                     left: "14.426933%"
++                                     animationDelay: "1.713381193780923s"
+-                                     animation-delay: "3.736269s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "63.57323687076125%"
--                                     left: "8.787702%"
-+                                     animationDelay: "2.273816616980995s"
--                                     animation-delay: "0.851362s"
++                                     left: "52.56209172918973%"
+-                                     left: "97.437172%"
++                                     animationDelay: "2.831287800148224s"
+-                                     animation-delay: "4.597525s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "86.04179222992526%"
--                                     left: "2.634135%"
-+                                     animationDelay: "0.10551816834877825s"
--                                     animation-delay: "4.139963s"
++                                     left: "47.13100153086865%"
+-                                     left: "48.010068%"
++                                     animationDelay: "2.989575007890543s"
+-                                     animation-delay: "1.415542s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "51.587446811844536%"
--                                     left: "6.164914%"
-+                                     animationDelay: "2.0741719407561527s"
--                                     animation-delay: "3.792139s"
++                                     left: "9.704056295530405%"
+-                                     left: "44.121565%"
++                                     animationDelay: "4.6493218062660775s"
+-                                     animation-delay: "4.073878s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "8.001433429249927%"
--                                     left: "47.344407%"
-+                                     animationDelay: "4.26511968547121s"
--                                     animation-delay: "0.902906s"
++                                     left: "60.84383052148704%"
+-                                     left: "76.510458%"
++                                     animationDelay: "1.4130797336783674s"
+-                                     animation-delay: "0.785672s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "7.054712429561882%"
--                                     left: "36.221958%"
-+                                     animationDelay: "2.536891597623206s"
--                                     animation-delay: "4.063499s"
++                                     left: "21.353116251860982%"
+-                                     left: "81.090011%"
++                                     animationDelay: "0.17655582304922757s"
+-                                     animation-delay: "3.795817s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "97.77246112050352%"
--                                     left: "25.240264%"
-+                                     animationDelay: "2.937605078521255s"
--                                     animation-delay: "4.405304s"
++                                     left: "10.401883693433266%"
+-                                     left: "13.402405%"
++                                     animationDelay: "2.936458896768251s"
+-                                     animation-delay: "4.786897s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "69.67250686298392%"
--                                     left: "29.504513%"
-+                                     animationDelay: "3.1052551431186726s"
--                                     animation-delay: "1.611494s"
++                                     left: "32.173956674252736%"
+-                                     left: "78.894795%"
++                                     animationDelay: "4.246101273827646s"
+-                                     animation-delay: "1.425211s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "21.4621176445018%"
--                                     left: "78.322265%"
-+                                     animationDelay: "4.000734404401873s"
--                                     animation-delay: "0.116442s"
++                                     left: "44.044912899035516%"
+-                                     left: "73.562124%"
++                                     animationDelay: "1.4582869034067525s"
+-                                     animation-delay: "0.664329s"
                                     }}
                                   >
                                   <div
                                     className="particle"
                                     style={{
-+                                     left: "22.041604573481788%"
--                                     left: "3.293595%"
-+                                     animationDelay: "1.0693031329550777s"
--                                     animation-delay: "2.141107s"
++                                     left: "47.06109091748113%"
+-                                     left: "26.668487%"
++                                     animationDelay: "3.6888654005718995s"
+-                                     animation-delay: "3.85619s"
                                     }}
                                   >
                                 ...
@@ -272,37 +273,37 @@ It can also happen if the client has a browser extension installed which messes 
                                     <div
                                       className="absolute"
                                       style={{
-+                                       top: "65.53031302584074%"
--                                       top: "59.326475%"
-+                                       left: "31.552947158150502%"
--                                       left: "64.279533%"
++                                       top: "69.41793268700752%"
+-                                       top: "35.915111%"
++                                       left: "57.40748072978381%"
+-                                       left: "68.07435%"
                                       }}
                                     >
                                     <div
                                       className="absolute"
                                       style={{
-+                                       top: "26.4892585858479%"
--                                       top: "43.587235%"
-+                                       left: "77.48252088670193%"
--                                       left: "66.190737%"
++                                       top: "53.51540730776731%"
+-                                       top: "35.504848%"
++                                       left: "68.94031178119315%"
+-                                       left: "28.470771%"
                                       }}
                                     >
                                     <div
                                       className="absolute"
                                       style={{
-+                                       top: "48.89199142364795%"
--                                       top: "72.699909%"
-+                                       left: "78.52548473965535%"
--                                       left: "21.374122%"
++                                       top: "20.950751342273932%"
+-                                       top: "26.008545%"
++                                       left: "40.99243367935472%"
+-                                       left: "56.192603%"
                                       }}
                                     >
                                     <div
                                       className="absolute"
                                       style={{
-+                                       top: "54.97737254601586%"
--                                       top: "25.87441%"
-+                                       left: "38.03849196700072%"
--                                       left: "50.433642%"
++                                       top: "44.23267443312313%"
+-                                       top: "77.801407%"
++                                       left: "31.880905134478247%"
+-                                       left: "35.178236%"
                                       }}
                                     >
                                   <FloatingParticle img="/images/le..." size={40} delay={0}>
@@ -310,10 +311,10 @@ It can also happen if the client has a browser extension installed which messes 
                                       <div
                                         className="absolute"
                                         style={{
-+                                         left: "19.58776168424128%"
--                                         left: "91.110799%"
-+                                         top: "47.33584808515601%"
--                                         top: "52.141866%"
++                                         left: "80.0072929289669%"
+-                                         left: "0.082444%"
++                                         top: "61.72659363899973%"
+-                                         top: "83.41153%"
 +                                         opacity: 0
 -                                         opacity: "0"
 +                                         transform: "translateY(40px)"
@@ -326,10 +327,10 @@ It can also happen if the client has a browser extension installed which messes 
                                       <div
                                         className="absolute"
                                         style={{
-+                                         left: "50.63059819034085%"
--                                         left: "79.41876%"
-+                                         top: "69.37935158449565%"
--                                         top: "51.442104%"
++                                         left: "63.62066869350684%"
+-                                         left: "80.974141%"
++                                         top: "13.722244021307306%"
+-                                         top: "52.063303%"
 +                                         opacity: 0
 -                                         opacity: "0"
 +                                         transform: "translateY(40px)"
@@ -342,10 +343,10 @@ It can also happen if the client has a browser extension installed which messes 
                                       <div
                                         className="absolute"
                                         style={{
-+                                         left: "98.2005638443197%"
--                                         left: "43.417014%"
-+                                         top: "83.9872745305625%"
--                                         top: "82.30702%"
++                                         left: "87.96616704669754%"
+-                                         left: "7.833111%"
++                                         top: "0.9926867167764586%"
+-                                         top: "4.060489%"
 +                                         opacity: 0
 -                                         opacity: "0"
 +                                         transform: "translateY(40px)"
@@ -358,10 +359,10 @@ It can also happen if the client has a browser extension installed which messes 
                                       <div
                                         className="absolute"
                                         style={{
-+                                         left: "17.881093892189902%"
--                                         left: "45.286659%"
-+                                         top: "95.33020591658983%"
--                                         top: "54.269124%"
++                                         left: "5.758000919898299%"
+-                                         left: "80.991064%"
++                                         top: "54.73791442086933%"
+-                                         top: "49.557587%"
 +                                         opacity: 0
 -                                         opacity: "0"
 +                                         transform: "translateY(40px)"
@@ -374,10 +375,10 @@ It can also happen if the client has a browser extension installed which messes 
                                       <div
                                         className="absolute"
                                         style={{
-+                                         left: "72.34870310881007%"
--                                         left: "68.484828%"
-+                                         top: "79.23874300210225%"
--                                         top: "26.17262%"
++                                         left: "70.28835142964701%"
+-                                         left: "51.820403%"
++                                         top: "74.40736463893327%"
+-                                         top: "87.551366%"
 +                                         opacity: 0
 -                                         opacity: "0"
 +                                         transform: "translateY(40px)"
@@ -394,9 +395,8 @@ It can also happen if the client has a browser extension installed which messes 
                                     ...
                   ...
 
-[00:00:08.562] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:09.012] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/recycle-icon.png" "received" null
-[00:00:09.253] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
+[00:00:07.497] Browser WARN    Image with src "/images/recycling.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:07.678] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
 Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
 /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
 
@@ -407,7 +407,7 @@ Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5
 Can't reach database server at `localhost:5432`
 
 Please make sure your database server is running at `localhost:5432`.
-[00:00:09.420] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
+[00:00:07.734] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
 Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
 /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
 
@@ -418,7 +418,7 @@ Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5
 Can't reach database server at `localhost:5432`
 
 Please make sure your database server is running at `localhost:5432`.
-[00:03:02.384] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
+[00:00:13.019] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
 Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
 /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
 
@@ -429,8 +429,7 @@ Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5
 Can't reach database server at `localhost:5432`
 
 Please make sure your database server is running at `localhost:5432`.
-[00:03:02.389] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:03:02.457] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
+[00:00:13.071] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
 Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
 /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
 
@@ -441,1276 +440,4 @@ Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5
 Can't reach database server at `localhost:5432`
 
 Please make sure your database server is running at `localhost:5432`.
-[00:05:17.614] Server  LOG      ✓ Compiled in 50ms
-[00:05:20.110] Server  ERROR    ⨯ Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:05:20.293] Server  ERROR   Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:05:20.459] Server  ERROR    ⨯ "unhandledRejection:" Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:05:20.633] Server  ERROR    ⨯ "unhandledRejection: " Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:05:21.193] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:05:21.253] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:16:34.447] Server  ERROR    ⨯ Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:34.628] Server  ERROR   Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:34.796] Server  ERROR    ⨯ "unhandledRejection:" Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:34.962] Server  ERROR    ⨯ "unhandledRejection: " Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:35.548] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:16:35.659] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:16:49.153] Server  ERROR    ⨯ Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:49.333] Server  ERROR   Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:49.505] Server  ERROR    ⨯ "unhandledRejection:" Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:49.673] Server  ERROR    ⨯ "unhandledRejection: " Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:16:50.238] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:16:50.346] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:20:27.246] Server  LOG      ✓ Compiled in 53ms
-[00:20:27.481] Browser ERROR   ./app/AboutUs
-Invalid import
-'client-only' cannot be imported from a Server Component module. It should only be used from a Client Component.
-The error was caused by using 'styled-jsx'. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-[00:21:23.228] Server  ERROR    ⨯ Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:21:23.407] Server  ERROR   Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:21:23.578] Server  ERROR    ⨯ "unhandledRejection:" Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:21:23.744] Server  ERROR    ⨯ "unhandledRejection: " Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:21:24.318] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:21:24.429] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:23:24.018] Server  LOG      ✓ Compiled in 20ms
-[00:23:24.167] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/globals.css:135:7: Unknown word `
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
-    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:437:12)]
-    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
-    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
-    [at new LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
-    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
-    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:23:28.321] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/globals.css:134:7: Unknown word `
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
-    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:437:12)]
-    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
-    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
-    [at new LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
-    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
-    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:23:32.813] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/globals.css:134:7: Unknown word `
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
-    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:437:12)]
-    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
-    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
-    [at new LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
-    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
-    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:23:34.055] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/globals.css:134:7: Unknown word `
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
-    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:437:12)]
-    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
-    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
-    [at new LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
-    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
-    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:23:34.555] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/globals.css:134:7: Unknown word `
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
-    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:437:12)]
-    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
-    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
-    [at new LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
-    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
-    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:23:35.354] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: /Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/app/globals.css:134:7: Unknown word `
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
-    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:437:12)]
-    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
-    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
-    [at new LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
-    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
-    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:24:03.510] Server  ERROR    ⨯ Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:24:03.688] Server  ERROR   Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:24:03.857] Server  ERROR    ⨯ "unhandledRejection:" Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:24:04.020] Server  ERROR    ⨯ "unhandledRejection: " Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:24:04.574] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:24:04.684] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:24:30.681] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
-  <button onClick={function onClick} className=... children=...>
-                  ^^^^^^^^^^^^^^^^^^
-If you need interactivity, consider converting part of this to a Client Component.
-[00:24:30.779] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
-  <button onClick={function onClick} className=... children=...>
-                  ^^^^^^^^^^^^^^^^^^
-If you need interactivity, consider converting part of this to a Client Component.
-[00:24:31.329] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
-  <button onClick={function onClick} className=... children=...>
-                  ^^^^^^^^^^^^^^^^^^
-If you need interactivity, consider converting part of this to a Client Component.
-[00:24:39.792] Server  LOG      ✓ Compiled in 55ms
-[00:24:39.800] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:24:41.687] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:24:41.763] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:24:41.764] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/AboutUs" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body className="geist_a715...">
-                            <Preloader>
-                              <div className="preloader">
-                                <div>
-                                <div className="particles">
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "52.63836991291557%"
--                                     left: "28.204018%"
-+                                     animationDelay: "4.518060624883913s"
--                                     animation-delay: "3.5721s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "94.85361502669119%"
--                                     left: "4.650056%"
-+                                     animationDelay: "0.6705540416998623s"
--                                     animation-delay: "1.420431s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "37.25648486375198%"
--                                     left: "44.116833%"
-+                                     animationDelay: "1.1972877783612612s"
--                                     animation-delay: "4.087269s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "65.57606094864612%"
--                                     left: "89.377132%"
-+                                     animationDelay: "1.3433379280526943s"
--                                     animation-delay: "2.647706s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "33.209038533462774%"
--                                     left: "91.015965%"
-+                                     animationDelay: "4.97349796390178s"
--                                     animation-delay: "4.948405s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "60.074921995374986%"
--                                     left: "28.617053%"
-+                                     animationDelay: "2.8322228359509207s"
--                                     animation-delay: "3.871305s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "79.04970409719826%"
--                                     left: "45.732295%"
-+                                     animationDelay: "1.5345640340088722s"
--                                     animation-delay: "1.589817s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "38.54145926847011%"
--                                     left: "97.066019%"
-+                                     animationDelay: "1.961260227729651s"
--                                     animation-delay: "3.389221s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "94.80958533093306%"
--                                     left: "98.711594%"
-+                                     animationDelay: "0.9623010885226019s"
--                                     animation-delay: "0.500537s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "57.76070771593413%"
--                                     left: "29.052313%"
-+                                     animationDelay: "0.3980443503342035s"
--                                     animation-delay: "1.213597s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "91.59115685859787%"
--                                     left: "96.476835%"
-+                                     animationDelay: "2.742347360215937s"
--                                     animation-delay: "0.650162s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "48.887341947193285%"
--                                     left: "10.444615%"
-+                                     animationDelay: "1.6074024396085385s"
--                                     animation-delay: "2.986104s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "35.409207410993105%"
--                                     left: "58.595801%"
-+                                     animationDelay: "4.475916725978556s"
--                                     animation-delay: "1.697732s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "63.12155794106018%"
--                                     left: "20.725894%"
-+                                     animationDelay: "0.505890768434139s"
--                                     animation-delay: "3.543382s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "28.264367174642224%"
--                                     left: "61.406793%"
-+                                     animationDelay: "4.0637462051404585s"
--                                     animation-delay: "0.859367s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "59.946331159571145%"
--                                     left: "63.533414%"
-+                                     animationDelay: "2.7105129860404276s"
--                                     animation-delay: "3.892021s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "72.20798113663875%"
--                                     left: "71.141932%"
-+                                     animationDelay: "4.937679347538088s"
--                                     animation-delay: "0.025314s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "77.19219329481382%"
--                                     left: "60.407271%"
-+                                     animationDelay: "2.8519266373239294s"
--                                     animation-delay: "3.13479s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "80.46580553697711%"
--                                     left: "55.02828%"
-+                                     animationDelay: "3.906655874682488s"
--                                     animation-delay: "3.45575s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "7.89918616985168%"
--                                     left: "3.032663%"
-+                                     animationDelay: "1.1207693740827518s"
--                                     animation-delay: "0.931695s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "91.29432356010301%"
--                                     left: "31.623989%"
-+                                     animationDelay: "3.9630241236889856s"
--                                     animation-delay: "0.315653s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "80.9472240794197%"
--                                     left: "1.629761%"
-+                                     animationDelay: "2.2061246760973745s"
--                                     animation-delay: "4.18354s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "82.39751369291966%"
--                                     left: "37.403948%"
-+                                     animationDelay: "0.0445007915311485s"
--                                     animation-delay: "0.817104s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "97.31465216869636%"
--                                     left: "74.193428%"
-+                                     animationDelay: "0.14726475025670982s"
--                                     animation-delay: "4.151377s"
-                                    }}
-                                  >
-                                  <div
-                                    className="particle"
-                                    style={{
-+                                     left: "10.672261946026929%"
--                                     left: "31.62283%"
-+                                     animationDelay: "2.6841296701111754s"
--                                     animation-delay: "0.253267s"
-                                    }}
-                                  >
-                                ...
-                            ...
-                              <AboutUsPage params={Promise} searchParams={Promise}>
-                                <Navbar>
-                                <div className="relative m...">
-                                  <div className="absolute i...">
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "71.39211977902873%"
--                                       top: "9.251038%"
-+                                       left: "86.13732340766619%"
--                                       left: "15.247316%"
-+                                       animationDelay: "1.1059539881299845s"
-+                                       animationDuration: "11.032056155838555s"
--                                       animation-delay: "1.97028s"
--                                       animation-duration: "12.943855s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "61.70391218366975%"
--                                       top: "34.927201%"
-+                                       left: "50.19956009784616%"
--                                       left: "16.224083%"
-+                                       animationDelay: "1.7377721005564117s"
-+                                       animationDuration: "8.663861392424097s"
--                                       animation-delay: "3.750207s"
--                                       animation-duration: "7.471533s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "54.52028413978673%"
--                                       top: "84.795095%"
-+                                       left: "48.007840076424024%"
--                                       left: "15.400884%"
-+                                       animationDelay: "3.0947165461944004s"
-+                                       animationDuration: "11.182345736022343s"
--                                       animation-delay: "1.576046s"
--                                       animation-duration: "10.599403s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "45.62638740029665%"
--                                       top: "31.297547%"
-+                                       left: "31.242535012445018%"
--                                       left: "56.859831%"
-+                                       animationDelay: "2.3170768903800427s"
-+                                       animationDuration: "13.063422726752636s"
--                                       animation-delay: "4.430708s"
--                                       animation-duration: "7.815317s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "25.294509750685734%"
--                                       top: "64.8538%"
-+                                       left: "97.4417577919997%"
--                                       left: "51.083403%"
-+                                       animationDelay: "1.0523358310956317s"
-+                                       animationDuration: "5.565868566213076s"
--                                       animation-delay: "1.669343s"
--                                       animation-duration: "9.206208s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "71.94605367424552%"
--                                       top: "52.058181%"
-+                                       left: "87.24972432596417%"
--                                       left: "0.840043%"
-+                                       animationDelay: "2.3630358853568034s"
-+                                       animationDuration: "7.979022734481866s"
--                                       animation-delay: "0.580945s"
--                                       animation-duration: "12.607714s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "35.08344699631076%"
--                                       top: "59.653142%"
-+                                       left: "37.02770799876552%"
--                                       left: "33.828927%"
-+                                       animationDelay: "3.1026325752994377s"
-+                                       animationDuration: "14.601997126479194s"
--                                       animation-delay: "2.012349s"
--                                       animation-duration: "13.744463s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "65.26897983194104%"
--                                       top: "82.167309%"
-+                                       left: "0.7549011688560814%"
--                                       left: "95.486152%"
-+                                       animationDelay: "1.0079489125043262s"
-+                                       animationDuration: "10.426842817686257s"
--                                       animation-delay: "0.181607s"
--                                       animation-duration: "13.687909s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "2.2987435952424473%"
--                                       top: "45.219012%"
-+                                       left: "74.96380974251787%"
--                                       left: "96.31422%"
-+                                       animationDelay: "1.8840791267182606s"
-+                                       animationDuration: "5.275363689049845s"
--                                       animation-delay: "1.603111s"
--                                       animation-duration: "11.642029s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "89.64547434772703%"
--                                       top: "29.619786%"
-+                                       left: "79.44377801159071%"
--                                       left: "65.363339%"
-+                                       animationDelay: "0.6678277551872408s"
-+                                       animationDuration: "9.454297198964998s"
--                                       animation-delay: "2.586565s"
--                                       animation-duration: "5.350273s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "35.73408668724173%"
--                                       top: "27.098677%"
-+                                       left: "35.24469210856764%"
--                                       left: "65.053689%"
-+                                       animationDelay: "3.212656033055079s"
-+                                       animationDuration: "10.904550252277467s"
--                                       animation-delay: "1.851959s"
--                                       animation-duration: "11.847749s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "61.125486058413316%"
--                                       top: "69.475988%"
-+                                       left: "77.03421999340705%"
--                                       left: "77.556787%"
-+                                       animationDelay: "1.2973094118405504s"
-+                                       animationDuration: "13.332234542389655s"
--                                       animation-delay: "2.356616s"
--                                       animation-duration: "13.845808s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "56.90798962494205%"
--                                       top: "33.678458%"
-+                                       left: "76.96402554224579%"
--                                       left: "88.309113%"
-+                                       animationDelay: "4.7089366448590635s"
-+                                       animationDuration: "5.816765920730608s"
--                                       animation-delay: "0.586291s"
--                                       animation-duration: "8.118548s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "48.58760524010697%"
--                                       top: "22.838836%"
-+                                       left: "46.5449824602162%"
--                                       left: "88.21177%"
-+                                       animationDelay: "4.969506505669685s"
-+                                       animationDuration: "11.579735688309565s"
--                                       animation-delay: "0.928631s"
--                                       animation-duration: "14.348258s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "28.41682643109379%"
--                                       top: "45.242056%"
-+                                       left: "55.47215537622928%"
--                                       left: "89.530784%"
-+                                       animationDelay: "4.959375640085017s"
-+                                       animationDuration: "12.853586473506097s"
--                                       animation-delay: "2.811271s"
--                                       animation-duration: "13.683694s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "50.024150884848915%"
--                                       top: "38.426056%"
-+                                       left: "77.47827155573806%"
--                                       left: "24.610955%"
-+                                       animationDelay: "4.34101318896894s"
-+                                       animationDuration: "10.753467941793872s"
--                                       animation-delay: "4.759582s"
--                                       animation-duration: "13.630254s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "52.81573672717585%"
--                                       top: "41.892889%"
-+                                       left: "17.626082931933606%"
--                                       left: "53.031352%"
-+                                       animationDelay: "1.2499324027867091s"
-+                                       animationDuration: "9.906673585410868s"
--                                       animation-delay: "2.195906s"
--                                       animation-duration: "11.299165s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "57.03657762455101%"
--                                       top: "69.495027%"
-+                                       left: "77.00933200012472%"
--                                       left: "44.964616%"
-+                                       animationDelay: "2.6774365744048594s"
-+                                       animationDuration: "12.763345827182938s"
--                                       animation-delay: "0.035341s"
--                                       animation-duration: "5.986144s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "2.922802580919026%"
--                                       top: "80.434344%"
-+                                       left: "3.519941320663822%"
--                                       left: "93.333724%"
-+                                       animationDelay: "4.075623144267109s"
-+                                       animationDuration: "11.196924242381648s"
--                                       animation-delay: "0.771354s"
--                                       animation-duration: "9.458697s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "12.474728009142266%"
--                                       top: "60.65676%"
-+                                       left: "67.76257936630516%"
--                                       left: "36.71126%"
-+                                       animationDelay: "2.4797169710919995s"
-+                                       animationDuration: "14.656008272462147s"
--                                       animation-delay: "3.52314s"
--                                       animation-duration: "7.046416s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "75.22997340488935%"
--                                       top: "66.449847%"
-+                                       left: "43.60585616253599%"
--                                       left: "48.454116%"
-+                                       animationDelay: "0.4244406879138807s"
-+                                       animationDuration: "5.235124136527519s"
--                                       animation-delay: "0.92281s"
--                                       animation-duration: "5.573889s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "58.08247548274203%"
--                                       top: "75.70567%"
-+                                       left: "89.02386408467179%"
--                                       left: "93.474986%"
-+                                       animationDelay: "2.8899373835739595s"
-+                                       animationDuration: "11.71555490128952s"
--                                       animation-delay: "1.718189s"
--                                       animation-duration: "5.356222s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "70.12700548621274%"
--                                       top: "43.375578%"
-+                                       left: "78.20542461654091%"
--                                       left: "17.804495%"
-+                                       animationDelay: "2.1486330076750706s"
-+                                       animationDuration: "6.557620264007133s"
--                                       animation-delay: "0.800696s"
--                                       animation-duration: "5.75182s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "85.11840842691211%"
--                                       top: "89.213394%"
-+                                       left: "1.9469401178111023%"
--                                       left: "44.533938%"
-+                                       animationDelay: "2.596597809964614s"
-+                                       animationDuration: "7.966666882160606s"
--                                       animation-delay: "3.223052s"
--                                       animation-duration: "6.47254s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "99.45279043380613%"
--                                       top: "81.268374%"
-+                                       left: "22.75971892501254%"
--                                       left: "26.49016%"
-+                                       animationDelay: "2.3237029281358907s"
-+                                       animationDuration: "13.735007316312874s"
--                                       animation-delay: "1.324794s"
--                                       animation-duration: "9.62707s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "74.21874595207788%"
--                                       top: "11.409094%"
-+                                       left: "4.3770381478740905%"
--                                       left: "18.669382%"
-+                                       animationDelay: "4.733682301766374s"
-+                                       animationDuration: "8.627414992026305s"
--                                       animation-delay: "4.80484s"
--                                       animation-duration: "5.653242s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "86.20477165049397%"
--                                       top: "27.572031%"
-+                                       left: "49.40946727152733%"
--                                       left: "52.01653%"
-+                                       animationDelay: "2.530516460278899s"
-+                                       animationDuration: "10.343067497349102s"
--                                       animation-delay: "2.681516s"
--                                       animation-duration: "13.373867s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "40.339881188382435%"
--                                       top: "84.756858%"
-+                                       left: "74.90826693709316%"
--                                       left: "54.571373%"
-+                                       animationDelay: "1.9933772119688857s"
-+                                       animationDuration: "10.248964095530193s"
--                                       animation-delay: "0.529496s"
--                                       animation-duration: "10.577935s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "36.64885477683749%"
--                                       top: "69.930198%"
-+                                       left: "86.48693746077524%"
--                                       left: "56.582972%"
-+                                       animationDelay: "3.833577619082633s"
-+                                       animationDuration: "7.506667644926405s"
--                                       animation-delay: "1.84818s"
--                                       animation-duration: "7.908972s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "51.02600259054061%"
--                                       top: "34.641043%"
-+                                       left: "53.585500966877696%"
--                                       left: "22.019758%"
-+                                       animationDelay: "3.452920619478605s"
-+                                       animationDuration: "10.833029958795944s"
--                                       animation-delay: "2.349313s"
--                                       animation-duration: "14.280545s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "39.99977187052741%"
--                                       top: "78.168647%"
-+                                       left: "56.712809507273455%"
--                                       left: "77.079843%"
-+                                       animationDelay: "2.6142389066173957s"
-+                                       animationDuration: "12.373052762813112s"
--                                       animation-delay: "1.168229s"
--                                       animation-duration: "5.987953s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "11.08016446041905%"
--                                       top: "42.032102%"
-+                                       left: "74.55925580137742%"
--                                       left: "63.427684%"
-+                                       animationDelay: "3.4914578783843915s"
-+                                       animationDuration: "13.094578358916158s"
--                                       animation-delay: "3.105741s"
--                                       animation-duration: "7.093736s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "90.71198256697379%"
--                                       top: "61.710122%"
-+                                       left: "62.71123934324454%"
--                                       left: "23.436502%"
-+                                       animationDelay: "4.229352227434717s"
-+                                       animationDuration: "9.888631729075428s"
--                                       animation-delay: "2.931534s"
--                                       animation-duration: "12.367152s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "7.559919401343773%"
--                                       top: "45.144359%"
-+                                       left: "15.451221472846665%"
--                                       left: "37.641295%"
-+                                       animationDelay: "1.845148611153281s"
-+                                       animationDuration: "9.30240000095517s"
--                                       animation-delay: "1.387963s"
--                                       animation-duration: "9.229222s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "50.136510670355285%"
--                                       top: "4.250945%"
-+                                       left: "40.541763777124196%"
--                                       left: "88.529688%"
-+                                       animationDelay: "1.269510730575465s"
-+                                       animationDuration: "11.493834229695839s"
--                                       animation-delay: "3.673547s"
--                                       animation-duration: "11.26237s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "15.291924092262866%"
--                                       top: "14.248159%"
-+                                       left: "48.198434086131925%"
--                                       left: "57.393945%"
-+                                       animationDelay: "4.455312421096788s"
-+                                       animationDuration: "13.50589422005249s"
--                                       animation-delay: "0.817255s"
--                                       animation-duration: "6.170842s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "32.60608337716864%"
--                                       top: "18.837571%"
-+                                       left: "58.27725740480143%"
--                                       left: "34.597963%"
-+                                       animationDelay: "4.009239276999418s"
-+                                       animationDuration: "9.261574003530963s"
--                                       animation-delay: "1.944016s"
--                                       animation-duration: "11.142399s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "94.7946836061553%"
--                                       top: "35.707839%"
-+                                       left: "89.50296964157646%"
--                                       left: "44.777569%"
-+                                       animationDelay: "4.327417905554786s"
-+                                       animationDuration: "6.539604781389215s"
--                                       animation-delay: "1.610676s"
--                                       animation-duration: "13.799638s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "19.227012130931364%"
--                                       top: "62.944115%"
-+                                       left: "21.9363329883147%"
--                                       left: "72.668493%"
-+                                       animationDelay: "3.796532149315711s"
-+                                       animationDuration: "10.240104557348431s"
--                                       animation-delay: "1.613832s"
--                                       animation-duration: "14.237709s"
-                                      }}
-                                    >
-                                    <div
-                                      className="absolute w-1 h-1 rounded-full bg-emerald-400/60 animate-float"
-                                      style={{
-+                                       top: "77.66722536297127%"
--                                       top: "29.076015%"
-+                                       left: "7.8352625788454695%"
--                                       left: "24.573774%"
-+                                       animationDelay: "3.749246888317854s"
-+                                       animationDuration: "7.149154848525247s"
--                                       animation-delay: "4.452902s"
--                                       animation-duration: "7.646964s"
-                                      }}
-                                    >
-                                  <div className="absolute i...">
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "14.503158826184137%"
--                                       top: "48.431323%"
-+                                       left: "1.7585442066179513%"
--                                       left: "30.233675%"
-+                                       animationDuration: "8.828804092962802s"
-+                                       animationDelay: "0.6562442950882219s"
--                                       animation-duration: "19.274913s"
--                                       animation-delay: "4.534561s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "93.31883630737009%"
--                                       top: "7.220519%"
-+                                       left: "37.70723029420703%"
--                                       left: "59.440403%"
-+                                       animationDuration: "17.729104537412784s"
-+                                       animationDelay: "0.9325982749420453s"
--                                       animation-duration: "10.198294s"
--                                       animation-delay: "3.903814s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "86.32636322645139%"
--                                       top: "3.036081%"
-+                                       left: "90.85307989534658%"
--                                       left: "19.507205%"
-+                                       animationDuration: "18.3652537576356s"
-+                                       animationDelay: "3.425682992570023s"
--                                       animation-duration: "12.978162s"
--                                       animation-delay: "4.331359s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "33.23030134251398%"
--                                       top: "15.321083%"
-+                                       left: "99.89358715718842%"
--                                       left: "13.187073%"
-+                                       animationDuration: "19.39883472115949s"
-+                                       animationDelay: "4.235520737483405s"
--                                       animation-duration: "8.625603s"
--                                       animation-delay: "3.52518s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "56.94878556500807%"
--                                       top: "11.585589%"
-+                                       left: "9.05777309161132%"
--                                       left: "97.831098%"
-+                                       animationDuration: "18.77796141039582s"
-+                                       animationDelay: "3.1441974784615434s"
--                                       animation-duration: "12.435316s"
--                                       animation-delay: "3.06327s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "58.63680152628687%"
--                                       top: "97.923055%"
-+                                       left: "93.46034831861782%"
--                                       left: "96.996935%"
-+                                       animationDuration: "17.1097152280004s"
-+                                       animationDelay: "0.4281924797263664s"
--                                       animation-duration: "17.848884s"
--                                       animation-delay: "3.200954s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "82.04811780922357%"
--                                       top: "86.450716%"
-+                                       left: "57.57501458405583%"
--                                       left: "86.540909%"
-+                                       animationDuration: "17.022302245108047s"
-+                                       animationDelay: "1.9543930042312847s"
--                                       animation-duration: "8.121243s"
--                                       animation-delay: "1.612844s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "64.33487519208725%"
--                                       top: "84.135908%"
-+                                       left: "32.74519066093161%"
--                                       left: "98.977607%"
-+                                       animationDuration: "10.84461578527954s"
-+                                       animationDelay: "0.5323375766699928s"
--                                       animation-duration: "8.700167s"
--                                       animation-delay: "0.400916s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "78.97287449788595%"
--                                       top: "68.25833%"
-+                                       left: "43.80390547387986%"
--                                       left: "43.010446%"
-+                                       animationDuration: "19.904431553279487s"
-+                                       animationDelay: "3.2991225574669243s"
--                                       animation-duration: "16.287522s"
--                                       animation-delay: "2.887488s"
-                                      }}
-                                    >
-                                    <img
-                                      src="/images/leaf.png"
-                                      alt="leaf"
-                                      className="absolute w-10 h-10 opacity-60 animate-fly drop-shadow-[0_0_12px_rgba(..."
-                                      style={{
-+                                       top: "85.00048159411404%"
--                                       top: "7.681551%"
-+                                       left: "37.148636876612905%"
--                                       left: "80.649141%"
-+                                       animationDuration: "14.811495964422395s"
-+                                       animationDelay: "3.5740338813383925s"
--                                       animation-duration: "9.01371s"
--                                       animation-delay: "1.63644s"
-                                      }}
-                                    >
-                                  <section className="relative z...">
-                                    <div className={"\n      ..."}>
-                                      <h1>
-                                      <p>
-                                      <p>
-                                      <button
-                                        onClick={function _temp3}
-+                                       className={"\n                px-10 py-3.5 rounded-full\n                bg-g..."}
--                                       className={" px-10 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-g..."}
-                                      >
-+                                       Dev Team
-                                  <section>
-                                  <section>
-                                  <section className="relative z...">
-                                    <div className="max-w-3xl ...">
-                                      <h2>
-                                      <p>
-                                      <button
-                                        onClick={function _temp4}
-+                                       className={"\n                px-10 py-3.5 rounded-full\n                bg-g..."}
--                                       className={" px-10 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-g..."}
-                                      >
-+                                       Explore Quests
-                                ...
-                  ...
-
-[00:25:23.901] Server  LOG      ✓ Compiled in 53ms
-[00:25:34.910] Server  LOG      ✓ Compiled in 56ms
-[00:25:38.119] Server  ERROR    ⨯ Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:25:38.308] Server  ERROR   Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:25:38.484] Server  ERROR    ⨯ "unhandledRejection:" Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:25:38.651] Server  ERROR    ⨯ "unhandledRejection: " Error: Failed to load chunk server/chunks/ssr/_c6b6d190._.js from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/AboutUs/page { GLOBAL_ERROR_MODULE => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_0 => "[project]/app/favicon.ico.mjs { IMAGE => \"[project]/app/favicon.ico (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript, Next.js Server Component)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/node_modules/next/dist/client/components/builtin/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/AboutUs/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>
-[00:25:39.214] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
-[00:25:39.325] Server  ERROR   Error in /api/auth/me: PrismaClientInitializationError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique()` invocation in
-/Users/gavrilbogdan/Documents/GitHub/CleanTM/marian/Untitled/my-project/.next/dev/server/chunks/[root-of-the-server]__6fc20d83._.js:114:156
-
-  111 }
-  112 const token = tokenMatch[1];
-  113 const decoded = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jsonwebtoken$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].verify(token, JWT_SECRET); // { userId: ... }
-→ 114 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].user.findUnique(
-Can't reach database server at `localhost:5432`
-
-Please make sure your database server is running at `localhost:5432`.
+[00:00:13.073] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

@@ -75,7 +75,7 @@ const AboutUsPage = () => {
 
             <button
               onClick={() => (window.location.href = "/Devs")}
-              className="
+              className={`
                 px-10 py-3.5 rounded-full
                 bg-gradient-to-r from-emerald-500 to-green-400
                 text-slate-900 font-bold text-base md:text-lg
@@ -83,7 +83,7 @@ const AboutUsPage = () => {
                 hover:shadow-emerald-400/70
                 hover:scale-105
                 transition-all duration-300
-              "
+              `}
             >
               Dev Team
             </button>
@@ -167,7 +167,7 @@ const AboutUsPage = () => {
             </p>
             <button
               onClick={() => (window.location.href = "/task")}
-              className="
+              className={`
                 px-10 py-3.5 rounded-full
                 bg-gradient-to-r from-emerald-500 to-green-400
                 text-slate-900 font-bold text-base md:text-lg
@@ -175,7 +175,7 @@ const AboutUsPage = () => {
                 hover:shadow-emerald-400/70
                 hover:scale-105
                 transition-all duration-300
-              "
+              `}
             >
               Explore Quests
             </button>
