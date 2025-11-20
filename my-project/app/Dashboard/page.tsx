@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 const TILE_DARK =
   "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
@@ -453,36 +451,62 @@ export default function ProfileDashboardPage() {
 }
 
 /* ------------------------------------------------------------------
-   MINI MAP COMPONENT (Leaflet)
+   MINI MAP COMPONENT (Leaflet) — SSR SAFE VERSION
 -------------------------------------------------------------------*/
 function MiniCleanupMap({ cleanups }: { cleanups: CleanupLocation[] }) {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
-  const mapRef = useRef<L.Map | null>(null);
-  const markersRef = useRef<L.LayerGroup | null>(null);
+  const mapRef = useRef<any>(null);
+  const markersRef = useRef<any>(null);
+  const LRef = useRef<any>(null); // ← store Leaflet instance here
 
   useEffect(() => {
-    if (!mapContainerRef.current || mapRef.current) return;
+    let isMounted = true;
 
-    const map = L.map(mapContainerRef.current, {
-      center: [45.7489, 21.2087],
-      zoom: 12,
-      zoomControl: false,
-      attributionControl: false,
-    });
+    (async () => {
+      if (typeof window === "undefined") return;
+      if (!mapContainerRef.current || mapRef.current) return;
 
-    L.tileLayer(TILE_DARK, { maxZoom: 18 }).addTo(map);
+      // Dynamic import Leaflet
+      const leaflet = await import("leaflet");
+      await import("leaflet/dist/leaflet.css");
 
-    const group = L.layerGroup().addTo(map);
-    mapRef.current = map;
-    markersRef.current = group;
+      const LInstance = leaflet.default || leaflet;
+      LRef.current = LInstance; // ← save it for later use
+
+      if (!isMounted) return;
+
+      const map = LInstance.map(mapContainerRef.current, {
+        center: [45.7489, 21.2087],
+        zoom: 12,
+        zoomControl: false,
+        attributionControl: false,
+      });
+
+      LInstance.tileLayer(TILE_DARK, { maxZoom: 18 }).addTo(map);
+
+      const group = LInstance.layerGroup().addTo(map);
+
+      mapRef.current = map;
+      markersRef.current = group;
+    })();
+
+    return () => {
+      isMounted = false;
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
+    };
   }, []);
 
   useEffect(() => {
-    if (!mapRef.current || !markersRef.current) return;
+    if (!mapRef.current || !markersRef.current || !LRef.current) return;
+
+    const L = LRef.current;
 
     markersRef.current.clearLayers();
 
-    const points: L.LatLngExpression[] = [];
+    const points: any[] = [];
 
     cleanups.forEach((c) => {
       const marker = L.circleMarker([c.pos.lat, c.pos.lng], {
@@ -497,7 +521,7 @@ function MiniCleanupMap({ cleanups }: { cleanups: CleanupLocation[] }) {
         `<strong>${c.title}</strong><br/>${c.desc}<br/><small>${c.date}</small>`
       );
 
-      marker.addTo(markersRef.current!);
+      marker.addTo(markersRef.current);
       points.push([c.pos.lat, c.pos.lng]);
     });
 
@@ -505,10 +529,6 @@ function MiniCleanupMap({ cleanups }: { cleanups: CleanupLocation[] }) {
       const bounds = L.latLngBounds(points);
       mapRef.current.fitBounds(bounds, { padding: [20, 20] });
     }
-
-    return () => {
-      markersRef.current?.clearLayers();
-    };
   }, [cleanups]);
 
   return (
@@ -517,7 +537,6 @@ function MiniCleanupMap({ cleanups }: { cleanups: CleanupLocation[] }) {
     </div>
   );
 }
-
 /* ------------------------------------------------------------------
    IMPACT TIMELINE CARD + MINI CHART
 -------------------------------------------------------------------*/

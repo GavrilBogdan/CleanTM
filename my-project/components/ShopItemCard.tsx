@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import confetti from "canvas-confetti";
 
 interface ShopItemCardProps {

@@ -775,6 +775,8 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$canvas$2d$confetti$2f$dist$2f$confetti$2e$module$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/canvas-confetti/dist/confetti.module.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -785,11 +787,11 @@ var _s = __turbopack_context__.k.signature();
 const ShopItemCard = (t0)=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(27);
-    if ($[0] !== "1818915d89630d94e8eb24a1b40c5dfa74955ef3c6b8c07f93dbd4caa2b690b2") {
+    if ($[0] !== "881cb6d9c584b79d077cbc8bdd04a8c682ded1118c6f6f5751363b5326744320") {
         for(let $i = 0; $i < 27; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1818915d89630d94e8eb24a1b40c5dfa74955ef3c6b8c07f93dbd4caa2b690b2";
+        $[0] = "881cb6d9c584b79d077cbc8bdd04a8c682ded1118c6f6f5751363b5326744320";
     }
     const { item, userPoints, onBuy } = t0;
     const canBuy = userPoints >= item.price;
@@ -830,7 +832,7 @@ const ShopItemCard = (t0)=>{
             className: "w-32 h-32 object-contain mb-6 mt-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 62,
+            lineNumber: 64,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[6] = item.imageUrl;
@@ -846,7 +848,7 @@ const ShopItemCard = (t0)=>{
             children: item.name
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 71,
+            lineNumber: 73,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[9] = item.name;
@@ -861,7 +863,7 @@ const ShopItemCard = (t0)=>{
             children: item.description
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 79,
+            lineNumber: 81,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[11] = item.description;
@@ -876,7 +878,7 @@ const ShopItemCard = (t0)=>{
             children: "💎"
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 87,
+            lineNumber: 89,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[13] = t5;
@@ -893,13 +895,13 @@ const ShopItemCard = (t0)=>{
                     children: item.price
                 }, void 0, false, {
                     fileName: "[project]/components/ShopItemCard.tsx",
-                    lineNumber: 94,
+                    lineNumber: 96,
                     columnNumber: 88
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 94,
+            lineNumber: 96,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[14] = item.price;
@@ -922,12 +924,12 @@ const ShopItemCard = (t0)=>{
                 children: t9
             }, void 0, false, {
                 fileName: "[project]/components/ShopItemCard.tsx",
-                lineNumber: 106,
+                lineNumber: 108,
                 columnNumber: 43
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 106,
+            lineNumber: 108,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[16] = handleBuy;
@@ -953,12 +955,12 @@ const ShopItemCard = (t0)=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ShopItemCard.tsx",
-                lineNumber: 117,
+                lineNumber: 119,
                 columnNumber: 40
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/components/ShopItemCard.tsx",
-            lineNumber: 117,
+            lineNumber: 119,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[21] = t10;

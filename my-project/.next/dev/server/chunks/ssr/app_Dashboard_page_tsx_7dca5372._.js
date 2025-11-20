@@ -9,10 +9,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/leaflet/dist/leaflet-src.js [app-ssr] (ecmascript)");
 "use client";
-;
-;
 ;
 ;
 ;
@@ -165,12 +162,12 @@ function ProfileDashboardPage() {
                 children: "Loading profile…"
             }, void 0, false, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 164,
+                lineNumber: 162,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/Dashboard/page.tsx",
-            lineNumber: 163,
+            lineNumber: 161,
             columnNumber: 7
         }, this);
     }
@@ -185,7 +182,7 @@ function ProfileDashboardPage() {
                         children: "You’re not logged in."
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 173,
+                        lineNumber: 171,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -193,18 +190,18 @@ function ProfileDashboardPage() {
                         children: "Please log in to view your dashboard."
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 174,
+                        lineNumber: 172,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 172,
+                lineNumber: 170,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/Dashboard/page.tsx",
-            lineNumber: 171,
+            lineNumber: 169,
             columnNumber: 7
         }, this);
     }
@@ -223,7 +220,7 @@ function ProfileDashboardPage() {
                                     children: "Profile"
                                 }, void 0, false, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 186,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -231,13 +228,13 @@ function ProfileDashboardPage() {
                                     children: "Track your cleanup impact, badges and latest missions on the map."
                                 }, void 0, false, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 187,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Dashboard/page.tsx",
-                            lineNumber: 187,
+                            lineNumber: 185,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -249,20 +246,20 @@ function ProfileDashboardPage() {
                                     children: "←"
                                 }, void 0, false, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 206,
+                                    lineNumber: 204,
                                     columnNumber: 13
                                 }, this),
                                 "Back to last page"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Dashboard/page.tsx",
-                            lineNumber: 194,
+                            lineNumber: 192,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/Dashboard/page.tsx",
-                    lineNumber: 186,
+                    lineNumber: 184,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -288,12 +285,12 @@ function ProfileDashboardPage() {
                                                                 className: "w-full h-full object-cover"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/Dashboard/page.tsx",
-                                                                lineNumber: 220,
+                                                                lineNumber: 218,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 219,
+                                                            lineNumber: 217,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -304,13 +301,13 @@ function ProfileDashboardPage() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 226,
+                                                            lineNumber: 224,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 216,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -320,7 +317,7 @@ function ProfileDashboardPage() {
                                                             children: displayName
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 232,
+                                                            lineNumber: 230,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -328,7 +325,7 @@ function ProfileDashboardPage() {
                                                             children: usernameHandle
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 233,
+                                                            lineNumber: 231,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -339,7 +336,7 @@ function ProfileDashboardPage() {
                                                                     children: "💎"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                                    lineNumber: 235,
+                                                                    lineNumber: 233,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -350,25 +347,25 @@ function ProfileDashboardPage() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                                    lineNumber: 236,
+                                                                    lineNumber: 234,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 234,
+                                                            lineNumber: 232,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 231,
+                                                    lineNumber: 229,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 217,
+                                            lineNumber: 215,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -382,7 +379,7 @@ function ProfileDashboardPage() {
                                                             children: "Global rank"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 243,
+                                                            lineNumber: 241,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -393,13 +390,13 @@ function ProfileDashboardPage() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 244,
+                                                            lineNumber: 242,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 242,
+                                                    lineNumber: 240,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -410,7 +407,7 @@ function ProfileDashboardPage() {
                                                             children: "Cleanups"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 245,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -418,13 +415,13 @@ function ProfileDashboardPage() {
                                                             children: totalCleanups
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 248,
+                                                            lineNumber: 246,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 244,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -435,7 +432,7 @@ function ProfileDashboardPage() {
                                                             children: "Hours"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 253,
+                                                            lineNumber: 251,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -443,25 +440,25 @@ function ProfileDashboardPage() {
                                                             children: totalHours
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 254,
+                                                            lineNumber: 252,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 252,
+                                                    lineNumber: 250,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 241,
+                                            lineNumber: 239,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 214,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -472,7 +469,7 @@ function ProfileDashboardPage() {
                                             children: "Impact overview"
                                         }, void 0, false, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 261,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -486,7 +483,7 @@ function ProfileDashboardPage() {
                                                             children: "Total bags collected"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 269,
+                                                            lineNumber: 267,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -494,13 +491,13 @@ function ProfileDashboardPage() {
                                                             children: totalBags
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 270,
+                                                            lineNumber: 268,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 268,
+                                                    lineNumber: 266,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -511,7 +508,7 @@ function ProfileDashboardPage() {
                                                             children: "Average bags / cleanup"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 276,
+                                                            lineNumber: 274,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -519,13 +516,13 @@ function ProfileDashboardPage() {
                                                             children: (totalBags / totalCleanups).toFixed(1)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 277,
+                                                            lineNumber: 275,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 275,
+                                                    lineNumber: 273,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -536,7 +533,7 @@ function ProfileDashboardPage() {
                                                             children: "Average duration"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 283,
+                                                            lineNumber: 281,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -547,19 +544,19 @@ function ProfileDashboardPage() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 284,
+                                                            lineNumber: 282,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 280,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 267,
+                                            lineNumber: 265,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -570,7 +567,7 @@ function ProfileDashboardPage() {
                                                     children: "Progress to next level"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 291,
+                                                    lineNumber: 289,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -582,24 +579,24 @@ function ProfileDashboardPage() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/Dashboard/page.tsx",
-                                                        lineNumber: 295,
+                                                        lineNumber: 293,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 294,
+                                                    lineNumber: 292,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 290,
+                                            lineNumber: 288,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 262,
+                                    lineNumber: 260,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -610,7 +607,7 @@ function ProfileDashboardPage() {
                                             children: "Profile settings"
                                         }, void 0, false, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 305,
+                                            lineNumber: 303,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -623,7 +620,7 @@ function ProfileDashboardPage() {
                                                             children: "Username (public)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 311,
+                                                            lineNumber: 309,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -634,7 +631,7 @@ function ProfileDashboardPage() {
                                                             className: "w-full bg-[#020617] border border-[#1e293b] rounded-lg px-3 py-2 outline-none text-sm text-gray-100 placeholder:text-gray-500"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 314,
+                                                            lineNumber: 312,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -642,13 +639,13 @@ function ProfileDashboardPage() {
                                                             children: "This will be shown on leaderboards and quests."
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 321,
+                                                            lineNumber: 319,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 308,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -658,7 +655,7 @@ function ProfileDashboardPage() {
                                                             children: "Avatar image URL"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 327,
+                                                            lineNumber: 325,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -669,7 +666,7 @@ function ProfileDashboardPage() {
                                                             className: "w-full bg-[#020617] border border-[#1e293b] rounded-lg px-3 py-2 outline-none text-sm text-gray-100 placeholder:text-gray-500"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 330,
+                                                            lineNumber: 328,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -677,13 +674,13 @@ function ProfileDashboardPage() {
                                                             children: "For now, paste a direct image URL. (Later you can add upload.)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 337,
+                                                            lineNumber: 335,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 326,
+                                                    lineNumber: 324,
                                                     columnNumber: 17
                                                 }, this),
                                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -691,7 +688,7 @@ function ProfileDashboardPage() {
                                                     children: error
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 344,
+                                                    lineNumber: 342,
                                                     columnNumber: 19
                                                 }, this),
                                                 success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -699,7 +696,7 @@ function ProfileDashboardPage() {
                                                     children: success
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 347,
+                                                    lineNumber: 345,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -711,19 +708,19 @@ function ProfileDashboardPage() {
                                                     children: saving ? "Saving…" : "Save changes"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 350,
+                                                    lineNumber: 348,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 309,
+                                            lineNumber: 307,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 304,
+                                    lineNumber: 302,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -734,7 +731,7 @@ function ProfileDashboardPage() {
                                             children: "Badges & achievements"
                                         }, void 0, false, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 364,
+                                            lineNumber: 362,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -746,7 +743,7 @@ function ProfileDashboardPage() {
                                                     icon: "🌊"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 369,
+                                                    lineNumber: 367,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Badge, {
@@ -755,7 +752,7 @@ function ProfileDashboardPage() {
                                                     icon: "🧴"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 374,
+                                                    lineNumber: 372,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Badge, {
@@ -764,7 +761,7 @@ function ProfileDashboardPage() {
                                                     icon: "📅"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 379,
+                                                    lineNumber: 377,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Badge, {
@@ -773,25 +770,25 @@ function ProfileDashboardPage() {
                                                     icon: "⭐"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 384,
+                                                    lineNumber: 382,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 368,
+                                            lineNumber: 366,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 363,
+                                    lineNumber: 361,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Dashboard/page.tsx",
-                            lineNumber: 214,
+                            lineNumber: 212,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -810,7 +807,7 @@ function ProfileDashboardPage() {
                                                             children: "Last cleanup locations"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 399,
+                                                            lineNumber: 397,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -818,13 +815,13 @@ function ProfileDashboardPage() {
                                                             children: "A quick overview of your most recent cleanup spots."
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 402,
+                                                            lineNumber: 400,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 398,
+                                                    lineNumber: 396,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -835,13 +832,13 @@ function ProfileDashboardPage() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 406,
+                                                    lineNumber: 404,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 397,
+                                            lineNumber: 395,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -853,12 +850,12 @@ function ProfileDashboardPage() {
                                                         cleanups: LAST_CLEANUPS
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/Dashboard/page.tsx",
-                                                        lineNumber: 414,
+                                                        lineNumber: 412,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 413,
+                                                    lineNumber: 411,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -876,7 +873,7 @@ function ProfileDashboardPage() {
                                                                                     children: c.title
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                                                    lineNumber: 426,
+                                                                                    lineNumber: 424,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -884,13 +881,13 @@ function ProfileDashboardPage() {
                                                                                     children: c.desc
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                                                    lineNumber: 427,
+                                                                                    lineNumber: 425,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                                            lineNumber: 425,
+                                                                            lineNumber: 423,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -898,13 +895,13 @@ function ProfileDashboardPage() {
                                                                             children: c.date
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                                            lineNumber: 429,
+                                                                            lineNumber: 427,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                                    lineNumber: 424,
+                                                                    lineNumber: 422,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -918,7 +915,7 @@ function ProfileDashboardPage() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                                            lineNumber: 435,
+                                                                            lineNumber: 433,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -929,97 +926,101 @@ function ProfileDashboardPage() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                                            lineNumber: 436,
+                                                                            lineNumber: 434,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                                    lineNumber: 434,
+                                                                    lineNumber: 432,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, c.id, true, {
                                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                                            lineNumber: 420,
+                                                            lineNumber: 418,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                                    lineNumber: 418,
+                                                    lineNumber: 416,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Dashboard/page.tsx",
-                                            lineNumber: 411,
+                                            lineNumber: 409,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 396,
+                                    lineNumber: 394,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ImpactTimelineCard, {}, void 0, false, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 447,
+                                    lineNumber: 445,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Dashboard/page.tsx",
-                            lineNumber: 394,
+                            lineNumber: 392,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/Dashboard/page.tsx",
-                    lineNumber: 212,
+                    lineNumber: 210,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/Dashboard/page.tsx",
-            lineNumber: 184,
+            lineNumber: 182,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/Dashboard/page.tsx",
-        lineNumber: 183,
+        lineNumber: 181,
         columnNumber: 5
     }, this);
 }
 /* ------------------------------------------------------------------
-   MINI MAP COMPONENT (Leaflet)
+   MINI MAP COMPONENT (Leaflet) — SSR SAFE VERSION
 -------------------------------------------------------------------*/ function MiniCleanupMap({ cleanups }) {
     const mapContainerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const mapRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const markersRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const LRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null); // ← store Leaflet instance here
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (!mapContainerRef.current || mapRef.current) return;
-        const map = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].map(mapContainerRef.current, {
-            center: [
-                45.7489,
-                21.2087
-            ],
-            zoom: 12,
-            zoomControl: false,
-            attributionControl: false
-        });
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].tileLayer(TILE_DARK, {
-            maxZoom: 18
-        }).addTo(map);
-        const group = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].layerGroup().addTo(map);
-        mapRef.current = map;
-        markersRef.current = group;
+        let isMounted = true;
+        (async ()=>{
+            if ("TURBOPACK compile-time truthy", 1) return;
+            //TURBOPACK unreachable
+            ;
+            // Dynamic import Leaflet
+            const leaflet = undefined;
+            const LInstance = undefined;
+            const map = undefined;
+            const group = undefined;
+        })();
+        return ()=>{
+            isMounted = false;
+            if (mapRef.current) {
+                mapRef.current.remove();
+                mapRef.current = null;
+            }
+        };
     }, []);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (!mapRef.current || !markersRef.current) return;
+        if (!mapRef.current || !markersRef.current || !LRef.current) return;
+        const L = LRef.current;
         markersRef.current.clearLayers();
         const points = [];
         cleanups.forEach((c)=>{
-            const marker = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].circleMarker([
+            const marker = L.circleMarker([
                 c.pos.lat,
                 c.pos.lng
             ], {
@@ -1037,7 +1038,7 @@ function ProfileDashboardPage() {
             ]);
         });
         if (points.length > 0) {
-            const bounds = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].latLngBounds(points);
+            const bounds = L.latLngBounds(points);
             mapRef.current.fitBounds(bounds, {
                 padding: [
                     20,
@@ -1045,9 +1046,6 @@ function ProfileDashboardPage() {
                 ]
             });
         }
-        return ()=>{
-            markersRef.current?.clearLayers();
-        };
     }, [
         cleanups
     ]);
@@ -1058,12 +1056,12 @@ function ProfileDashboardPage() {
             className: "w-full h-full"
         }, void 0, false, {
             fileName: "[project]/app/Dashboard/page.tsx",
-            lineNumber: 516,
+            lineNumber: 536,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/Dashboard/page.tsx",
-        lineNumber: 515,
+        lineNumber: 535,
         columnNumber: 5
     }, this);
 }
@@ -1087,7 +1085,7 @@ function ProfileDashboardPage() {
                                 children: "Impact timeline"
                             }, void 0, false, {
                                 fileName: "[project]/app/Dashboard/page.tsx",
-                                lineNumber: 534,
+                                lineNumber: 553,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1095,13 +1093,13 @@ function ProfileDashboardPage() {
                                 children: "Bags collected across your last 7 cleanups."
                             }, void 0, false, {
                                 fileName: "[project]/app/Dashboard/page.tsx",
-                                lineNumber: 537,
+                                lineNumber: 556,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 533,
+                        lineNumber: 552,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1109,13 +1107,13 @@ function ProfileDashboardPage() {
                         children: "Last 7 sessions"
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 541,
+                        lineNumber: 560,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 532,
+                lineNumber: 551,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ImpactTimelineMiniChart, {
@@ -1123,7 +1121,7 @@ function ProfileDashboardPage() {
                 labels: labels
             }, void 0, false, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 544,
+                lineNumber: 563,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1141,13 +1139,13 @@ function ProfileDashboardPage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Dashboard/page.tsx",
-                                lineNumber: 549,
+                                lineNumber: 568,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 547,
+                        lineNumber: 566,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1162,25 +1160,25 @@ function ProfileDashboardPage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Dashboard/page.tsx",
-                                lineNumber: 553,
+                                lineNumber: 572,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 551,
+                        lineNumber: 570,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 546,
+                lineNumber: 565,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/Dashboard/page.tsx",
-        lineNumber: 531,
+        lineNumber: 550,
         columnNumber: 5
     }, this);
 }
@@ -1219,7 +1217,7 @@ function ImpactTimelineMiniChart({ data, labels }) {
                                     stopOpacity: "0.5"
                                 }, void 0, false, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 597,
+                                    lineNumber: 616,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
@@ -1228,18 +1226,18 @@ function ImpactTimelineMiniChart({ data, labels }) {
                                     stopOpacity: "0"
                                 }, void 0, false, {
                                     fileName: "[project]/app/Dashboard/page.tsx",
-                                    lineNumber: 598,
+                                    lineNumber: 617,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Dashboard/page.tsx",
-                            lineNumber: 596,
+                            lineNumber: 615,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 595,
+                        lineNumber: 614,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1249,7 +1247,7 @@ function ImpactTimelineMiniChart({ data, labels }) {
                         opacity: 0.6
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 602,
+                        lineNumber: 621,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1261,7 +1259,7 @@ function ImpactTimelineMiniChart({ data, labels }) {
                         strokeLinejoin: "round"
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 609,
+                        lineNumber: 628,
                         columnNumber: 9
                     }, this),
                     points.map((p, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -1273,13 +1271,13 @@ function ImpactTimelineMiniChart({ data, labels }) {
                             strokeWidth: 1.4
                         }, i, false, {
                             fileName: "[project]/app/Dashboard/page.tsx",
-                            lineNumber: 619,
+                            lineNumber: 638,
                             columnNumber: 11
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 591,
+                lineNumber: 610,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1288,18 +1286,18 @@ function ImpactTimelineMiniChart({ data, labels }) {
                         children: label
                     }, label, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 633,
+                        lineNumber: 652,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 631,
+                lineNumber: 650,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/Dashboard/page.tsx",
-        lineNumber: 590,
+        lineNumber: 609,
         columnNumber: 5
     }, this);
 }
@@ -1314,7 +1312,7 @@ function ImpactTimelineMiniChart({ data, labels }) {
                 children: icon
             }, void 0, false, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 654,
+                lineNumber: 673,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1325,7 +1323,7 @@ function ImpactTimelineMiniChart({ data, labels }) {
                         children: label
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 656,
+                        lineNumber: 675,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1333,19 +1331,19 @@ function ImpactTimelineMiniChart({ data, labels }) {
                         children: desc
                     }, void 0, false, {
                         fileName: "[project]/app/Dashboard/page.tsx",
-                        lineNumber: 657,
+                        lineNumber: 676,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Dashboard/page.tsx",
-                lineNumber: 655,
+                lineNumber: 674,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/Dashboard/page.tsx",
-        lineNumber: 653,
+        lineNumber: 672,
         columnNumber: 5
     }, this);
 }

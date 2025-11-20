@@ -8,6 +8,10 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/leaflet/dist/leaflet-src.js [app-client] (ecmascript)");
+// We silence TS for plugin + CSS imports but keep runtime behavior identical.
+// These imports are needed so the plugins and styles load in the bundle.
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2e$markercluster$2f$dist$2f$leaflet$2e$markercluster$2d$src$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
@@ -434,7 +438,8 @@ function formatTimeLeft(ms) {
             ({
                 "HeatmapCard.useEffect": async ()=>{
                     const leafletModule = await __turbopack_context__.A("[project]/node_modules/leaflet/dist/leaflet-src.js [app-client] (ecmascript, async loader)");
-                    await __turbopack_context__.A("[project]/node_modules/leaflet/dist/leaflet.css [app-client] (css, async loader)");
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore - plugin has no TS types in this project
                     await __turbopack_context__.A("[project]/node_modules/leaflet.heat/dist/leaflet-heat.js [app-client] (ecmascript, async loader)");
                     const LInstance = leafletModule.default || leafletModule;
                     setLeaflet(LInstance);
@@ -516,7 +521,7 @@ function formatTimeLeft(ms) {
                             children: "Heatmap — Problem distribution"
                         }, void 0, false, {
                             fileName: "[project]/components/Map.tsx",
-                            lineNumber: 456,
+                            lineNumber: 467,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -525,13 +530,13 @@ function formatTimeLeft(ms) {
                             children: heatEnabled ? "Disable heatmap" : "Enable heatmap"
                         }, void 0, false, {
                             fileName: "[project]/components/Map.tsx",
-                            lineNumber: 460,
+                            lineNumber: 471,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Map.tsx",
-                    lineNumber: 455,
+                    lineNumber: 466,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -539,18 +544,18 @@ function formatTimeLeft(ms) {
                     className: "w-full h-[500px] rounded-xl overflow-hidden border border-[#1e293b]"
                 }, void 0, false, {
                     fileName: "[project]/components/Map.tsx",
-                    lineNumber: 465,
+                    lineNumber: 476,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Map.tsx",
-            lineNumber: 454,
+            lineNumber: 465,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Map.tsx",
-        lineNumber: 453,
+        lineNumber: 464,
         columnNumber: 10
     }, this);
 }
@@ -560,6 +565,7 @@ function TimisoaraProblemsMap() {
     _s1();
     const mapContainerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const mapRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // MarkerCluster plugin doesn’t have TS types here; use `any` for the ref.
     const clusterRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const markersRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])([]);
     const poolRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])([]); // for replacing rejected tasks
@@ -640,6 +646,7 @@ function TimisoaraProblemsMap() {
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].tileLayer(TILE_DARK, {
                 maxZoom: 19
             }).addTo(map);
+            // MarkerCluster plugin is attached to L via side-effect imports above.
             const clusterGroup = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].markerClusterGroup({
                 showCoverageOnHover: false,
                 maxClusterRadius: 45
@@ -817,13 +824,13 @@ function TimisoaraProblemsMap() {
                                                 className: "h-1 w-1 rounded-full bg-emerald-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 681,
+                                                lineNumber: 696,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 679,
+                                        lineNumber: 694,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -831,7 +838,7 @@ function TimisoaraProblemsMap() {
                                         children: "Timișoara — Cleanup Quests Map"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 683,
+                                        lineNumber: 698,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -839,13 +846,13 @@ function TimisoaraProblemsMap() {
                                         children: "Every time you open the app, a new random set of 10 sanitation and eco-cleanup quests is loaded across the city. Accept a quest, clean the area, upload proof and earn points."
                                     }, void 0, false, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 686,
+                                        lineNumber: 701,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Map.tsx",
-                                lineNumber: 678,
+                                lineNumber: 693,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -859,7 +866,7 @@ function TimisoaraProblemsMap() {
                                                 children: "Your points"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 696,
+                                                lineNumber: 711,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -867,13 +874,13 @@ function TimisoaraProblemsMap() {
                                                 children: userPoints
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 699,
+                                                lineNumber: 714,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 695,
+                                        lineNumber: 710,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -884,19 +891,19 @@ function TimisoaraProblemsMap() {
                                         children: "Reset view"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 704,
+                                        lineNumber: 719,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Map.tsx",
-                                lineNumber: 693,
+                                lineNumber: 708,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Map.tsx",
-                        lineNumber: 677,
+                        lineNumber: 692,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -914,7 +921,7 @@ function TimisoaraProblemsMap() {
                                                     className: "w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 717,
+                                                    lineNumber: 732,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -922,13 +929,13 @@ function TimisoaraProblemsMap() {
                                                     children: "Loading map..."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 718,
+                                                    lineNumber: 733,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 716,
+                                            lineNumber: 731,
                                             columnNumber: 30
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -939,18 +946,18 @@ function TimisoaraProblemsMap() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 720,
+                                            lineNumber: 735,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 715,
+                                    lineNumber: 730,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Map.tsx",
-                                lineNumber: 714,
+                                lineNumber: 729,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -968,7 +975,7 @@ function TimisoaraProblemsMap() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 730,
+                                                lineNumber: 745,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -976,13 +983,13 @@ function TimisoaraProblemsMap() {
                                                 children: totalText
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 733,
+                                                lineNumber: 748,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 729,
+                                        lineNumber: 744,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -992,7 +999,7 @@ function TimisoaraProblemsMap() {
                                                 children: "Filter by type"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 738,
+                                                lineNumber: 753,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1008,7 +1015,7 @@ function TimisoaraProblemsMap() {
                                                         children: "All"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 743,
+                                                        lineNumber: 758,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1016,7 +1023,7 @@ function TimisoaraProblemsMap() {
                                                         children: "Cleaning / Sanitation"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 744,
+                                                        lineNumber: 759,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1024,7 +1031,7 @@ function TimisoaraProblemsMap() {
                                                         children: "Eco-actions"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 745,
+                                                        lineNumber: 760,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1032,13 +1039,13 @@ function TimisoaraProblemsMap() {
                                                         children: "Waste dumping"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 746,
+                                                        lineNumber: 761,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 739,
+                                                lineNumber: 754,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1046,7 +1053,7 @@ function TimisoaraProblemsMap() {
                                                 children: "Filter by priority"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 749,
+                                                lineNumber: 764,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1062,7 +1069,7 @@ function TimisoaraProblemsMap() {
                                                         children: "All"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 754,
+                                                        lineNumber: 769,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1070,7 +1077,7 @@ function TimisoaraProblemsMap() {
                                                         children: "High"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 755,
+                                                        lineNumber: 770,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1078,7 +1085,7 @@ function TimisoaraProblemsMap() {
                                                         children: "Medium"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 756,
+                                                        lineNumber: 771,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1086,19 +1093,19 @@ function TimisoaraProblemsMap() {
                                                         children: "Low"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 757,
+                                                        lineNumber: 772,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 750,
+                                                lineNumber: 765,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 737,
+                                        lineNumber: 752,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1124,12 +1131,12 @@ function TimisoaraProblemsMap() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/Map.tsx",
-                                                                lineNumber: 773,
+                                                                lineNumber: 788,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Map.tsx",
-                                                            lineNumber: 772,
+                                                            lineNumber: 787,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1143,7 +1150,7 @@ function TimisoaraProblemsMap() {
                                                                             children: p_7.title
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 781,
+                                                                            lineNumber: 796,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1154,13 +1161,13 @@ function TimisoaraProblemsMap() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 784,
+                                                                            lineNumber: 799,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/Map.tsx",
-                                                                    lineNumber: 780,
+                                                                    lineNumber: 795,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1168,7 +1175,7 @@ function TimisoaraProblemsMap() {
                                                                     children: p_7.desc
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/Map.tsx",
-                                                                    lineNumber: 789,
+                                                                    lineNumber: 804,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1182,7 +1189,7 @@ function TimisoaraProblemsMap() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 795,
+                                                                            lineNumber: 810,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1194,13 +1201,13 @@ function TimisoaraProblemsMap() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 799,
+                                                                            lineNumber: 814,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/Map.tsx",
-                                                                    lineNumber: 794,
+                                                                    lineNumber: 809,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 status === "pending" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1215,7 +1222,7 @@ function TimisoaraProblemsMap() {
                                                                             children: "Accept quest"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 806,
+                                                                            lineNumber: 821,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1227,13 +1234,13 @@ function TimisoaraProblemsMap() {
                                                                             children: "Reject"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 812,
+                                                                            lineNumber: 827,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/Map.tsx",
-                                                                    lineNumber: 805,
+                                                                    lineNumber: 820,
                                                                     columnNumber: 50
                                                                 }, this),
                                                                 status === "accepted" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1248,12 +1255,12 @@ function TimisoaraProblemsMap() {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/Map.tsx",
-                                                                                lineNumber: 822,
+                                                                                lineNumber: 837,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 821,
+                                                                            lineNumber: 836,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1267,7 +1274,7 @@ function TimisoaraProblemsMap() {
                                                                                             children: "Upload proof photo"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/Map.tsx",
-                                                                                            lineNumber: 827,
+                                                                                            lineNumber: 842,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1282,13 +1289,13 @@ function TimisoaraProblemsMap() {
                                                                                             }
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/Map.tsx",
-                                                                                            lineNumber: 830,
+                                                                                            lineNumber: 845,
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/Map.tsx",
-                                                                                    lineNumber: 826,
+                                                                                    lineNumber: 841,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1302,19 +1309,19 @@ function TimisoaraProblemsMap() {
                                                                                     children: "Finish quest"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/Map.tsx",
-                                                                                    lineNumber: 838,
+                                                                                    lineNumber: 853,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/Map.tsx",
-                                                                            lineNumber: 825,
+                                                                            lineNumber: 840,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/Map.tsx",
-                                                                    lineNumber: 820,
+                                                                    lineNumber: 835,
                                                                     columnNumber: 51
                                                                 }, this),
                                                                 isFinished && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1326,48 +1333,48 @@ function TimisoaraProblemsMap() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/Map.tsx",
-                                                                    lineNumber: 848,
+                                                                    lineNumber: 863,
                                                                     columnNumber: 40
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/Map.tsx",
-                                                            lineNumber: 779,
+                                                            lineNumber: 794,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 770,
+                                                    lineNumber: 785,
                                                     columnNumber: 21
                                                 }, this)
                                             }, p_7.id, false, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 769,
+                                                lineNumber: 784,
                                                 columnNumber: 22
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/components/Map.tsx",
-                                        lineNumber: 762,
+                                        lineNumber: 777,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Map.tsx",
-                                lineNumber: 728,
+                                lineNumber: 743,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Map.tsx",
-                        lineNumber: 712,
+                        lineNumber: 727,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Map.tsx",
-                lineNumber: 675,
+                lineNumber: 690,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1380,7 +1387,7 @@ function TimisoaraProblemsMap() {
                             children: "General statistics — Timișoara (current set of 10 quests)"
                         }, void 0, false, {
                             fileName: "[project]/components/Map.tsx",
-                            lineNumber: 863,
+                            lineNumber: 878,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1394,7 +1401,7 @@ function TimisoaraProblemsMap() {
                                             children: "Total quests"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 870,
+                                            lineNumber: 885,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1402,13 +1409,13 @@ function TimisoaraProblemsMap() {
                                             children: problems.length
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 871,
+                                            lineNumber: 886,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 869,
+                                    lineNumber: 884,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1419,7 +1426,7 @@ function TimisoaraProblemsMap() {
                                             children: "High-priority quests"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 877,
+                                            lineNumber: 892,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1427,13 +1434,13 @@ function TimisoaraProblemsMap() {
                                             children: problems.filter((p_8)=>p_8.priority === "mare").length
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 880,
+                                            lineNumber: 895,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 876,
+                                    lineNumber: 891,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1444,7 +1451,7 @@ function TimisoaraProblemsMap() {
                                             children: "Average resolution time (estimate)"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 886,
+                                            lineNumber: 901,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1452,13 +1459,13 @@ function TimisoaraProblemsMap() {
                                             children: "~ 3.4 days"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 889,
+                                            lineNumber: 904,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 885,
+                                    lineNumber: 900,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1469,7 +1476,7 @@ function TimisoaraProblemsMap() {
                                             children: "Most affected zones (current set)"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 895,
+                                            lineNumber: 910,
                                             columnNumber: 15
                                         }, this),
                                         Object.entries(problems.reduce((acc, p_9)=>{
@@ -1487,19 +1494,19 @@ function TimisoaraProblemsMap() {
                                                 ]
                                             }, zone_0, true, {
                                                 fileName: "[project]/components/Map.tsx",
-                                                lineNumber: 903,
+                                                lineNumber: 918,
                                                 columnNumber: 86
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 894,
+                                    lineNumber: 909,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Map.tsx",
-                            lineNumber: 868,
+                            lineNumber: 883,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1513,7 +1520,7 @@ function TimisoaraProblemsMap() {
                                             children: "Overall distribution"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 912,
+                                            lineNumber: 927,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1523,21 +1530,21 @@ function TimisoaraProblemsMap() {
                                                     className: "absolute inset-0 rounded-full border-[12px] border-green-400/40"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 917,
+                                                    lineNumber: 932,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 rounded-full border-[12px] border-yellow-400/40 rotate-45"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 918,
+                                                    lineNumber: 933,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 rounded-full border-[12px] border-red-400/40 rotate-90"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 919,
+                                                    lineNumber: 934,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1545,56 +1552,6 @@ function TimisoaraProblemsMap() {
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-white text-xl font-bold",
                                                         children: problems.length
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 922,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 921,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 916,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 911,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-gray-300 mb-3 font-medium block",
-                                            children: "Quest priority split"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 930,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mb-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-sm text-red-400",
-                                                    children: "High"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 935,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "h-3 bg-red-400/20 rounded",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "h-3 bg-red-400 rounded",
-                                                        style: {
-                                                            width: `${problems.length ? problems.filter((p_10)=>p_10.priority === "mare").length / problems.length * 100 : 0}%`
-                                                        }
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
                                                         lineNumber: 937,
@@ -1608,7 +1565,57 @@ function TimisoaraProblemsMap() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 934,
+                                            lineNumber: 931,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/Map.tsx",
+                                    lineNumber: 926,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-gray-300 mb-3 font-medium block",
+                                            children: "Quest priority split"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Map.tsx",
+                                            lineNumber: 945,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-sm text-red-400",
+                                                    children: "High"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/Map.tsx",
+                                                    lineNumber: 950,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "h-3 bg-red-400/20 rounded",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "h-3 bg-red-400 rounded",
+                                                        style: {
+                                                            width: `${problems.length ? problems.filter((p_10)=>p_10.priority === "mare").length / problems.length * 100 : 0}%`
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Map.tsx",
+                                                        lineNumber: 952,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/Map.tsx",
+                                                    lineNumber: 951,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/Map.tsx",
+                                            lineNumber: 949,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1619,7 +1626,7 @@ function TimisoaraProblemsMap() {
                                                     children: "Medium"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 944,
+                                                    lineNumber: 959,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1631,18 +1638,18 @@ function TimisoaraProblemsMap() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 946,
+                                                        lineNumber: 961,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 945,
+                                                    lineNumber: 960,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 943,
+                                            lineNumber: 958,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1653,7 +1660,7 @@ function TimisoaraProblemsMap() {
                                                     children: "Low"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 953,
+                                                    lineNumber: 968,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1665,48 +1672,48 @@ function TimisoaraProblemsMap() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Map.tsx",
-                                                        lineNumber: 955,
+                                                        lineNumber: 970,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Map.tsx",
-                                                    lineNumber: 954,
+                                                    lineNumber: 969,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Map.tsx",
-                                            lineNumber: 952,
+                                            lineNumber: 967,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Map.tsx",
-                                    lineNumber: 929,
+                                    lineNumber: 944,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Map.tsx",
-                            lineNumber: 910,
+                            lineNumber: 925,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Map.tsx",
-                    lineNumber: 862,
+                    lineNumber: 877,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Map.tsx",
-                lineNumber: 861,
+                lineNumber: 876,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HeatmapCard, {
                 problems: problems
             }, void 0, false, {
                 fileName: "[project]/components/Map.tsx",
-                lineNumber: 966,
+                lineNumber: 981,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
@@ -1810,13 +1817,13 @@ function TimisoaraProblemsMap() {
       `
             }, void 0, false, {
                 fileName: "[project]/components/Map.tsx",
-                lineNumber: 969,
+                lineNumber: 984,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Map.tsx",
-        lineNumber: 674,
+        lineNumber: 689,
         columnNumber: 10
     }, this);
 }

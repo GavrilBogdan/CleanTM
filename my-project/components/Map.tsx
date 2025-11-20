@@ -1,10 +1,21 @@
 "use client";
 
 import L from "leaflet";
+// We silence TS for plugin + CSS imports but keep runtime behavior identical.
+// These imports are needed so the plugins and styles load in the bundle.
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import "leaflet.markercluster";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import "leaflet.markercluster/dist/MarkerCluster.css";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import "leaflet/dist/leaflet.css";
+
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 
 /* ──────────────────────────────────────────
@@ -354,7 +365,8 @@ function HeatmapCard({ problems }: { problems: ProblemWithState[] }) {
   useEffect(() => {
     (async () => {
       const leafletModule = await import("leaflet");
-      await import("leaflet/dist/leaflet.css");
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore - plugin has no TS types in this project
       await import("leaflet.heat");
       const LInstance = leafletModule.default || leafletModule;
       setLeaflet(LInstance);
@@ -451,7 +463,10 @@ function HeatmapCard({ problems }: { problems: ProblemWithState[] }) {
 export default function TimisoaraProblemsMap() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
-  const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
+
+  // MarkerCluster plugin doesn’t have TS types here; use `any` for the ref.
+  const clusterRef = useRef<any>(null);
+
   const markersRef = useRef<{ id: number; marker: L.Marker }[]>([]);
   const poolRef = useRef<ProblemWithState[]>([]); // for replacing rejected tasks
 
@@ -525,6 +540,7 @@ export default function TimisoaraProblemsMap() {
 
     L.tileLayer(TILE_DARK, { maxZoom: 19 }).addTo(map);
 
+    // MarkerCluster plugin is attached to L via side-effect imports above.
     const clusterGroup = (L as any).markerClusterGroup({
       showCoverageOnHover: false,
       maxClusterRadius: 45,
