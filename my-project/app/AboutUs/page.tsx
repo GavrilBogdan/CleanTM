@@ -46,7 +46,7 @@ const AboutUsPage = () => {
         {/* Hero Section */}
         <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 lg:px-16">
           <div
-            className="
+            className={`
               max-w-4xl
               bg-slate-900/70
               backdrop-blur-2xl
@@ -56,7 +56,7 @@ const AboutUsPage = () => {
               hover:shadow-[0_0_55px_rgba(16,185,129,1)]
               transition-all duration-700
               p-10 md:p-14
-            "
+            `}
           >
             <h1 className="text-4xl md:text-6xl font-extrabold text-emerald-50 mb-6 tracking-tight">
               About <span className="text-emerald-400">CleanTM</span>
